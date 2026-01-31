@@ -265,11 +265,11 @@ const Footer = () => {
           <ContactInfo>
             <ContactItem>
               <strong>Email</strong><br />
-              troy1028@bellsouth.net
+              jpkicker@gmail.com
             </ContactItem>
             <ContactItem>
               <strong>Phone</strong><br />
-              (561) 685-5674
+              (561) 451-5880
             </ContactItem>
             <ContactItem>
               <strong>Location</strong><br />
