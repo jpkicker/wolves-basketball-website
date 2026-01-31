@@ -4,8 +4,8 @@
 
 # Force HTTPS
 [[redirects]]
-  from = "http://wellington-wolves-17u.netlify.app/*"
-  to = "https://wellington-wolves-17u.netlify.app/:splat"
+  from = "http://wellingtonwolveselite-17u.netlify.app/*"
+  to = "https://wellingtonwolveselite-17u.netlify.app/:splat"
   status = 301
   force = true
 
