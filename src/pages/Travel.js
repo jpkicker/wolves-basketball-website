@@ -286,12 +286,12 @@ const Travel = () => {
               <InfoCardBody>
                 <ContactText>
                   <strong>Team Manager</strong>
-                  Emma Snelgrove<br />
-                  <a href="tel:5616855674">(561) 685-5674</a>
+                  Jason Ranney<br />
+                  <a href="tel:5614515880">(561) 451-5880</a>
                 </ContactText>
                 <ContactText style={{ marginTop: '1rem' }}>
                   <strong>Travel Questions</strong>
-                  <a href="mailto:troy1028@bellsouth.net">troy1028@bellsouth.net</a>
+                  <a href="mailto:jpkicker@gmail.com">jpkicker@gmail.com</a>
                 </ContactText>
               </InfoCardBody>
             </InfoCard>

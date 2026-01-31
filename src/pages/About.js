@@ -406,12 +406,12 @@ const About = () => {
 
               <StaffCard $delay="0.3s">
                 <StaffCardHeader>
-                  <StaffName>EMMA SNELGROVE</StaffName>
+                  <StaffName>JASON RANNEY</StaffName>
                   <StaffRole>Team Manager</StaffRole>
                 </StaffCardHeader>
                 <StaffCardBody>
                   <StaffDescription>
-                    Emma coordinates all the travel logistics, tournament registration,
+                    Jason coordinates all the travel logistics, tournament registration,
                     and team operations to keep the Wolves running smoothly.
                   </StaffDescription>
                 </StaffCardBody>
