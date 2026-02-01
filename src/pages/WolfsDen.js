@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 // Password for the Wolf's Den (simple client-side protection)
-const PACK_PASSWORD = 'wolves 2026';
+const PACK_PASSWORD = 'wolves2026';
 
 const fadeInUp = keyframes`
   from {
