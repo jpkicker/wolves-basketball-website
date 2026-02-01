@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+
+// Password for the Wolf's Den (simple client-side protection)
+const PACK_PASSWORD = 'wolves 2026';
 
 const fadeInUp = keyframes`
   from {
@@ -291,7 +294,142 @@ const LinkIcon = () => (
   </svg>
 );
 
+// Password Gate Components
+const GateContainer = styled.div`
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+`;
+
+const GateCard = styled.div`
+  background: var(--white);
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: ${fadeInUp} 0.6s ease-out;
+`;
+
+const GateIcon = styled.div`
+  font-size: 4rem;
+  margin-bottom: 1rem;
+`;
+
+const GateTitle = styled.h1`
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--navy);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+`;
+
+const GateSubtitle = styled.p`
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+`;
+
+const PasswordInput = styled.input`
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  &::placeholder {
+    color: var(--gray-400);
+  }
+`;
+
+const SubmitButton = styled.button`
+  width: 100%;
+  padding: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  background: var(--navy);
+  color: var(--gold);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-2px);
+  }
+`;
+
+const ErrorMessage = styled.p`
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  color: #e51b24;
+  margin-top: 1rem;
+`;
+
 const WolfsDen = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    // Check if already authenticated
+    const auth = localStorage.getItem('wolfsDenAuth');
+    if (auth === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password.toLowerCase() === PACK_PASSWORD.toLowerCase()) {
+      localStorage.setItem('wolfsDenAuth', 'true');
+      setIsAuthenticated(true);
+      setError('');
+    } else {
+      setError('Incorrect password. Please try again.');
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <GateContainer>
+        <GateCard>
+          <GateIcon>🐺</GateIcon>
+          <GateTitle>WOLF'S DEN</GateTitle>
+          <GateSubtitle>This area is for team members only.<br />Enter the password to continue.</GateSubtitle>
+          <form onSubmit={handleSubmit}>
+            <PasswordInput
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoFocus
+            />
+            <SubmitButton type="submit">ENTER THE DEN</SubmitButton>
+          </form>
+          {error && <ErrorMessage>{error}</ErrorMessage>}
+        </GateCard>
+      </GateContainer>
+    );
+  }
+
   return (
     <DenContainer>
       <HeroSection>
