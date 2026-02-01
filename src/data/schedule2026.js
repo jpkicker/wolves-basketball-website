@@ -11,7 +11,7 @@ export const tournaments = [
     circuit: "LOCAL",
     venue: {
       name: "Village Park",
-      address: "Wellington, FL"
+      address: "11700 Pierson Rd, Wellington, FL 33414"
     },
     hotelLink: null,
     details: "Local Wellington Wolves tournament. No travel required."
@@ -25,7 +25,7 @@ export const tournaments = [
     circuit: "AAU",
     venue: {
       name: "Wiregrass Ranch Sports Complex",
-      address: "Wesley Chapel, FL"
+      address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: null,
     details: "Hotel: Holiday Inn Express, 2775 Cypress Ridge Road, Wesley Chapel, FL 33544. $189/night."
@@ -38,8 +38,8 @@ export const tournaments = [
     state: "FL",
     circuit: "AAU",
     venue: {
-      name: "TBD",
-      address: "Tavares, FL"
+      name: "Big House",
+      address: "400 E Alfred St, Tavares, FL 32778"
     },
     hotelLink: null,
     details: "Hotel: Holiday Inn Express, Tavares, FL. $189/night."
@@ -81,7 +81,7 @@ export const tournaments = [
     circuit: "NXTpro",
     venue: {
       name: "Wiregrass Ranch Sports Complex",
-      address: "Wesley Chapel, FL"
+      address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: "https://eventconnect.io",
     details: "Hotel: Residence Inn by Marriott Tampa Wesley Chapel, 2867 Lajuana Blvd, Wesley Chapel, FL 33543. $180/night."
@@ -95,7 +95,7 @@ export const tournaments = [
     circuit: "NXTpro",
     venue: {
       name: "Big House",
-      address: "Tavares, FL"
+      address: "400 E Alfred St, Tavares, FL 32778"
     },
     hotelLink: "https://eventconnect.io",
     details: "Hotel: Holiday Inn Express, Tavares, FL. $189/night."
