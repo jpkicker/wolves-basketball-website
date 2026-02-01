@@ -103,7 +103,7 @@ export const tournaments = [
   {
     id: 8,
     date: "05/15 - 05/17",
-    name: "Atlanta Jam (OTR LIVE)",
+    name: "Sweet 16 in ATL (OTR LIVE)",
     city: "Johns Creek",
     state: "GA",
     circuit: "OTR",
@@ -159,16 +159,16 @@ export const tournaments = [
   {
     id: 12,
     date: "07/16 - 07/19",
-    name: "Best of the South (HOOPSEEN)",
-    city: "College Park",
+    name: "Power 24 (OTR LIVE)",
+    city: "Cartersville",
     state: "GA",
-    circuit: "HOOPSEEN",
+    circuit: "OTR",
     venue: {
-      name: "Georgia International Convention Center",
-      address: "2000 Convention Center Concourse, College Park, GA 30337"
+      name: "TBD",
+      address: "Cartersville, GA"
     },
     hotelLink: null,
-    details: "Hotel: Holiday Inn Express Atlanta Airport-College Park, 4601 Best Rd, College Park, GA 30337. $145/night. Flight: ATL (Delta)."
+    details: "Hotel: TBD. Flight: ATL (Spirit or Delta), ~45 min drive to Cartersville."
   },
   {
     id: 13,
