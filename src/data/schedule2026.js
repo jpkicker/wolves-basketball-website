@@ -10,7 +10,7 @@ export const tournaments = [
     state: "FL",
     circuit: "LOCAL",
     venue: {
-      name: "TBD",
+      name: "Village Park",
       address: "Wellington, FL"
     },
     hotelLink: null,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { tournaments, circuitColors } from '../data/schedule2026';
 
@@ -10,6 +10,17 @@ const fadeIn = keyframes`
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+`;
+
+const modalFadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 `;
 
@@ -129,27 +140,6 @@ const EventBadge = styled.div`
   }
 `;
 
-const EventTooltip = styled.div`
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--navy);
-  color: white;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  font-family: 'Barlow', sans-serif;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: none;
-
-  ${EventBadge}:hover + & {
-    display: block;
-  }
-`;
-
 const Legend = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -178,12 +168,180 @@ const LegendLabel = styled.span`
   color: var(--gray-600);
 `;
 
+// Modal styles
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 31, 63, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+`;
+
+const ModalContent = styled.div`
+  background: var(--white);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: ${modalFadeIn} 0.3s ease-out;
+`;
+
+const ModalHeader = styled.div`
+  background: var(--navy);
+  padding: 1.5rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+  }
+`;
+
+const ModalTitle = styled.h3`
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin: 0 0 0.5rem 0;
+`;
+
+const ModalDate = styled.span`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+const ModalBody = styled.div`
+  padding: 1.5rem;
+`;
+
+const InfoSection = styled.div`
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+const InfoLabel = styled.span`
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+`;
+
+const InfoText = styled.p`
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  color: var(--gray-700);
+  margin: 0;
+  line-height: 1.5;
+`;
+
+const VenueName = styled.h4`
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin: 0 0 0.25rem 0;
+  letter-spacing: 0.5px;
+`;
+
+const CircuitBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: ${props => circuitColors[props.$circuit]?.bg || 'var(--gray-500)'};
+  color: ${props => circuitColors[props.$circuit]?.text || '#fff'};
+`;
+
+const HotelLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    background: var(--navy);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+`;
+
+const DetailsText = styled.p`
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+`;
+
 // Helper functions
 const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
 const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
 
 const parseDate = (dateStr) => {
-  // Parse "03/27 - 03/29" format
   const parts = dateStr.split(' - ');
   const start = parts[0].split('/');
   const end = parts[1].split('/');
@@ -199,12 +357,10 @@ const getEventsForDay = (month, day, tournamentList) => {
   return tournamentList.filter(t => {
     const { startMonth, startDay, endMonth, endDay } = parseDate(t.date);
     
-    // Handle same month
     if (startMonth === endMonth) {
       return month === startMonth && day >= startDay && day <= endDay;
     }
     
-    // Handle spanning months
     if (month === startMonth) {
       return day >= startDay;
     }
@@ -217,6 +373,7 @@ const getEventsForDay = (month, day, tournamentList) => {
 };
 
 const TournamentCalendar = () => {
+  const [selectedEvent, setSelectedEvent] = useState(null);
   const year = 2026;
   const months = [
     { name: 'MARCH', num: 2 },
@@ -228,12 +385,19 @@ const TournamentCalendar = () => {
   
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
+  const handleEventClick = (event) => {
+    setSelectedEvent(event);
+  };
+
+  const closeModal = () => {
+    setSelectedEvent(null);
+  };
+
   const renderMonth = (monthName, monthNum) => {
     const daysInMonth = getDaysInMonth(year, monthNum);
     const firstDay = getFirstDayOfMonth(year, monthNum);
     const cells = [];
     
-    // Empty cells before first day
     for (let i = 0; i < firstDay; i++) {
       cells.push(
         <DayCell key={`empty-${i}`} $isCurrentMonth={false}>
@@ -242,7 +406,6 @@ const TournamentCalendar = () => {
       );
     }
     
-    // Days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       const events = getEventsForDay(monthNum, day, tournaments);
       cells.push(
@@ -252,7 +415,7 @@ const TournamentCalendar = () => {
             <EventBadge 
               key={`${event.id}-${idx}`} 
               $circuit={event.circuit}
-              title={`${event.name} - ${event.city}, ${event.state}`}
+              onClick={() => handleEventClick(event)}
             >
               {event.name.split(' ')[0]}
             </EventBadge>
@@ -261,7 +424,6 @@ const TournamentCalendar = () => {
       );
     }
     
-    // Fill remaining cells to complete the grid
     const remainingCells = 7 - (cells.length % 7);
     if (remainingCells < 7) {
       for (let i = 0; i < remainingCells; i++) {
@@ -311,6 +473,60 @@ const TournamentCalendar = () => {
           </LegendItem>
         </Legend>
       </MonthSection>
+
+      {/* Event Details Modal */}
+      {selectedEvent && (
+        <ModalOverlay onClick={closeModal}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <ModalHeader>
+              <CloseButton onClick={closeModal}>&times;</CloseButton>
+              <ModalTitle>{selectedEvent.name}</ModalTitle>
+              <ModalDate>{selectedEvent.date}</ModalDate>
+            </ModalHeader>
+            <ModalBody>
+              <InfoSection>
+                <InfoLabel>Location</InfoLabel>
+                <InfoText>{selectedEvent.city}, {selectedEvent.state}</InfoText>
+              </InfoSection>
+
+              <InfoSection>
+                <InfoLabel>Venue</InfoLabel>
+                <VenueName>{selectedEvent.venue.name}</VenueName>
+                <InfoText>{selectedEvent.venue.address}</InfoText>
+              </InfoSection>
+
+              <InfoSection>
+                <InfoLabel>Circuit</InfoLabel>
+                <CircuitBadge $circuit={selectedEvent.circuit}>
+                  {selectedEvent.circuit}
+                </CircuitBadge>
+              </InfoSection>
+
+              {selectedEvent.details && (
+                <InfoSection>
+                  <InfoLabel>Details</InfoLabel>
+                  <DetailsText>{selectedEvent.details}</DetailsText>
+                </InfoSection>
+              )}
+
+              {selectedEvent.hotelLink && (
+                <HotelLink
+                  href={selectedEvent.hotelLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15,3 21,3 21,9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                  Book Hotel
+                </HotelLink>
+              )}
+            </ModalBody>
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </CalendarContainer>
   );
 };
