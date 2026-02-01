@@ -8,13 +8,13 @@ export const tournaments = [
     name: "March Madness",
     city: "Wellington",
     state: "FL",
-    circuit: "LOCAL",
+    circuit: "USAB",
     venue: {
       name: "Village Park",
       address: "11700 Pierson Rd, Wellington, FL 33414"
     },
     hotelLink: null,
-    details: "Local Wellington Wolves tournament. No travel required."
+    details: "US Amateur Basketball tournament. Local event - no travel required."
   },
   {
     id: 2,
@@ -192,5 +192,6 @@ export const circuitColors = {
   HOOPSEEN: { bg: "#1E3A5F", text: "#FFFFFF", accent: "#FFD700" },
   OTR: { bg: "#FF6B00", text: "#FFFFFF", accent: "#000000" },
   AAU: { bg: "#003087", text: "#FFFFFF", accent: "#C8102E" },
+  USAB: { bg: "#002a5c", text: "#FFFFFF", accent: "#e51b24" },
   LOCAL: { bg: "#001f3f", text: "#FFFFFF", accent: "#FFD700" }
 };

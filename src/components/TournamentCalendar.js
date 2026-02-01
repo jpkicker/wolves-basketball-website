@@ -460,16 +460,20 @@ const TournamentCalendar = () => {
             <LegendLabel>Puma NXTpro</LegendLabel>
           </LegendItem>
           <LegendItem>
+            <LegendColor $color={circuitColors.HOOPSEEN.bg} />
+            <LegendLabel>HOOPSEEN</LegendLabel>
+          </LegendItem>
+          <LegendItem>
             <LegendColor $color={circuitColors.OTR.bg} />
             <LegendLabel>On The Radar</LegendLabel>
           </LegendItem>
           <LegendItem>
-            <LegendColor $color={circuitColors.AAU.bg} />
-            <LegendLabel>AAU</LegendLabel>
+            <LegendColor $color={circuitColors.USAB.bg} />
+            <LegendLabel>US Amateur</LegendLabel>
           </LegendItem>
           <LegendItem>
-            <LegendColor $color={circuitColors.LOCAL.bg} />
-            <LegendLabel>Local</LegendLabel>
+            <LegendColor $color={circuitColors.AAU.bg} />
+            <LegendLabel>AAU</LegendLabel>
           </LegendItem>
         </Legend>
       </MonthSection>

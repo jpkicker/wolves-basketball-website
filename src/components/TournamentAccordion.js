@@ -4,6 +4,7 @@ import { tournaments, circuitColors } from '../data/schedule2026';
 import nxtproLogo from 'url:../assets/nxtpro-logo.jpg';
 import hoopseenLogo from 'url:../assets/hoopseen-logo.png';
 import otrLogo from 'url:../assets/otr-logo.png';
+import usabLogo from 'url:../assets/usab-logo.svg';
 
 const fadeInUp = keyframes`
   from {
@@ -265,6 +266,9 @@ const TournamentAccordion = () => {
                 )}
                 {tournament.circuit === 'OTR' && (
                   <CircuitLogo src={otrLogo} alt="On The Radar" $light />
+                )}
+                {tournament.circuit === 'USAB' && (
+                  <CircuitLogo src={usabLogo} alt="US Amateur Basketball" $light />
                 )}
                 <LocationCell $isOpen={openId === tournament.id}>
                   {tournament.city}, {tournament.state}
