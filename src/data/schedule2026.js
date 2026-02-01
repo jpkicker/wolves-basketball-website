@@ -19,12 +19,12 @@ export const tournaments = [
   {
     id: 2,
     date: "03/13 - 03/15",
-    name: "Conrad Foss Memorial",
+    name: "Conrad P. Foss Memorial",
     city: "Wesley Chapel",
     state: "FL",
-    circuit: "AAU",
+    circuit: "HOOPSEEN",
     venue: {
-      name: "Wiregrass Ranch Sports Complex",
+      name: "Wiregrass Ranch Sports Campus",
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: null,
