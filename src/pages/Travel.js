@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import TournamentAccordion from '../components/TournamentAccordion';
+import TournamentCalendar from '../components/TournamentCalendar';
 
 const fadeInUp = keyframes`
   from {
@@ -110,6 +111,49 @@ const ContentWrapper = styled.div`
 
 const ScheduleContainer = styled.div`
   margin-bottom: 4rem;
+`;
+
+const ScheduleHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+`;
+
+const ViewToggle = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: ${props => props.$active ? 'var(--navy)' : 'var(--white)'};
+  color: ${props => props.$active ? 'var(--gold)' : 'var(--navy)'};
+  border: 2px solid var(--navy);
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--navy);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+`;
+
+const ToggleGroup = styled.div`
+  display: flex;
+  gap: 0.5rem;
 `;
 
 const ScheduleNote = styled.p`
@@ -227,6 +271,8 @@ const ContactText = styled.p`
 `;
 
 const Travel = () => {
+  const [viewMode, setViewMode] = useState('list');
+
   return (
     <TravelContainer>
       <HeroSection>
@@ -244,10 +290,44 @@ const Travel = () => {
       <ContentSection>
         <ContentWrapper>
           <ScheduleContainer>
-            <ScheduleNote>
-              Click on any tournament to view venue details and hotel booking information.
-            </ScheduleNote>
-            <TournamentAccordion />
+            <ScheduleHeader>
+              <ScheduleNote style={{ marginBottom: 0 }}>
+                {viewMode === 'list' 
+                  ? 'Click on any tournament to view venue details and hotel booking information.'
+                  : 'Hover over events to see tournament details.'}
+              </ScheduleNote>
+              <ToggleGroup>
+                <ViewToggle 
+                  $active={viewMode === 'list'} 
+                  onClick={() => setViewMode('list')}
+                  title="List View"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="8" y1="6" x2="21" y2="6"/>
+                    <line x1="8" y1="12" x2="21" y2="12"/>
+                    <line x1="8" y1="18" x2="21" y2="18"/>
+                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                  </svg>
+                  List
+                </ViewToggle>
+                <ViewToggle 
+                  $active={viewMode === 'calendar'} 
+                  onClick={() => setViewMode('calendar')}
+                  title="Calendar View"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  Calendar
+                </ViewToggle>
+              </ToggleGroup>
+            </ScheduleHeader>
+            {viewMode === 'list' ? <TournamentAccordion /> : <TournamentCalendar />}
           </ScheduleContainer>
 
           <InfoGrid>
