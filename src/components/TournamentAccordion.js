@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { tournaments, circuitColors } from '../data/schedule2026';
-import nxtproLogo from 'url:../assets/nxtpro-logo.webp';
+import nxtproLogo from 'url:../assets/nxtpro-logo.jpg';
 import hoopseenLogo from 'url:../assets/hoopseen-logo.png';
 import otrLogo from 'url:../assets/otr-logo.png';
 
