@@ -4,7 +4,7 @@ import { tournaments, circuitColors } from '../data/schedule2026';
 import nxtproLogo from 'url:../assets/nxtpro-logo.jpg';
 import hoopseenLogo from 'url:../assets/hoopseen-logo.png';
 import otrLogo from 'url:../assets/otr-logo.png';
-import usabLogo from 'url:../assets/usab-logo.svg';
+const usabLogo = 'https://usamateurbasketball.com/themes/custom/usabb/logo.svg';
 
 const fadeInUp = keyframes`
   from {
