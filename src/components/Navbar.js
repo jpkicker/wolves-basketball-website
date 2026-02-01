@@ -272,6 +272,7 @@ const Navbar = () => {
             <NavLink to="/players" onClick={closeMenu} $isActive={isActive('/players')}>Roster</NavLink>
             <NavLink to="/travel" onClick={closeMenu} $isActive={isActive('/travel')}>Schedule</NavLink>
             <NavLink to="/announcements" onClick={closeMenu} $isActive={isActive('/announcements')}>News</NavLink>
+            <NavLink to="/wolfs-den" onClick={closeMenu} $isActive={isActive('/wolfs-den')}>Wolf's Den</NavLink>
           </NavLinks>
         </NavbarContent>
       </NavbarContainer>

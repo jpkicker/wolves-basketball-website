@@ -12,6 +12,7 @@ import About from './pages/About';
 import Travel from './pages/Travel';
 import Players from './pages/Players';
 import Announcements from './pages/Announcements';
+import WolfsDen from './pages/WolfsDen';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -96,6 +97,7 @@ function App() {
           <Route path="/travel" element={<Travel />} />
           <Route path="/players" element={<Players />} />
           <Route path="/announcements" element={<Announcements />} />
+          <Route path="/wolfs-den" element={<WolfsDen />} />
         </Routes>
       </MainContent>
       <Footer />
