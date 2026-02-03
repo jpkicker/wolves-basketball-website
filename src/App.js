@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Travel from './pages/Travel';
-import Players from './pages/Players';
+import Players from './pages/PlayersOptionB';
+import PlayerDetail from './pages/PlayerDetail';
 import Announcements from './pages/Announcements';
 import WolfsDen from './pages/WolfsDen';
 
@@ -96,6 +97,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/travel" element={<Travel />} />
           <Route path="/players" element={<Players />} />
+          <Route path="/players/:playerId" element={<PlayerDetail />} />
           <Route path="/announcements" element={<Announcements />} />
           <Route path="/wolfs-den" element={<WolfsDen />} />
         </Routes>
