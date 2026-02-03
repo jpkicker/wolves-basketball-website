@@ -37,7 +37,7 @@ export const roster = [
     instagram: "iamnickcruz4"
   },
   {
-    number: 5,
+    number: 0,
     firstName: "RJ",
     lastName: "JEAN-BAPTISTE",
     position: "Guard",
