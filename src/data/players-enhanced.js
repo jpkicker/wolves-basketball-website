@@ -19,12 +19,12 @@ export const rosterEnhanced = [
     image: canaanImage,
     instagram: "c_gedeon.21",
     // Enhanced fields
-    height: "5'11\"",
+    height: "6'1\"",
     weight: "165",
-    gradYear: 2026,
+    gradYear: 2027,
     school: "Wellington High School",
-    gpa: "3.4",
-    bio: "Dynamic point guard with exceptional court vision and leadership abilities. Known for creating opportunities for teammates while being a scoring threat from anywhere on the court. Two-year varsity starter with a relentless work ethic.",
+    gpa: "",
+    bio: "Dynamic point guard with exceptional court vision and leadership abilities. Known for creating opportunities for teammates while being a scoring threat from anywhere on the court.",
     stats: {
       season: "2024-25",
       gp: 31,
@@ -37,13 +37,10 @@ export const rosterEnhanced = [
       threePct: 34,
       ftPct: 56
     },
-    highlights: [
-      { title: "Season Highlights 2024-25", url: "https://youtube.com/watch?v=example1" },
-      { title: "Tournament MVP Performance", url: "https://youtube.com/watch?v=example2" }
-    ],
+    highlights: [],
     recruiting: {
-      hudl: "https://hudl.com/profile/example",
-      email: "recruit@example.com",
+      hudl: "",
+      email: "CASGEDEON@AOL.COM",
       interests: ["D1", "D2", "D3"],
       status: "Open"
     }
@@ -59,11 +56,11 @@ export const rosterEnhanced = [
     instagram: "ethanranney3",
     // Enhanced fields
     height: "6'0\"",
-    weight: "175",
-    gradYear: 2026,
+    weight: "150",
+    gradYear: 2027,
     school: "Wellington High School",
-    gpa: "3.5",
-    bio: "Versatile shooting guard with a smooth stroke and high basketball IQ. Excels at reading defenses and making the right play. Strong defender who takes pride in shutting down the opponent's best player. Team captain and vocal leader on and off the court.",
+    gpa: "",
+    bio: "Versatile shooting guard with a smooth stroke and high basketball IQ. Excels at reading defenses and making the right play. Strong defender who takes pride in shutting down the opponent's best player.",
     stats: {
       season: "2024-25",
       gp: 31,
@@ -76,14 +73,10 @@ export const rosterEnhanced = [
       threePct: 35,
       ftPct: 50
     },
-    highlights: [
-      { title: "Junior Year Highlights", url: "https://youtube.com/watch?v=example3" },
-      { title: "28-Point Game vs Palm Beach Lakes", url: "https://youtube.com/watch?v=example4" },
-      { title: "Defensive Showcase", url: "https://youtube.com/watch?v=example5" }
-    ],
+    highlights: [],
     recruiting: {
-      hudl: "https://hudl.com/profile/ethan-ranney",
-      email: "ethanranney@example.com",
+      hudl: "",
+      email: "JPKICKER@GMAIL.COM",
       interests: ["D1", "D2"],
       status: "Open"
     }
@@ -97,11 +90,11 @@ export const rosterEnhanced = [
     initial: "NC",
     image: nicholasImage,
     instagram: "iamnickcruz4",
-    height: "5'10\"",
-    weight: "160",
-    gradYear: 2026,
-    school: "Wellington High School",
-    gpa: "3.3",
+    height: "5'7\"",
+    weight: "145",
+    gradYear: 2027,
+    school: "Park Vista High School",
+    gpa: "",
     bio: "Quick and crafty guard who excels at getting to the rim. Fearless competitor with a knack for making big plays in clutch moments.",
     stats: {
       season: "2024-25",
@@ -118,25 +111,25 @@ export const rosterEnhanced = [
     highlights: [],
     recruiting: {
       hudl: "",
-      email: "",
+      email: "CRUZ_RA1@YAHOO.COM",
       interests: ["D2", "D3"],
       status: "Open"
     }
   },
   {
     id: "rj-jean-baptiste",
-    number: 5,
+    number: 0,
     firstName: "RJ",
     lastName: "JEAN-BAPTISTE",
     position: "Guard",
     initial: "RJ",
     image: rjImage,
     instagram: "bxngout.rjj",
-    height: "6'1\"",
-    weight: "170",
-    gradYear: 2026,
+    height: "5'10\"",
+    weight: "145",
+    gradYear: 2027,
     school: "Wellington High School",
-    gpa: "3.2",
+    gpa: "",
     bio: "Athletic combo guard with explosive scoring ability. Can score at all three levels and is developing into a lockdown defender.",
     stats: {
       season: "2024-25",
@@ -153,60 +146,60 @@ export const rosterEnhanced = [
     highlights: [],
     recruiting: {
       hudl: "",
-      email: "",
+      email: "NAMIEJ@HOTMAIL.COM",
       interests: ["D1", "D2"],
       status: "Open"
     }
   },
   {
-    id: "camden-player",
+    id: "max-modric",
     number: 10,
     firstName: "MAX",
-    lastName: "GOLDIE",
-    position: "Forward",
-    initial: "MG",
+    lastName: "MODRIC",
+    position: "Guard",
+    initial: "MM",
     image: maxImage,
-    instagram: "",
-    height: "6'4\"",
-    weight: "195",
-    gradYear: 2026,
+    instagram: "maxmodric10",
+    height: "5'9\"",
+    weight: "150",
+    gradYear: 2027,
     school: "Wellington High School",
-    gpa: "3.6",
-    bio: "Skilled forward with a versatile game. Can stretch the floor with his shooting or attack the basket. Strong rebounder and rim protector.",
+    gpa: "",
+    bio: "Skilled guard with a versatile game. Can stretch the floor with his shooting or attack the basket.",
     stats: {
       season: "2024-25",
       gp: 24,
-      ppg: 1.9,
-      rpg: 2.0,
-      apg: 1.0,
-      spg: 1.0,
+      ppg: 0.0,
+      rpg: 0.0,
+      apg: 0.0,
+      spg: 0.0,
       bpg: 0.0,
-      fgPct: 21,
-      threePct: 14,
-      ftPct: 44
+      fgPct: 0,
+      threePct: 0,
+      ftPct: 0
     },
     highlights: [],
     recruiting: {
       hudl: "",
-      email: "",
+      email: "GAMODRIC@MBIPROJECTMANAGEMENT.COM",
       interests: ["D2", "D3"],
       status: "Open"
     }
   },
   {
-    id: "camden-hutchinson",
+    id: "camden-wesley-kam",
     number: 24,
     firstName: "CAMDEN",
-    lastName: "HUTCHINSON",
+    lastName: "WESLEY-KAM",
     position: "Forward",
-    initial: "CH",
+    initial: "CW",
     image: camdenImage,
-    instagram: "",
-    height: "6'5\"",
-    weight: "200",
-    gradYear: 2026,
+    instagram: "camden.wk",
+    height: "6'3\"",
+    weight: "170",
+    gradYear: 2027,
     school: "Wellington High School",
-    gpa: "3.4",
+    gpa: "",
     bio: "Long and athletic forward with excellent potential. Uses his length to disrupt passing lanes and alter shots. Developing offensive game.",
     stats: {
       season: "2024-25",
@@ -223,7 +216,7 @@ export const rosterEnhanced = [
     highlights: [],
     recruiting: {
       hudl: "",
-      email: "",
+      email: "FALLONKAM@GMAIL.COM",
       interests: ["D2", "D3"],
       status: "Open"
     }

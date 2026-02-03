@@ -14,6 +14,8 @@ export const roster = [
     firstName: "CANAAN",
     lastName: "GEDEON",
     position: "Guard",
+    height: "6'1\"",
+    weight: 165,
     initial: "CG",
     image: canaanImage,
     instagram: "c_gedeon.21"
@@ -23,6 +25,8 @@ export const roster = [
     firstName: "ETHAN",
     lastName: "RANNEY",
     position: "Guard",
+    height: "6'0\"",
+    weight: 150,
     initial: "ER",
     image: ethanImage,
     instagram: "ethanranney3"
@@ -32,6 +36,8 @@ export const roster = [
     firstName: "NICHOLAS",
     lastName: "CRUZ",
     position: "Guard",
+    height: "5'7\"",
+    weight: 145,
     initial: "NC",
     image: nicholasImage,
     instagram: "iamnickcruz4"
@@ -41,6 +47,8 @@ export const roster = [
     firstName: "RJ",
     lastName: "JEAN-BAPTISTE",
     position: "Guard",
+    height: "5'10\"",
+    weight: 145,
     initial: "RJ",
     image: rjImage,
     instagram: "bxngout.rjj"
@@ -50,6 +58,8 @@ export const roster = [
     firstName: "MAX",
     lastName: "MODRIC",
     position: "Guard",
+    height: "5'9\"",
+    weight: 150,
     initial: "MM",
     image: maxImage,
     instagram: "maxmodric10"
@@ -59,6 +69,8 @@ export const roster = [
     firstName: "CAMDEN",
     lastName: "WESLEY-KAM",
     position: "Forward",
+    height: "6'3\"",
+    weight: 170,
     initial: "CW",
     image: camdenImage,
     instagram: "camden.wk"
