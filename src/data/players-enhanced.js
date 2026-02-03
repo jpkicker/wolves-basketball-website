@@ -27,12 +27,15 @@ export const rosterEnhanced = [
     bio: "Dynamic point guard with exceptional court vision and leadership abilities. Known for creating opportunities for teammates while being a scoring threat from anywhere on the court. Two-year varsity starter with a relentless work ethic.",
     stats: {
       season: "2024-25",
-      ppg: 12.5,
-      rpg: 3.2,
-      apg: 5.8,
-      spg: 2.1,
-      fgPct: 44.0,
-      threePct: 36.5
+      gp: 31,
+      ppg: 12.3,
+      rpg: 3.0,
+      apg: 2.5,
+      spg: 0.8,
+      bpg: 0.1,
+      fgPct: 49,
+      threePct: 34,
+      ftPct: 56
     },
     highlights: [
       { title: "Season Highlights 2024-25", url: "https://youtube.com/watch?v=example1" },
@@ -63,12 +66,15 @@ export const rosterEnhanced = [
     bio: "Versatile shooting guard with a smooth stroke and high basketball IQ. Excels at reading defenses and making the right play. Strong defender who takes pride in shutting down the opponent's best player. Team captain and vocal leader on and off the court.",
     stats: {
       season: "2024-25",
-      ppg: 14.2,
-      rpg: 4.1,
-      apg: 3.5,
-      spg: 1.8,
-      fgPct: 46.5,
-      threePct: 39.2
+      gp: 31,
+      ppg: 3.1,
+      rpg: 1.5,
+      apg: 0.7,
+      spg: 0.3,
+      bpg: 0.0,
+      fgPct: 34,
+      threePct: 35,
+      ftPct: 50
     },
     highlights: [
       { title: "Junior Year Highlights", url: "https://youtube.com/watch?v=example3" },
@@ -99,12 +105,15 @@ export const rosterEnhanced = [
     bio: "Quick and crafty guard who excels at getting to the rim. Fearless competitor with a knack for making big plays in clutch moments.",
     stats: {
       season: "2024-25",
-      ppg: 10.8,
-      rpg: 2.5,
-      apg: 4.2,
-      spg: 1.5,
-      fgPct: 42.0,
-      threePct: 34.0
+      gp: 31,
+      ppg: 4.5,
+      rpg: 2.2,
+      apg: 1.9,
+      spg: 1.0,
+      bpg: 0.0,
+      fgPct: 37,
+      threePct: 31,
+      ftPct: 68
     },
     highlights: [],
     recruiting: {
@@ -131,12 +140,15 @@ export const rosterEnhanced = [
     bio: "Athletic combo guard with explosive scoring ability. Can score at all three levels and is developing into a lockdown defender.",
     stats: {
       season: "2024-25",
-      ppg: 11.5,
-      rpg: 3.8,
-      apg: 2.9,
-      spg: 1.2,
-      fgPct: 43.5,
-      threePct: 32.0
+      gp: 31,
+      ppg: 7.8,
+      rpg: 2.5,
+      apg: 3.3,
+      spg: 1.0,
+      bpg: 0.1,
+      fgPct: 37,
+      threePct: 28,
+      ftPct: 67
     },
     highlights: [],
     recruiting: {
@@ -163,12 +175,15 @@ export const rosterEnhanced = [
     bio: "Skilled forward with a versatile game. Can stretch the floor with his shooting or attack the basket. Strong rebounder and rim protector.",
     stats: {
       season: "2024-25",
-      ppg: 9.2,
-      rpg: 6.5,
-      apg: 2.1,
-      spg: 0.8,
-      fgPct: 48.0,
-      threePct: 35.5
+      gp: 24,
+      ppg: 1.9,
+      rpg: 2.0,
+      apg: 1.0,
+      spg: 1.0,
+      bpg: 0.0,
+      fgPct: 21,
+      threePct: 14,
+      ftPct: 44
     },
     highlights: [],
     recruiting: {
@@ -195,12 +210,15 @@ export const rosterEnhanced = [
     bio: "Long and athletic forward with excellent potential. Uses his length to disrupt passing lanes and alter shots. Developing offensive game.",
     stats: {
       season: "2024-25",
-      ppg: 8.5,
+      gp: 31,
+      ppg: 12.9,
       rpg: 7.2,
-      apg: 1.5,
-      spg: 1.0,
-      fgPct: 52.0,
-      threePct: 28.0
+      apg: 0.7,
+      spg: 0.9,
+      bpg: 0.7,
+      fgPct: 58,
+      threePct: 27,
+      ftPct: 51
     },
     highlights: [],
     recruiting: {

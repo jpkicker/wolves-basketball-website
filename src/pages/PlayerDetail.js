@@ -539,22 +539,34 @@ const PlayerDetail = () => {
             <Card $delay="0.4s">
               <SectionTitle>Season Statistics ({player.stats.season})</SectionTitle>
               <StatsGrid>
+                {player.stats.gp && (
+                  <StatBox>
+                    <div className="value">{player.stats.gp}</div>
+                    <div className="label">Games</div>
+                  </StatBox>
+                )}
                 <StatBox>
                   <div className="value">{player.stats.ppg}</div>
-                  <div className="label">Points</div>
+                  <div className="label">PPG</div>
                 </StatBox>
                 <StatBox>
                   <div className="value">{player.stats.rpg}</div>
-                  <div className="label">Rebounds</div>
+                  <div className="label">RPG</div>
                 </StatBox>
                 <StatBox>
                   <div className="value">{player.stats.apg}</div>
-                  <div className="label">Assists</div>
+                  <div className="label">APG</div>
                 </StatBox>
                 <StatBox>
                   <div className="value">{player.stats.spg}</div>
-                  <div className="label">Steals</div>
+                  <div className="label">SPG</div>
                 </StatBox>
+                {player.stats.bpg !== undefined && (
+                  <StatBox>
+                    <div className="value">{player.stats.bpg}</div>
+                    <div className="label">BPG</div>
+                  </StatBox>
+                )}
                 <StatBox>
                   <div className="value">{player.stats.fgPct}%</div>
                   <div className="label">FG%</div>
@@ -563,6 +575,12 @@ const PlayerDetail = () => {
                   <div className="value">{player.stats.threePct}%</div>
                   <div className="label">3PT%</div>
                 </StatBox>
+                {player.stats.ftPct && (
+                  <StatBox>
+                    <div className="value">{player.stats.ftPct}%</div>
+                    <div className="label">FT%</div>
+                  </StatBox>
+                )}
               </StatsGrid>
             </Card>
           )}
