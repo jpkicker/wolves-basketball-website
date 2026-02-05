@@ -286,6 +286,14 @@ const DollarIcon = () => (
   </svg>
 );
 
+const GolfIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="12" cy="18" r="3"/>
+    <path d="M12 2v13"/>
+    <path d="M12 2l8 4-8 4"/>
+  </svg>
+);
+
 const LinkIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -533,6 +541,75 @@ const WolfsDen = () => {
               </CardContent>
             </ResourceCard>
           </ResourceGrid>
+
+          {/* Golf Tournament Section */}
+          <div style={{ marginTop: '2rem' }}>
+            <SectionTitle><span>⛳</span> CHARITY GOLF TOURNAMENT</SectionTitle>
+            <div style={{ 
+              background: 'var(--white)', 
+              borderRadius: '12px', 
+              padding: '2rem', 
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.06)',
+              border: '2px solid var(--gold)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                <IconWrapper $bg="#228B22">
+                  <GolfIcon />
+                </IconWrapper>
+                <div>
+                  <CardTitle style={{ fontSize: '1.5rem' }}>WELLINGTON WOLVES CHARITY GOLF TOURNAMENT</CardTitle>
+                  <CardDescription style={{ marginTop: '0.25rem' }}>One of our largest fundraising opportunities of the season!</CardDescription>
+                </div>
+              </div>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                <div>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>📅 Event Details</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><strong>Date:</strong> Saturday, April 4, 2026</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><strong>Location:</strong> Village Golf Course</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>122 Country Club Drive</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>Royal Palm Beach, FL 33411</p>
+                  
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginTop: '1.5rem', marginBottom: '0.75rem' }}>🕐 Agenda</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• 11:00 AM – 12:00 PM: Golfer Registration</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• 1:00 PM: Shotgun Start</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• 5:00 PM: Food & Awards</p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>💵 Golfer Pricing</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• <strong>$150</strong> per golfer</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• <strong>$600</strong> per foursome</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-500)', margin: '0.5rem 0', fontStyle: 'italic' }}>$70/golfer goes to course (greens fee + drinks).<br/>Remaining balance is profit for the team!</p>
+
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginTop: '1.5rem', marginBottom: '0.75rem' }}>🎁 Raffle Items Needed</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>Each team is asked to donate:</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Three (3) raffle items</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Value range: $50–$150 per item</p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>🏆 How Teams Earn Money</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Registered golfers & foursomes</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Team-secured sponsorships</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Silent auction items (100% goes to team!)</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Raffle and contest proceeds</p>
+
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginTop: '1.5rem', marginBottom: '0.75rem' }}>📞 Questions?</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><strong>Rochelle Glenn</strong></p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><a href="tel:5613735137" style={{ color: 'var(--navy)', textDecoration: 'none' }}>561-373-5137</a></p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-500)', margin: '0.5rem 0', fontStyle: 'italic' }}>Join the Golf Tournament GroupMe for updates!</p>
+                </div>
+              </div>
+
+              <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--gray-100)', borderRadius: '8px' }}>
+                <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-600)', margin: 0 }}>
+                  <strong>🙋 Volunteers Required:</strong> If our team participates, we must provide volunteers for swag bag assembly (2 weeks before), 
+                  registration table, contest holes, raffles & silent auction, and general event support on tournament day.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <Divider />
 
