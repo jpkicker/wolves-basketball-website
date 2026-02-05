@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { tournaments, circuitColors } from '../data/schedule2026';
+import { tournaments, teamEvents, circuitColors } from '../data/schedule2026';
+
+// Combine tournaments and team events
+const allEvents = [...tournaments, ...teamEvents];
 
 const fadeIn = keyframes`
   from {
@@ -407,7 +410,7 @@ const TournamentCalendar = () => {
     }
     
     for (let day = 1; day <= daysInMonth; day++) {
-      const events = getEventsForDay(monthNum, day, tournaments);
+      const events = getEventsForDay(monthNum, day, allEvents);
       cells.push(
         <DayCell key={day} $isCurrentMonth={true}>
           <DayNumber $isCurrentMonth={true}>{day}</DayNumber>

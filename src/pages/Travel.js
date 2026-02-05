@@ -279,10 +279,10 @@ const Travel = () => {
         <HeroContent>
           <PageTagline>2026 Season</PageTagline>
           <PageTitle>
-            TOURNAMENT <span>SCHEDULE</span>
+            EVENTS <span>CALENDAR</span>
           </PageTitle>
           <PageSubtitle>
-            Follow the Wolves as we compete across the country in the Puma NXTpro circuit and beyond.
+            Tournaments, fundraisers, and team events — follow the Wolves all season long.
           </PageSubtitle>
         </HeroContent>
       </HeroSection>

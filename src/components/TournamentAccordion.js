@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { tournaments, circuitColors } from '../data/schedule2026';
+import { tournaments, teamEvents, circuitColors } from '../data/schedule2026';
+
+// Combine tournaments and team events, then sort by date
+const allEvents = [...tournaments, ...teamEvents].sort((a, b) => {
+  const getStartDate = (dateStr) => {
+    const month = parseInt(dateStr.split('/')[0]);
+    const day = parseInt(dateStr.split('/')[1].split(' ')[0]);
+    return month * 100 + day;
+  };
+  return getStartDate(a.date) - getStartDate(b.date);
+});
 import nxtproLogo from 'url:../assets/nxtpro-logo.jpg';
 import hoopseenLogo from 'url:../assets/hoopseen-logo.png';
 import otrLogo from 'url:../assets/otr-logo.png';
@@ -248,7 +258,7 @@ const TournamentAccordion = () => {
 
   return (
     <AccordionContainer>
-      {tournaments.map((tournament, index) => (
+      {allEvents.map((tournament, index) => (
         <AccordionItem key={tournament.id} $index={index}>
           <HeaderWrapper>
             <AccordionHeader

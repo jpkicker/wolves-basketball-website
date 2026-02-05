@@ -186,6 +186,38 @@ export const tournaments = [
   }
 ];
 
+// Team Events (Fundraisers, etc.)
+export const teamEvents = [
+  {
+    id: 101,
+    date: "04/04",
+    name: "Charity Golf Tournament",
+    city: "Royal Palm Beach",
+    state: "FL",
+    circuit: "FUNDRAISER",
+    venue: {
+      name: "Village Golf Course",
+      address: "122 Country Club Drive, Royal Palm Beach, FL 33411"
+    },
+    hotelLink: null,
+    details: "Wellington Wolves Charity Golf Tournament. Golfer Registration: 11AM-12PM, Shotgun Start: 1PM, Food & Awards: 5PM. $150/golfer, $600/foursome. Contact Rochelle Glenn: 561-373-5137."
+  },
+  {
+    id: 102,
+    date: "04/11 - 04/12",
+    name: "Publix Fundraiser",
+    city: "Royal Palm Beach",
+    state: "FL",
+    circuit: "FUNDRAISER",
+    venue: {
+      name: "Publix at The Groves",
+      address: "125 S State Road 7, Royal Palm Beach, FL 33414"
+    },
+    hotelLink: null,
+    details: "Team fundraising event at Publix. Volunteers needed - check Wolf's Den for sign-up details."
+  }
+];
+
 // Circuit logo/badge colors for styling
 export const circuitColors = {
   NXTpro: { bg: "#000000", text: "#FFFFFF", accent: "#E31837" },
@@ -193,5 +225,6 @@ export const circuitColors = {
   OTR: { bg: "#FF6B00", text: "#FFFFFF", accent: "#000000" },
   AAU: { bg: "#003087", text: "#FFFFFF", accent: "#C8102E" },
   USAB: { bg: "#002a5c", text: "#FFFFFF", accent: "#e51b24" },
-  LOCAL: { bg: "#001f3f", text: "#FFFFFF", accent: "#FFD700" }
+  LOCAL: { bg: "#001f3f", text: "#FFFFFF", accent: "#FFD700" },
+  FUNDRAISER: { bg: "#228B22", text: "#FFFFFF", accent: "#FFD700" }
 };
