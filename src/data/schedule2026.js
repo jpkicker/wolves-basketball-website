@@ -55,8 +55,8 @@ export const tournaments = [
       name: "The Mill Works",
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
-    hotelLink: "https://eventconnect.io",
-    details: "Hotel: Courtyard by Marriott Boston Littleton, 102 Constitution Avenue, Littleton, MA 01460. $193/night. Flight: Boston Logan Intl (JetBlue)."
+    hotelLink: "https://app.eventconnect.io/events/40330/hotels?registration=1936835&hotelContractId=270535",
+    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Flight: Boston Logan Intl (JetBlue)."
   },
   {
     id: 5,
