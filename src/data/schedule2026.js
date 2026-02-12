@@ -189,20 +189,6 @@ export const tournaments = [
 // Team Events (Fundraisers, etc.)
 export const teamEvents = [
   {
-    id: 101,
-    date: "04/04",
-    name: "Charity Golf Tournament",
-    city: "Royal Palm Beach",
-    state: "FL",
-    circuit: "FUNDRAISER",
-    venue: {
-      name: "Village Golf Course",
-      address: "122 Country Club Drive, Royal Palm Beach, FL 33411"
-    },
-    hotelLink: null,
-    details: "Wellington Wolves Charity Golf Tournament. Golfer Registration: 11AM-12PM, Shotgun Start: 1PM, Food & Awards: 5PM. $150/golfer, $600/foursome. Contact Rochelle Glenn: 561-373-5137."
-  },
-  {
     id: 102,
     date: "04/11 - 04/12",
     name: "Publix Fundraiser",
