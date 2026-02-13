@@ -140,7 +140,7 @@ export const tournaments = [
       address: "4870 Celebration Pointe Ave, Gainesville, FL 32608"
     },
     hotelLink: "https://app.eventconnect.io/events/40398/hotels?registration=1936838&hotelContractId=291023",
-    details: "Hotel: Hom Hotel & Suites Gainesville, SureStay. $194/night. Matching 15U team hotel."
+    details: "Hotel: Hilton Garden Inn Gainesville. $194/night. Matching 15U team hotel."
   },
   {
     id: 11,
