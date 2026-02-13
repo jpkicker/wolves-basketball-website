@@ -56,7 +56,7 @@ export const tournaments = [
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
     hotelLink: "https://app.eventconnect.io/events/40330/hotels?registration=1936835&hotelContractId=270535",
-    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Flight: Boston Logan Intl (JetBlue). Boys will miss Friday for travel."
+    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen."
   },
   {
     id: 5,
@@ -70,7 +70,7 @@ export const tournaments = [
       address: "2100 Olympic Avenue, Henderson, NV 89014"
     },
     hotelLink: "https://app.eventconnect.io/events/40364/hotels?registration=1936837&hotelContractId=279535",
-    details: "Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. $209/night. Flight: Las Vegas Intl (Spirit via DFW). Boys will likely miss Thursday and Monday for travel."
+    details: "Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. $209/night."
   },
   {
     id: 6,
@@ -112,7 +112,7 @@ export const tournaments = [
       address: "Atlanta, GA Area"
     },
     hotelLink: null,
-    details: "Hotel: Hampton Inn & Suites Johns Creek, 6440 East Johns Crossing, Johns Creek, GA 30097. $124/night. Flight: ATL (Spirit)."
+    details: "Hotel: Hampton Inn & Suites Johns Creek, 6440 East Johns Crossing, Johns Creek, GA 30097. $124/night."
   },
   {
     id: 9,
@@ -154,7 +154,7 @@ export const tournaments = [
       address: "1 All Star Boulevard, Glen Allen, VA 23059"
     },
     hotelLink: "https://app.eventconnect.io/events/40355/hotels?registration=2048943&hotelContractId=280396",
-    details: "Hotel: Fairfield Inn & Suites by Marriott Richmond Ashland, 11625 Lakeridge Parkway, Ashland, VA 23005. $189/night. Flight: ATL then drive (Delta)."
+    details: "Hotel: Fairfield Inn & Suites by Marriott Richmond Ashland, 11625 Lakeridge Parkway, Ashland, VA 23005. $189/night."
   },
   {
     id: 12,
@@ -168,7 +168,7 @@ export const tournaments = [
       address: "Cartersville, GA"
     },
     hotelLink: null,
-    details: "Hotel: TBD. Flight: ATL (Spirit or Delta), ~45 min drive to Cartersville."
+    details: "Hotel: TBD."
   },
   {
     id: 13,
