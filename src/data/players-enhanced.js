@@ -220,7 +220,7 @@ export const rosterEnhanced = [
       interests: ["D2", "D3"],
       status: "Open"
     }
-  }
+  },
   {
     id: "chase-ursini-gardner",
     number: 4,
