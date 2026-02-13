@@ -69,7 +69,7 @@ export const tournaments = [
       name: "Supreme Courtz",
       address: "2100 Olympic Avenue, Henderson, NV 89014"
     },
-    hotelLink: "https://app.eventconnect.io/events/40364/room-contracts/429525/reservations/create?blocking=1&nav=hidden&registration=1936837",
+    hotelLink: "https://app.eventconnect.io/events/40364/memberships?registration=1936837&invite=1",
     details: "Hotel: Book via EventConnect link. Flight: Las Vegas Intl (Spirit via DFW). Boys will likely miss Thursday and Monday for travel."
   },
   {
