@@ -28,7 +28,7 @@ export const tournaments = [
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: null,
-    details: "Hotel: Holiday Inn Express, 2775 Cypress Ridge Road, Wesley Chapel, FL 33544. $189/night."
+    details: "Hotel: Residence Inn by Marriott Tampa Wesley Chapel (next to Wiregrass facility). $229/night. Matching 15U team hotel."
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ export const tournaments = [
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
     hotelLink: "https://app.eventconnect.io/events/40330/hotels?registration=1936835&hotelContractId=270535",
-    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Flight: Boston Logan Intl (JetBlue)."
+    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Flight: Boston Logan Intl (JetBlue). Boys will miss Friday for travel."
   },
   {
     id: 5,
@@ -69,8 +69,8 @@ export const tournaments = [
       name: "Supreme Courtz",
       address: "2100 Olympic Avenue, Henderson, NV 89014"
     },
-    hotelLink: "https://eventconnect.io",
-    details: "Hotel: Hampton Inn & Suites Las Vegas Airport, 6575 S Eastern Ave, Las Vegas, NV 89119. $189/night. Flight: Las Vegas Intl (Spirit via DFW)."
+    hotelLink: "https://app.eventconnect.io/events/40364/room-contracts/429525/reservations/create?blocking=1&nav=hidden&registration=1936837",
+    details: "Hotel: Book via EventConnect link. Flight: Las Vegas Intl (Spirit via DFW). Boys will likely miss Thursday and Monday for travel."
   },
   {
     id: 6,
@@ -97,8 +97,8 @@ export const tournaments = [
       name: "Big House",
       address: "400 E Alfred St, Tavares, FL 32778"
     },
-    hotelLink: "https://eventconnect.io",
-    details: "Hotel: Holiday Inn Express, Tavares, FL. $189/night."
+    hotelLink: "https://app.eventconnect.io/events/41532/hotels?registration=2032431&hotelContractId=290398",
+    details: "Hotel: Hampton Inn Leesburg/Tavares. $180/night. Matching 15U team hotel."
   },
   {
     id: 8,
@@ -140,7 +140,7 @@ export const tournaments = [
       address: "4870 Celebration Pointe Ave, Gainesville, FL 32608"
     },
     hotelLink: "https://eventconnect.io",
-    details: "Hotel: DoubleTree by Hilton Gainesville, 3726 Southwest 40th Boulevard, Gainesville, FL 32608. $149/night."
+    details: "Hotel: Hom Hotel & Suites Gainesville, SureStay. $194/night. Matching 15U team hotel."
   },
   {
     id: 11,
@@ -182,7 +182,7 @@ export const tournaments = [
       address: "9800 International Dr., Orlando, FL 32819"
     },
     hotelLink: "https://eventconnect.io",
-    details: "Hotel: Fairfield Inn & Suites Orlando Int'l Drive/Convention Center, 8214 Universal Boulevard, Orlando, FL 32819. $179/night. Championship event."
+    details: "Hotel: Residence Inn by Marriott Orlando Convention Center. $194/night. Matching 15U team hotel. Championship event."
   }
 ];
 
