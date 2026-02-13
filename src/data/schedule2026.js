@@ -153,7 +153,7 @@ export const tournaments = [
       name: "Henrico Sports & Events Center",
       address: "1 All Star Boulevard, Glen Allen, VA 23059"
     },
-    hotelLink: "https://eventconnect.io",
+    hotelLink: "https://app.eventconnect.io/events/40355/hotels?registration=2048943&hotelContractId=280396",
     details: "Hotel: Fairfield Inn & Suites by Marriott Richmond Ashland, 11625 Lakeridge Parkway, Ashland, VA 23005. $189/night. Flight: ATL then drive (Delta)."
   },
   {
