@@ -47,11 +47,11 @@ export const roster = [
     firstName: "RJ",
     lastName: "JEAN-BAPTISTE",
     position: "Guard",
-    height: "5'10\"",
-    weight: 145,
+    height: "5'11\"",
+    weight: 155,
     initial: "RJ",
     image: rjImage,
-    instagram: "bxngout.rjj"
+    instagram: "rjjdolo"
   },
   {
     number: 10,
@@ -70,7 +70,7 @@ export const roster = [
     lastName: "WESLEY-KAM",
     position: "Forward",
     height: "6'3\"",
-    weight: 170,
+    weight: 180,
     initial: "CW",
     image: camdenImage,
     instagram: "camden.wk"
