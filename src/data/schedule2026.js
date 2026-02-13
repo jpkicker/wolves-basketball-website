@@ -154,7 +154,7 @@ export const tournaments = [
       address: "1 All Star Boulevard, Glen Allen, VA 23059"
     },
     hotelLink: "https://app.eventconnect.io/events/40355/hotels?registration=2048943&hotelContractId=280396",
-    details: "Hotel: Fairfield Inn & Suites by Marriott Richmond Ashland, 11625 Lakeridge Parkway, Ashland, VA 23005. $189/night."
+    details: "Hotel: Embassy Suites by Hilton Richmond. $189/night."
   },
   {
     id: 12,
