@@ -181,7 +181,7 @@ export const tournaments = [
       name: "Orange County Convention Center",
       address: "9800 International Dr., Orlando, FL 32819"
     },
-    hotelLink: "https://eventconnect.io",
+    hotelLink: "https://app.eventconnect.io/events/40336/hotels?registration=1936836&hotelContractId=276438",
     details: "Hotel: Residence Inn by Marriott Orlando Convention Center. $194/night. Matching 15U team hotel. Championship event."
   }
 ];
