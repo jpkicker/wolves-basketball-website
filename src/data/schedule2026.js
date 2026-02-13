@@ -83,7 +83,7 @@ export const tournaments = [
       name: "Wiregrass Ranch Sports Complex",
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
-    hotelLink: "https://eventconnect.io",
+    hotelLink: "https://app.eventconnect.io/events/40411/hotels?registration=1936839&hotelContractId=276801",
     details: "Hotel: Residence Inn by Marriott Tampa Wesley Chapel, 2867 Lajuana Blvd, Wesley Chapel, FL 33543. $180/night."
   },
   {
