@@ -188,7 +188,7 @@ export const rosterEnhanced = [
   },
   {
     id: "camden-wesley-kam",
-    number: 24,
+    number: 11,
     firstName: "CAMDEN",
     lastName: "WESLEY-KAM",
     position: "Forward",
@@ -218,6 +218,111 @@ export const rosterEnhanced = [
       hudl: "",
       email: "FALLONKAM@GMAIL.COM",
       interests: ["D2", "D3"],
+      status: "Open"
+    }
+  }
+  {
+    id: "chase-ursini-gardner",
+    number: 4,
+    firstName: "CHASE",
+    lastName: "URSINI-GARDNER",
+    position: "TBD",
+    initial: "CU",
+    image: null,
+    instagram: null,
+    height: "TBD",
+    weight: "TBD",
+    gradYear: 2027,
+    school: "",
+    gpa: "",
+    bio: "",
+    stats: {
+      season: "2025-26",
+      gp: 0,
+      ppg: 0.0,
+      rpg: 0.0,
+      apg: 0.0,
+      spg: 0.0,
+      bpg: 0.0,
+      fgPct: 0,
+      threePct: 0,
+      ftPct: 0
+    },
+    highlights: [],
+    recruiting: {
+      hudl: "",
+      email: "",
+      interests: [],
+      status: "Open"
+    }
+  },
+  {
+    id: "cristian-brown",
+    number: 5,
+    firstName: "CRISTIAN",
+    lastName: "BROWN",
+    position: "TBD",
+    initial: "CB",
+    image: null,
+    instagram: null,
+    height: "TBD",
+    weight: "TBD",
+    gradYear: 2027,
+    school: "",
+    gpa: "",
+    bio: "",
+    stats: {
+      season: "2025-26",
+      gp: 0,
+      ppg: 0.0,
+      rpg: 0.0,
+      apg: 0.0,
+      spg: 0.0,
+      bpg: 0.0,
+      fgPct: 0,
+      threePct: 0,
+      ftPct: 0
+    },
+    highlights: [],
+    recruiting: {
+      hudl: "",
+      email: "",
+      interests: [],
+      status: "Open"
+    }
+  },
+  {
+    id: "genesis-perozo",
+    number: 23,
+    firstName: "GENESIS",
+    lastName: "PEROZO",
+    position: "TBD",
+    initial: "GP",
+    image: null,
+    instagram: null,
+    height: "TBD",
+    weight: "TBD",
+    gradYear: 2027,
+    school: "",
+    gpa: "",
+    bio: "",
+    stats: {
+      season: "2025-26",
+      gp: 0,
+      ppg: 0.0,
+      rpg: 0.0,
+      apg: 0.0,
+      spg: 0.0,
+      bpg: 0.0,
+      fgPct: 0,
+      threePct: 0,
+      ftPct: 0
+    },
+    highlights: [],
+    recruiting: {
+      hudl: "",
+      email: "",
+      interests: [],
       status: "Open"
     }
   }

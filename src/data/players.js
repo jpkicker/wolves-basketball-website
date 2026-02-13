@@ -76,8 +76,30 @@ export const roster = [
     instagram: "camden.wk"
   },
   {
-    id: "tbd-1",
-    number: "?",
+    number: 4,
+    firstName: "CHASE",
+    lastName: "URSINI-GARDNER",
+    position: "TBD",
+    height: "TBD",
+    weight: null,
+    initial: "CU",
+    image: null,
+    instagram: null
+  },
+  {
+    number: 5,
+    firstName: "CRISTIAN",
+    lastName: "BROWN",
+    position: "TBD",
+    height: "TBD",
+    weight: null,
+    initial: "CB",
+    image: null,
+    instagram: null
+  },
+  {
+    id: "open-6",
+    number: 6,
     firstName: "TBD",
     lastName: "",
     position: "TBD",
@@ -86,32 +108,13 @@ export const roster = [
     instagram: null
   },
   {
-    id: "tbd-2",
-    number: "?",
-    firstName: "TBD",
-    lastName: "",
+    number: 23,
+    firstName: "GENESIS",
+    lastName: "PEROZO",
     position: "TBD",
-    initial: "?",
-    image: null,
-    instagram: null
-  },
-  {
-    id: "tbd-3",
-    number: "?",
-    firstName: "TBD",
-    lastName: "",
-    position: "TBD",
-    initial: "?",
-    image: null,
-    instagram: null
-  },
-  {
-    id: "tbd-4",
-    number: "?",
-    firstName: "TBD",
-    lastName: "",
-    position: "TBD",
-    initial: "?",
+    height: "TBD",
+    weight: null,
+    initial: "GP",
     image: null,
     instagram: null
   }
