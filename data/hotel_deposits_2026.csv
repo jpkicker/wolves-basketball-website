@@ -1,0 +1,9 @@
+Event,Session,Hotel,Reservation #,Rooms,Nights,Nightly Rate,Subtotal,Taxes,Service Fee Paid,Balance Due to Hotel,Date Paid
+"Puma NXT PRO (Boston)",Session 1,"Residence Inn by Marriott Boston Concord",2265290,1,2,$189.00,$378.00,$0.00,$20.00,$358.00,2026-02-13
+"Puma NXT PRO (Boston)",Session 1,"Residence Inn by Marriott Boston Concord",2265291,1,2,$189.00,$378.00,$0.00,$20.00,$358.00,2026-02-13
+"Puma NXT PRO (Tampa)",Session 6,"Fairfield Inn & Suites by Marriott Tampa Wesley Chapel",2265308,1,2,$193.00,$386.00,$0.00,$28.00,$358.00,2026-02-14
+"Puma NXT PRO (Tavares)",Session 7,"Hampton Inn Leesburg/Tavares",2265322,1,2,$180.00,$360.00,$0.00,$30.00,$330.00,2026-02-14
+"Puma NXT PRO (Gainesville)",Session 10,"Hilton Garden Inn Gainesville",2265330,1,2,$193.00,$386.00,$0.00,$28.00,$358.00,2026-02-14
+"Puma NXT PRO LIVE (Richmond)",Session 11,"Embassy Suites by Hilton Richmond",2265332,1,4,$202.00,$808.00,$120.96,$52.00,$876.96,2026-02-14
+"Puma NXT PRO FINALS (Orlando)",Session FINALS,"Residence Inn by Marriott Orlando Convention Center",2265341,1,4,$194.00,$776.00,$92.00,$40.00,$828.00,2026-02-14
+,,,,,,,,TOTAL SERVICE FEES PAID:,$218.00,,
