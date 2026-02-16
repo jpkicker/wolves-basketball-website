@@ -55,8 +55,8 @@ export const tournaments = [
       name: "The Mill Works",
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
-    hotelLink: "https://app.eventconnect.io/events/40330/hotels?registration=1936835&hotelContractId=270535",
-    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Block expires Feb 25. ✈ Recommended Flights: JetBlue #722 PBI→BOS Fri 3/27 6:35 AM–9:39 AM (3h 04m) | JetBlue #721 BOS→PBI Sun 3/29 7:25 PM–10:49 PM (3h 24m) — $216.80/person roundtrip."
+    hotelLink: null,
+    details: "🏨 Hotel: Residence Inn by Marriott Boston Concord. Check-in 3/27, Check-out 3/29 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: JetBlue #722 PBI→BOS Fri 3/27 6:35 AM–9:39 AM (3h 04m) | JetBlue #721 BOS→PBI Sun 3/29 7:25 PM–10:49 PM (3h 24m) — $216.80/person roundtrip."
   },
   {
     id: 5,
@@ -69,8 +69,8 @@ export const tournaments = [
       name: "Supreme Courtz",
       address: "2100 Olympic Avenue, Henderson, NV 89014"
     },
-    hotelLink: "https://app.eventconnect.io/events/40364/hotels?registration=1936837&hotelContractId=279535",
-    details: "Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. $209/night. Block expires Mar 15. ✈ Recommended Flights: Frontier #4551 MIA→LAS Apr 16 arrives 8:42 AM | Frontier #4552 LAS→MIA Apr 19 arrives 11:49 PM — $196.96/person roundtrip (non-refundable)."
+    hotelLink: null,
+    details: "🏨 Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. Check-in 4/16, Check-out 4/19 (3 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: Frontier #4551 MIA→LAS Apr 16 arrives 8:42 AM | Frontier #4552 LAS→MIA Apr 19 arrives 11:49 PM — $196.96/person roundtrip (non-refundable)."
   },
   {
     id: 6,
@@ -83,8 +83,8 @@ export const tournaments = [
       name: "Wiregrass Ranch Sports Complex",
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
-    hotelLink: "https://app.eventconnect.io/events/40411/hotels?registration=1936839&hotelContractId=276801",
-    details: "Hotel: Fairfield Inn & Suites by Marriott Tampa Wesley Chapel. $180/night. Block expires Mar 15."
+    hotelLink: null,
+    details: "🏨 Hotel: Fairfield Inn & Suites by Marriott Tampa Wesley Chapel. Check-in 5/1, Check-out 5/3 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 7,
@@ -97,8 +97,8 @@ export const tournaments = [
       name: "Big House",
       address: "400 E Alfred St, Tavares, FL 32778"
     },
-    hotelLink: "https://app.eventconnect.io/events/41532/hotels?registration=2032431&hotelContractId=290398",
-    details: "Hotel: Hampton Inn Leesburg/Tavares. $180/night. Matching 15U team hotel. Block expires Mar 15."
+    hotelLink: null,
+    details: "🏨 Hotel: Hampton Inn Leesburg/Tavares. Check-in 5/8, Check-out 5/10 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 8,
@@ -139,8 +139,8 @@ export const tournaments = [
       name: "Alachua County Sports & Event Center",
       address: "4870 Celebration Pointe Ave, Gainesville, FL 32608"
     },
-    hotelLink: "https://app.eventconnect.io/events/40398/hotels?registration=1936838&hotelContractId=291023",
-    details: "Hotel: Hilton Garden Inn Gainesville. $194/night. Matching 15U team hotel. Block expires Mar 15."
+    hotelLink: null,
+    details: "🏨 Hotel: Hilton Garden Inn Gainesville. Check-in 7/3, Check-out 7/5 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 11,
@@ -153,8 +153,8 @@ export const tournaments = [
       name: "Henrico Sports & Events Center",
       address: "1 All Star Boulevard, Glen Allen, VA 23059"
     },
-    hotelLink: "https://app.eventconnect.io/events/40355/hotels?registration=2048943&hotelContractId=280396",
-    details: "Hotel: Embassy Suites by Hilton Richmond. $189/night. Block expires Mar 15."
+    hotelLink: null,
+    details: "🏨 Hotel: Embassy Suites by Hilton Richmond. Check-in 7/8, Check-out 7/12 (4 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 12,
@@ -181,8 +181,8 @@ export const tournaments = [
       name: "Orange County Convention Center",
       address: "9800 International Dr., Orlando, FL 32819"
     },
-    hotelLink: "https://app.eventconnect.io/events/40336/hotels?registration=1936836&hotelContractId=276438",
-    details: "Hotel: Residence Inn by Marriott Orlando Convention Center. $194/night. Matching 15U team hotel. Championship event. Block expires Mar 15."
+    hotelLink: null,
+    details: "🏨 Hotel: Residence Inn by Marriott Orlando Convention Center. Check-in 7/23, Check-out 7/27 (4 nights). Championship event. Feel free to book through Expedia, Hotels.com, or any service you prefer."
   }
 ];
 
