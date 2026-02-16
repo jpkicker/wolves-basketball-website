@@ -138,7 +138,7 @@ const ExpandIcon = styled.span`
 `;
 
 const AccordionContent = styled.div`
-  max-height: ${props => props.$isOpen ? '500px' : '0'};
+  max-height: ${props => props.$isOpen ? '700px' : '0'};
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--gray-100);
@@ -241,6 +241,64 @@ const DetailsText = styled.p`
   font-style: italic;
 `;
 
+const FlightCard = styled.div`
+  background: var(--white);
+  border: 1px solid var(--gray-200, #e2e8f0);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-top: 0.25rem;
+`;
+
+const FlightTitle = styled.div`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.75rem;
+`;
+
+const FlightRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+`;
+
+const FlightLeg = styled.div`
+  font-size: 0.85rem;
+  color: var(--navy);
+  line-height: 1.5;
+
+  strong {
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  span {
+    color: var(--gray-500);
+    font-size: 0.8rem;
+  }
+`;
+
+const FlightPrice = styled.div`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: right;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--gray-200, #e2e8f0);
+  margin-top: 0.25rem;
+`;
+
 const HeaderWrapper = styled.div`
   position: relative;
 
@@ -314,6 +372,30 @@ const TournamentAccordion = () => {
                 )}
                 {tournament.details && (
                   <DetailsText>{tournament.details}</DetailsText>
+                )}
+                {tournament.flights && (
+                  <FlightCard>
+                    <FlightTitle>✈ Recommended Flights</FlightTitle>
+                    <FlightRow>
+                      <FlightLeg>
+                        <strong>{tournament.flights.outbound.route}</strong>
+                        <span>{tournament.flights.outbound.airline} {tournament.flights.outbound.flight && `#${tournament.flights.outbound.flight}`}</span><br/>
+                        <span>{tournament.flights.outbound.date} · {tournament.flights.outbound.time}</span>
+                        {tournament.flights.outbound.duration && <span> ({tournament.flights.outbound.duration})</span>}
+                      </FlightLeg>
+                    </FlightRow>
+                    <FlightRow>
+                      <FlightLeg>
+                        <strong>{tournament.flights.return.route}</strong>
+                        <span>{tournament.flights.return.airline} {tournament.flights.return.flight && `#${tournament.flights.return.flight}`}</span><br/>
+                        <span>{tournament.flights.return.date} · {tournament.flights.return.time}</span>
+                        {tournament.flights.return.duration && <span> ({tournament.flights.return.duration})</span>}
+                      </FlightLeg>
+                    </FlightRow>
+                    <FlightPrice>
+                      {tournament.flights.fareType}: {tournament.flights.totalPrice}/person
+                    </FlightPrice>
+                  </FlightCard>
                 )}
               </DetailsSection>
             </ContentInner>

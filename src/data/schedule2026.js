@@ -56,7 +56,27 @@ export const tournaments = [
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
     hotelLink: "https://app.eventconnect.io/events/40330/hotels?registration=1936835&hotelContractId=270535",
-    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Block expires Feb 25."
+    details: "Hotel: Residence Inn by Marriott Boston Concord, $189/night (2-night minimum). Studio Suite, 1 King Bed + Sofa Bed, Full Kitchen. Block expires Feb 25.",
+    flights: {
+      outbound: {
+        airline: "JetBlue Airways",
+        flight: "722",
+        route: "West Palm Beach (PBI) → Boston (BOS)",
+        date: "Friday, March 27, 2026",
+        time: "6:35 AM – 9:39 AM",
+        duration: "3h 04m"
+      },
+      return: {
+        airline: "JetBlue Airways",
+        flight: "721",
+        route: "Boston (BOS) → West Palm Beach (PBI)",
+        date: "Sunday, March 29, 2026",
+        time: "7:25 PM – 10:49 PM",
+        duration: "3h 24m"
+      },
+      totalPrice: "$216.80",
+      fareType: "JetBlue Roundtrip"
+    }
   },
   {
     id: 5,
@@ -70,7 +90,26 @@ export const tournaments = [
       address: "2100 Olympic Avenue, Henderson, NV 89014"
     },
     hotelLink: "https://app.eventconnect.io/events/40364/hotels?registration=1936837&hotelContractId=279535",
-    details: "Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. $209/night. Block expires Mar 15."
+    details: "Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. $209/night. Block expires Mar 15.",
+    flights: {
+      outbound: {
+        airline: "Frontier Airlines",
+        flight: "4551",
+        route: "Miami (MIA) → Las Vegas (LAS)",
+        date: "April 16, 2026",
+        time: "Arrives 8:42 AM"
+      },
+      return: {
+        airline: "Frontier Airlines",
+        flight: "4552",
+        route: "Las Vegas (LAS) → Miami (MIA)",
+        date: "April 19, 2026",
+        time: "Arrives 11:49 PM",
+        price: "$142.98"
+      },
+      totalPrice: "$196.96",
+      fareType: "Frontier Roundtrip (Non-Refundable)"
+    }
   },
   {
     id: 6,
