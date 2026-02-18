@@ -79,7 +79,7 @@ export const roster = [
     number: 4,
     firstName: "CHASE",
     lastName: "URSINI-GARDNER",
-    position: "TBD",
+    position: "Guard",
     height: "TBD",
     weight: null,
     initial: "CU",
@@ -90,32 +90,39 @@ export const roster = [
     number: 5,
     firstName: "CRISTIAN",
     lastName: "BROWN",
-    position: "TBD",
-    height: "TBD",
-    weight: null,
+    position: "Forward",
+    height: "6'0\"",
+    weight: 185,
     initial: "CB",
     image: null,
-    instagram: null
+    instagram: "Cristianbrown18",
+    school: "Joaquin Garcia",
+    grade: "2028"
   },
   {
-    id: "open-6",
     number: 6,
-    firstName: "TBD",
-    lastName: "",
-    position: "TBD",
-    initial: "?",
+    firstName: "JORGE",
+    lastName: "LOPEZ",
+    position: "Center",
+    height: "6'6\"",
+    weight: 207,
+    initial: "JL",
     image: null,
-    instagram: null
+    instagram: "jjorge.llopez",
+    school: "West Boca Raton Community High School",
+    grade: "11th/2027"
   },
   {
     number: 23,
     firstName: "GENESIS",
     lastName: "PEROZO",
-    position: "TBD",
-    height: "TBD",
-    weight: null,
+    position: "Center",
+    height: "6'4\"",
+    weight: 175,
     initial: "GP",
     image: null,
-    instagram: null
+    instagram: null,
+    school: "Park Vista",
+    grade: "2028"
   }
 ];
