@@ -18,7 +18,10 @@ export const roster = [
     weight: 165,
     initial: "CG",
     image: canaanImage,
-    instagram: "c_gedeon.21"
+    instagram: "c_gedeon.21",
+    school: null,
+    grade: null,
+    gpa: null
   },
   {
     number: 3,
@@ -29,7 +32,10 @@ export const roster = [
     weight: 150,
     initial: "ER",
     image: ethanImage,
-    instagram: "ethanranney3"
+    instagram: "ethanranney3",
+    school: null,
+    grade: null,
+    gpa: null
   },
   {
     number: 99,
@@ -40,7 +46,10 @@ export const roster = [
     weight: 145,
     initial: "NC",
     image: nicholasImage,
-    instagram: "iamnickcruz4"
+    instagram: "iamnickcruz4",
+    school: null,
+    grade: null,
+    gpa: null
   },
   {
     number: 0,
@@ -51,7 +60,11 @@ export const roster = [
     weight: 155,
     initial: "RJ",
     image: rjImage,
-    instagram: "rjjdolo"
+    instagram: "rjjdolo",
+    twitter: "RJJeanbaptiste",
+    school: "Wellington Community High School",
+    grade: "11th/2027",
+    gpa: null
   },
   {
     number: 10,
@@ -62,7 +75,10 @@ export const roster = [
     weight: 150,
     initial: "MM",
     image: maxImage,
-    instagram: "maxmodric10"
+    instagram: "maxmodric10",
+    school: null,
+    grade: null,
+    gpa: null
   },
   {
     number: 11,
@@ -73,7 +89,11 @@ export const roster = [
     weight: 180,
     initial: "CW",
     image: camdenImage,
-    instagram: "camden.wk"
+    instagram: "camden.wk",
+    twitter: "CamdenWK",
+    school: "Wellington Community High School",
+    grade: "11th/2027",
+    gpa: 3.5
   },
   {
     number: 4,
@@ -84,7 +104,10 @@ export const roster = [
     weight: null,
     initial: "CU",
     image: null,
-    instagram: null
+    instagram: null,
+    school: null,
+    grade: null,
+    gpa: null
   },
   {
     number: 5,
@@ -97,7 +120,8 @@ export const roster = [
     image: null,
     instagram: "Cristianbrown18",
     school: "Joaquin Garcia",
-    grade: "2028"
+    grade: "2028",
+    gpa: 3.1
   },
   {
     number: 6,
@@ -110,7 +134,8 @@ export const roster = [
     image: null,
     instagram: "jjorge.llopez",
     school: "West Boca Raton Community High School",
-    grade: "11th/2027"
+    grade: "11th/2027",
+    gpa: 2.5
   },
   {
     number: 23,
@@ -123,6 +148,7 @@ export const roster = [
     image: null,
     instagram: null,
     school: "Park Vista",
-    grade: "2028"
+    grade: "2028",
+    gpa: null
   }
 ];
