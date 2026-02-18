@@ -20,7 +20,7 @@ export const roster = [
     image: canaanImage,
     instagram: "c_gedeon.21",
     school: null,
-    grade: null,
+    gradYear: null,
     gpa: null
   },
   {
@@ -34,7 +34,7 @@ export const roster = [
     image: ethanImage,
     instagram: "ethanranney3",
     school: null,
-    grade: null,
+    gradYear: null,
     gpa: null
   },
   {
@@ -48,7 +48,7 @@ export const roster = [
     image: nicholasImage,
     instagram: "iamnickcruz4",
     school: null,
-    grade: null,
+    gradYear: null,
     gpa: null
   },
   {
@@ -63,7 +63,7 @@ export const roster = [
     instagram: "rjjdolo",
     twitter: "RJJeanbaptiste",
     school: "Wellington Community High School",
-    grade: "11th/2027",
+    gradYear: "11th/2027",
     gpa: null
   },
   {
@@ -77,7 +77,7 @@ export const roster = [
     image: maxImage,
     instagram: "maxmodric10",
     school: null,
-    grade: null,
+    gradYear: null,
     gpa: null
   },
   {
@@ -92,7 +92,7 @@ export const roster = [
     instagram: "camden.wk",
     twitter: "CamdenWK",
     school: "Wellington Community High School",
-    grade: "11th/2027",
+    gradYear: "11th/2027",
     gpa: 3.5
   },
   {
@@ -106,7 +106,7 @@ export const roster = [
     image: null,
     instagram: null,
     school: null,
-    grade: null,
+    gradYear: null,
     gpa: null
   },
   {
@@ -120,7 +120,7 @@ export const roster = [
     image: null,
     instagram: "Cristianbrown18",
     school: "Joaquin Garcia",
-    grade: "2028",
+    gradYear: "2028",
     gpa: 3.1
   },
   {
@@ -134,7 +134,7 @@ export const roster = [
     image: null,
     instagram: "jjorge.llopez",
     school: "West Boca Raton Community High School",
-    grade: "11th/2027",
+    gradYear: "11th/2027",
     gpa: 2.5
   },
   {
@@ -148,7 +148,7 @@ export const roster = [
     image: null,
     instagram: null,
     school: "Park Vista",
-    grade: "2028",
+    gradYear: "2028",
     gpa: null
   }
 ];
