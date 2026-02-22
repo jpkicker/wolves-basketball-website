@@ -201,6 +201,20 @@ export const teamEvents = [
     },
     hotelLink: null,
     details: "Team fundraising event at Publix. Volunteers needed - check Wolf's Den for sign-up details."
+  },
+  {
+    id: 103,
+    date: "04/04 - 04/05",
+    name: "Publix Fundraiser",
+    city: "Wellington",
+    state: "FL",
+    circuit: "FUNDRAISER",
+    venue: {
+      name: "Publix at Wellington Woodswalk Plaza",
+      address: "9855 Lake Worth Rd, Wellington, FL 33411" // Assuming 33411 is the correct zip for that area.
+    },
+    hotelLink: null,
+    details: "Team fundraising event at Publix. Volunteers needed - check Wolf's Den for sign-up details."
   }
 ];
 
