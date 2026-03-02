@@ -116,7 +116,7 @@ export const tournaments = [
   },
   {
     id: 9,
-    date: "05/22 - 05/24",
+    date: "05/22 - 05/25",
     name: "OTR Memorial Day Classic",
     city: "Orlando",
     state: "FL",
@@ -126,7 +126,7 @@ export const tournaments = [
       address: "6700 Kingspointe Pkwy, Orlando, FL 32819"
     },
     hotelLink: null,
-    details: "Hotel: Dockside Inn, 7125 Universal Boulevard, Orlando, FL 32819. $200/night."
+    details: "🏨 Hotel: Universal's Stella Nova Resort, Orlando, FL (staying with other Wolves teams). Arrive Friday 5/22, depart Monday 5/25 (3 nights). Possible game on Monday. Rate TBD."
   },
   {
     id: 10,
