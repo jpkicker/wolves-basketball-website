@@ -14,6 +14,7 @@ import Players from './pages/PlayersOptionB';
 import PlayerDetail from './pages/PlayerDetail';
 import Announcements from './pages/Announcements';
 import WolfsDen from './pages/WolfsDen';
+import Upload from './pages/Upload';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -100,6 +101,7 @@ function App() {
           <Route path="/players/:playerId" element={<PlayerDetail />} />
           <Route path="/announcements" element={<Announcements />} />
           <Route path="/wolfs-den" element={<WolfsDen />} />
+          <Route path="/upload" element={<Upload />} />
         </Routes>
       </MainContent>
       <Footer />

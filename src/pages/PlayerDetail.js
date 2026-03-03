@@ -1,11 +1,15 @@
 // OPTION B: Separate Player Detail Page
 // Each player has their own URL: /players/ethan-ranney
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import { FaArrowLeft, FaInstagram, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaInstagram, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt, FaPlay } from 'react-icons/fa';
+import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 import { rosterEnhanced } from '../data/players-enhanced';
+import { db } from '../firebase/config';
+import { getThumbnailUrl } from '../utils/youtube';
+import VideoModal from '../components/VideoModal';
 
 const fadeInUp = keyframes`
   from {
@@ -425,11 +429,183 @@ const NotFound = styled.div`
   }
 `;
 
+const HighlightsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const HighlightCard = styled.div`
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--gold);
+  }
+`;
+
+const VideoThumbnail = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  background: var(--gray-200);
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+const PlayButton = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  svg {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-left: 3px; /* Optical alignment */
+  }
+
+  ${HighlightCard}:hover & {
+    background: var(--gold);
+    
+    svg {
+      color: var(--navy);
+    }
+  }
+`;
+
+const VideoInfo = styled.div`
+  padding: 1.25rem;
+  
+  h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+`;
+
+const NoHighlights = styled.div`
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--gray-500);
+  
+  svg {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  
+  h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-family: 'Barlow', sans-serif;
+  }
+`;
+
+const LoadingSpinner = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  
+  &::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--gray-300);
+    border-top: 3px solid var(--gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+`;
+
 const PlayerDetail = () => {
   const { playerId } = useParams();
   const navigate = useNavigate();
+  const [highlights, setHighlights] = useState([]);
+  const [highlightsLoading, setHighlightsLoading] = useState(true);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   const player = rosterEnhanced.find(p => p.id === playerId);
+
+  // Fetch highlights from Firestore
+  useEffect(() => {
+    const fetchHighlights = async () => {
+      if (!player) return;
+      
+      try {
+        const highlightsQuery = query(
+          collection(db, 'highlights'),
+          where('playerId', '==', playerId),
+          where('approved', '==', true),
+          orderBy('submittedAt', 'desc')
+        );
+        
+        const querySnapshot = await getDocs(highlightsQuery);
+        const highlightsData = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        
+        setHighlights(highlightsData);
+      } catch (error) {
+        console.error('Error fetching highlights:', error);
+        setHighlights([]);
+      } finally {
+        setHighlightsLoading(false);
+      }
+    };
+
+    fetchHighlights();
+  }, [playerId, player]);
 
   const handleShare = () => {
     if (navigator.share) {
@@ -441,6 +617,14 @@ const PlayerDetail = () => {
       navigator.clipboard.writeText(window.location.href);
       alert('Link copied to clipboard!');
     }
+  };
+
+  const handleVideoClick = (video) => {
+    setSelectedVideo(video);
+  };
+
+  const closeVideoModal = () => {
+    setSelectedVideo(null);
   };
 
   if (!player) {
@@ -585,26 +769,43 @@ const PlayerDetail = () => {
             </Card>
           )}
 
-          {player.highlights && player.highlights.length > 0 && (
-            <Card $delay="0.5s">
-              <SectionTitle>
-                <FaVideo /> Highlights
-              </SectionTitle>
-              <HighlightsList>
-                {player.highlights.map((video, index) => (
-                  <HighlightLink
-                    key={index}
-                    href={video.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+          <Card $delay="0.5s">
+            <SectionTitle>
+              <FaVideo /> Highlights
+            </SectionTitle>
+            {highlightsLoading ? (
+              <LoadingSpinner />
+            ) : highlights.length > 0 ? (
+              <HighlightsGrid>
+                {highlights.map((video) => (
+                  <HighlightCard
+                    key={video.id}
+                    onClick={() => handleVideoClick(video)}
                   >
-                    <FaVideo />
-                    {video.title}
-                  </HighlightLink>
+                    <VideoThumbnail>
+                      <img
+                        src={getThumbnailUrl(video.youtubeVideoId)}
+                        alt={video.title}
+                      />
+                      <PlayButton>
+                        <FaPlay />
+                      </PlayButton>
+                    </VideoThumbnail>
+                    <VideoInfo>
+                      <h4>{video.title}</h4>
+                      {video.description && <p>{video.description}</p>}
+                    </VideoInfo>
+                  </HighlightCard>
                 ))}
-              </HighlightsList>
-            </Card>
-          )}
+              </HighlightsGrid>
+            ) : (
+              <NoHighlights>
+                <FaVideo />
+                <h4>No highlights yet</h4>
+                <p>Check back later for video highlights!</p>
+              </NoHighlights>
+            )}
+          </Card>
         </MainContent>
 
         <Sidebar>
@@ -661,6 +862,10 @@ const PlayerDetail = () => {
           </Card>
         </Sidebar>
       </ContentSection>
+      
+      {selectedVideo && (
+        <VideoModal video={selectedVideo} onClose={closeVideoModal} />
+      )}
     </PageContainer>
   );
 };
