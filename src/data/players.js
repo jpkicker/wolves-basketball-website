@@ -1,12 +1,15 @@
 // Player roster data for Wellington Wolves 17u Elite
 // Update this file to change roster information
 
-import canaanImage from 'url:../assets/headshots/canaan-removebg-preview.png';
-import ethanImage from 'url:../assets/headshots/ethan-removebg-preview.png';
-import nicholasImage from 'url:../assets/headshots/nick-removebg-preview.png';
-import rjImage from 'url:../assets/headshots/rj-baptiste-removebg-preview.png';
-import camdenImage from 'url:../assets/headshots/cam-removebg-preview.png';
+import canaanImage from 'url:../assets/headshots/canaan-2026.jpeg';
+import ethanImage from 'url:../assets/headshots/ethan-2026.jpeg';
+import nicholasImage from 'url:../assets/headshots/nick-2026.jpeg';
+import rjImage from 'url:../assets/headshots/rj-2026.jpeg';
+import camdenImage from 'url:../assets/headshots/cam-2026.jpeg';
 import maxImage from 'url:../assets/headshots/max-removebg-preview.png';
+import chaseImage from 'url:../assets/headshots/chase-2026.jpeg';
+import genesisImage from 'url:../assets/headshots/genesis-2026.jpeg';
+import jorgeImage from 'url:../assets/headshots/jorge-2026.jpeg';
 
 export const roster = [
   {
@@ -105,7 +108,7 @@ export const roster = [
     height: "6'1\"",
     weight: 170,
     initial: "CU",
-    image: null,
+    image: chaseImage,
     instagram: "Chase_ug",
     twitter: "ChaseUG_",
     school: "Palm Beach Central",
@@ -134,7 +137,7 @@ export const roster = [
     height: "6'6\"",
     weight: 207,
     initial: "JL",
-    image: null,
+    image: jorgeImage,
     instagram: "jjorge.llopez",
     school: "West Boca Raton Community High School",
     gradYear: "11th/2027",
@@ -148,7 +151,7 @@ export const roster = [
     height: "6'4\"",
     weight: 175,
     initial: "GP",
-    image: null,
+    image: genesisImage,
     instagram: null,
     school: "Park Vista",
     gradYear: "2028",
