@@ -6,7 +6,7 @@ import ethanImage from 'url:../assets/headshots/ethan-2026.jpeg';
 import nicholasImage from 'url:../assets/headshots/nick-2026.jpeg';
 import rjImage from 'url:../assets/headshots/rj-2026.jpeg';
 import camdenImage from 'url:../assets/headshots/cam-2026.jpeg';
-import maxImage from 'url:../assets/headshots/max-removebg-preview.png';
+import maxImage from 'url:../assets/headshots/max-2026.jpeg';
 import chaseImage from 'url:../assets/headshots/chase-2026.jpeg';
 import genesisImage from 'url:../assets/headshots/genesis-2026.jpeg';
 import jorgeImage from 'url:../assets/headshots/jorge-2026.jpeg';
