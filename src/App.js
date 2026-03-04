@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
@@ -11,12 +11,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Travel from './pages/Travel';
 import Players from './pages/PlayersOptionB';
+import PlayerDetail from './pages/PlayerDetail';
 import Announcements from './pages/Announcements';
 import WolfsDen from './pages/WolfsDen';
-
-// Lazy-load Firebase-dependent pages
-const PlayerDetail = lazy(() => import('./pages/PlayerDetail'));
-const Upload = lazy(() => import('./pages/Upload'));
+import Upload from './pages/Upload';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -95,18 +93,16 @@ function App() {
       <GlobalStyle />
       <Navbar />
       <MainContent>
-        <Suspense fallback={<div style={{minHeight:'60vh',display:'flex',alignItems:'center',justifyContent:'center',color:'#ffd700',fontSize:'1.2rem'}}>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/travel" element={<Travel />} />
-            <Route path="/players" element={<Players />} />
-            <Route path="/players/:playerId" element={<PlayerDetail />} />
-            <Route path="/announcements" element={<Announcements />} />
-            <Route path="/wolfs-den" element={<WolfsDen />} />
-            <Route path="/upload" element={<Upload />} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/travel" element={<Travel />} />
+          <Route path="/players" element={<Players />} />
+          <Route path="/players/:playerId" element={<PlayerDetail />} />
+          <Route path="/announcements" element={<Announcements />} />
+          <Route path="/wolfs-den" element={<WolfsDen />} />
+          <Route path="/upload" element={<Upload />} />
+        </Routes>
       </MainContent>
       <Footer />
     </AppContainer>
