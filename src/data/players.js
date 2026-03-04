@@ -116,7 +116,7 @@ export const roster = [
     gpa: null
   },
   {
-    number: 5,
+    number: 8,
     firstName: "CRISTIAN",
     lastName: "BROWN",
     position: "Forward",

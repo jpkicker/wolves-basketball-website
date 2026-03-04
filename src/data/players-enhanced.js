@@ -266,7 +266,7 @@ export const rosterEnhanced = [
   },
   {
     id: "cristian-brown",
-    number: 5,
+    number: 8,
     firstName: "CRISTIAN",
     lastName: "BROWN",
     position: "Forward",
