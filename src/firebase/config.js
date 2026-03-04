@@ -3,12 +3,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDc3Cou936E8E-5azcRUp8l3fwf4ZushjE",
-  authDomain: "wolves-website.firebaseapp.com",
-  projectId: "wolves-website",
-  storageBucket: "wolves-website.firebasestorage.app",
-  messagingSenderId: "43967201205",
-  appId: "1:43967201205:web:ab823da3e07035e44723fc"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
 };
 
 let db = null;
