@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { FaArrowLeft, FaInstagram, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt, FaPlay } from 'react-icons/fa';
-import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 import { rosterEnhanced } from '../data/players-enhanced';
 import { db } from '../firebase/config';
 import { getThumbnailUrl } from '../utils/youtube';
@@ -579,14 +579,16 @@ const PlayerDetail = () => {
   // Fetch highlights from Firestore
   useEffect(() => {
     const fetchHighlights = async () => {
-      if (!player) return;
+      if (!player || !db) {
+        setHighlightsLoading(false);
+        return;
+      }
       
       try {
         const highlightsQuery = query(
           collection(db, 'highlights'),
           where('playerId', '==', playerId),
-          where('approved', '==', true),
-          orderBy('submittedAt', 'desc')
+          where('approved', '==', true)
         );
         
         const querySnapshot = await getDocs(highlightsQuery);
@@ -594,6 +596,13 @@ const PlayerDetail = () => {
           id: doc.id,
           ...doc.data()
         }));
+        
+        // Sort client-side to avoid needing composite index
+        highlightsData.sort((a, b) => {
+          const aTime = a.submittedAt?.seconds || 0;
+          const bTime = b.submittedAt?.seconds || 0;
+          return bTime - aTime;
+        });
         
         setHighlights(highlightsData);
       } catch (error) {
