@@ -4,7 +4,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import { FaArrowLeft, FaInstagram, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt, FaPlay } from 'react-icons/fa';
+import { FaArrowLeft, FaInstagram, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt, FaQrcode, FaPlay } from 'react-icons/fa';
+import { QRCodeSVG } from 'qrcode.react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { rosterEnhanced } from '../data/players-enhanced';
 import { db } from '../firebase/config';
@@ -567,6 +568,62 @@ const LoadingSpinner = styled.div`
   }
 `;
 
+const QROverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+`;
+
+const QRModal = styled.div`
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+`;
+
+const QRTitle = styled.h3`
+  color: #001F3F;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.3rem;
+`;
+
+const QRSubtitle = styled.p`
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0 0 1.25rem 0;
+`;
+
+const QRUrl = styled.p`
+  color: #999;
+  font-size: 0.7rem;
+  word-break: break-all;
+  margin: 1rem 0 0.5rem 0;
+`;
+
+const QRCloseBtn = styled.button`
+  background: #001F3F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  &:hover {
+    background: #003366;
+  }
+`;
+
 const PlayerDetail = () => {
   const { playerId } = useParams();
   const navigate = useNavigate();
@@ -615,6 +672,8 @@ const PlayerDetail = () => {
 
     fetchHighlights();
   }, [playerId, player]);
+
+  const [showQR, setShowQR] = useState(false);
 
   const handleShare = () => {
     if (navigator.share) {
@@ -712,6 +771,9 @@ const PlayerDetail = () => {
                 )}
                 <ActionButton as="button" onClick={handleShare}>
                   <FaShareAlt /> Share Profile
+                </ActionButton>
+                <ActionButton as="button" onClick={() => setShowQR(true)}>
+                  <FaQrcode /> Share QR Code
                 </ActionButton>
               </ActionButtons>
             </HeroInfo>
@@ -874,6 +936,24 @@ const PlayerDetail = () => {
       
       {selectedVideo && (
         <VideoModal video={selectedVideo} onClose={closeVideoModal} />
+      )}
+      {showQR && (
+        <QROverlay onClick={() => setShowQR(false)}>
+          <QRModal onClick={(e) => e.stopPropagation()}>
+            <QRTitle>{player.firstName} {player.lastName}</QRTitle>
+            <QRSubtitle>Scan to view player profile</QRSubtitle>
+            <QRCodeSVG
+              value={window.location.href}
+              size={220}
+              bgColor="#ffffff"
+              fgColor="#001F3F"
+              level="M"
+              includeMargin={true}
+            />
+            <QRUrl>{window.location.href}</QRUrl>
+            <QRCloseBtn onClick={() => setShowQR(false)}>Close</QRCloseBtn>
+          </QRModal>
+        </QROverlay>
       )}
     </PageContainer>
   );
