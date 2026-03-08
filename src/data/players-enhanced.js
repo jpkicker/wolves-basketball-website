@@ -10,6 +10,7 @@ import maxImage from 'url:../assets/headshots/max-2026.png';
 import chaseImage from 'url:../assets/headshots/chase-2026.png';
 import genesisImage from 'url:../assets/headshots/genesis-2026.png';
 import jorgeImage from 'url:../assets/headshots/jorge-2026.png';
+import cristianImage from 'url:../assets/headshots/cristian-2026.png';
 
 export const rosterEnhanced = [
   {
@@ -271,7 +272,7 @@ export const rosterEnhanced = [
     lastName: "BROWN",
     position: "Forward",
     initial: "CB",
-    image: null,
+    image: cristianImage,
     instagram: "Cristianbrown18",
     height: "6'0\"",
     weight: "185",
