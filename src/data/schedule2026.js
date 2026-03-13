@@ -28,7 +28,41 @@ export const tournaments = [
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: null,
-    details: "Hotel: Residence Inn by Marriott Tampa Wesley Chapel (next to Wiregrass facility). $229/night. Matching 15U team hotel."
+    details: "Hotel: Residence Inn by Marriott Tampa Wesley Chapel (next to Wiregrass facility). $229/night. Matching 15U team hotel.",
+    games: [
+      {
+        day: "Sat, Mar 14",
+        time: "12:00 PM EDT",
+        court: "Court 2",
+        opponent: "SCE UA Grind",
+        homeAway: "Home",
+        division: "Boys Varsity Showcase, Pool A"
+      },
+      {
+        day: "Sat, Mar 14",
+        time: "4:40 PM EDT",
+        court: "Court 1",
+        opponent: "SCE UA Rise",
+        homeAway: "Home",
+        division: "Boys Varsity Showcase, Pool A"
+      },
+      {
+        day: "Sun, Mar 15",
+        time: "9:40 AM EDT",
+        court: "Court 1",
+        opponent: "TNT Hoopsquad 2026",
+        homeAway: "Home",
+        division: "Boys Varsity Showcase, Pool A"
+      },
+      {
+        day: "Sun, Mar 15",
+        time: "12:00 PM EDT",
+        court: "Court 1",
+        opponent: "SWFL Hoops",
+        homeAway: "Home",
+        division: "Boys Varsity Showcase, Pool A"
+      }
+    ]
   },
   {
     id: 3,

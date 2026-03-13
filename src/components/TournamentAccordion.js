@@ -138,9 +138,9 @@ const ExpandIcon = styled.span`
 `;
 
 const AccordionContent = styled.div`
-  max-height: ${props => props.$isOpen ? '500px' : '0'};
+  max-height: ${props => props.$isOpen ? '1200px' : '0'};
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--gray-100);
 `;
 
@@ -241,6 +241,90 @@ const DetailsText = styled.p`
   font-style: italic;
 `;
 
+const GamesSection = styled.div`
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+`;
+
+const GamesDayHeader = styled.h4`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 1.25rem 0 0.5rem 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+
+  &:first-child {
+    margin-top: 0;
+  }
+`;
+
+const GameCard = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+`;
+
+const GameTime = styled.span`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--navy);
+  min-width: 110px;
+  white-space: nowrap;
+`;
+
+const GameMatchup = styled.span`
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  flex: 1;
+
+  strong {
+    color: var(--navy);
+  }
+`;
+
+const GameMeta = styled.span`
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  white-space: nowrap;
+`;
+
+const GameCourt = styled.span`
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--gold-dark);
+  background: rgba(201, 169, 80, 0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+`;
+
 const HeaderWrapper = styled.div`
   position: relative;
 
@@ -316,6 +400,37 @@ const TournamentAccordion = () => {
                   <DetailsText>{tournament.details}</DetailsText>
                 )}
               </DetailsSection>
+              {tournament.games && tournament.games.length > 0 && (
+                <GamesSection>
+                  <InfoLabel>Game Schedule</InfoLabel>
+                  {(() => {
+                    const dayGroups = [];
+                    let currentDay = null;
+                    tournament.games.forEach((game, idx) => {
+                      if (game.day !== currentDay) {
+                        currentDay = game.day;
+                        dayGroups.push({ day: game.day, games: [] });
+                      }
+                      dayGroups[dayGroups.length - 1].games.push(game);
+                    });
+                    return dayGroups.map((group, gi) => (
+                      <div key={gi}>
+                        <GamesDayHeader>{group.day}</GamesDayHeader>
+                        {group.games.map((game, idx) => (
+                          <GameCard key={idx}>
+                            <GameTime>{game.time}</GameTime>
+                            <GameMatchup>
+                              <strong>Wolves</strong> vs {game.opponent}
+                            </GameMatchup>
+                            <GameCourt>{game.court}</GameCourt>
+                            <GameMeta>{game.division}</GameMeta>
+                          </GameCard>
+                        ))}
+                      </div>
+                    ));
+                  })()}
+                </GamesSection>
+              )}
             </ContentInner>
           </AccordionContent>
         </AccordionItem>
