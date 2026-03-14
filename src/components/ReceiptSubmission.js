@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { collection, addDoc, getDocs, orderBy, query } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { db, storage } from '../firebase/config';
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  'https://smamtkqlkuqkztorjemr.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtYW10a3Fsa3Vxa3p0b3JqZW1yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNTc1NDksImV4cCI6MjA4MjkzMzU0OX0.DTl9x0qzm8bmCJgINfVtUv8Sv4Kpr5fgf6fC_lsdWh0'
+);
 
 const fadeInUp = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -142,7 +145,6 @@ const StatusMsg = styled.div`
   border: 1px solid ${props => props.$error ? '#f5c6cb' : '#b8dfc5'};
 `;
 
-// Receipt log styles
 const LogTitle = styled.h3`
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.4rem;
@@ -231,7 +233,6 @@ const TotalBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0 0 10px 10px;
 `;
 
 const TotalLabel = styled.span`
@@ -268,16 +269,13 @@ const ReceiptSubmission = () => {
   const [loadingReceipts, setLoadingReceipts] = useState(true);
 
   const loadReceipts = async () => {
-    if (!db) return;
-    try {
-      const q = query(collection(db, 'receipts'), orderBy('submittedAt', 'desc'));
-      const snap = await getDocs(q);
-      setReceipts(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-    } catch (e) {
-      console.error('Error loading receipts:', e);
-    } finally {
-      setLoadingReceipts(false);
-    }
+    const { data, error } = await supabase
+      .from('wolf_receipts')
+      .select('*')
+      .order('submitted_at', { ascending: false });
+
+    if (!error) setReceipts(data || []);
+    setLoadingReceipts(false);
   };
 
   useEffect(() => {
@@ -308,21 +306,32 @@ const ReceiptSubmission = () => {
     setStatus(null);
 
     try {
-      // Upload image to Firebase Storage
-      const fileName = `receipts/${Date.now()}_${file.name}`;
-      const storageRef = ref(storage, fileName);
-      await uploadBytes(storageRef, file);
-      const imageUrl = await getDownloadURL(storageRef);
+      // Upload to Supabase Storage
+      const ext = file.name.split('.').pop();
+      const filePath = `receipts/${Date.now()}.${ext}`;
+      const { error: uploadError } = await supabase.storage
+        .from('wolves')
+        .upload(filePath, file, { upsert: false });
 
-      // Save record to Firestore
-      await addDoc(collection(db, 'receipts'), {
-        eventName: form.eventName,
-        vendorName: form.vendorName,
-        amount: parseFloat(form.amount),
-        imageUrl,
-        fileName: file.name,
-        submittedAt: new Date().toISOString(),
-      });
+      if (uploadError) throw uploadError;
+
+      const { data: urlData } = supabase.storage
+        .from('wolves')
+        .getPublicUrl(filePath);
+
+      // Save record to DB
+      const { error: dbError } = await supabase
+        .from('wolf_receipts')
+        .insert({
+          event_name: form.eventName,
+          vendor_name: form.vendorName,
+          amount: parseFloat(form.amount),
+          image_url: urlData.publicUrl,
+          file_name: file.name,
+          submitted_at: new Date().toISOString(),
+        });
+
+      if (dbError) throw dbError;
 
       setStatus({ error: false, msg: `✅ Receipt submitted! $${parseFloat(form.amount).toFixed(2)} from ${form.vendorName} logged.` });
       setForm({ eventName: '', vendorName: '', amount: '' });
@@ -330,7 +339,7 @@ const ReceiptSubmission = () => {
       loadReceipts();
     } catch (err) {
       console.error(err);
-      setStatus({ error: true, msg: 'Something went wrong. Please try again.' });
+      setStatus({ error: true, msg: `Error: ${err.message || 'Something went wrong. Please try again.'}` });
     } finally {
       setSubmitting(false);
     }
@@ -406,7 +415,6 @@ const ReceiptSubmission = () => {
         {status && <StatusMsg $error={status.error}>{status.msg}</StatusMsg>}
       </Card>
 
-      {/* Receipt Log */}
       <LogTitle>Submitted Receipts</LogTitle>
       {loadingReceipts ? (
         <EmptyState>Loading receipts...</EmptyState>
@@ -423,12 +431,12 @@ const ReceiptSubmission = () => {
           </TableHeader>
           {receipts.map((r, i) => (
             <TableRow key={r.id} $alt={i % 2 === 1}>
-              <TableCell>{r.eventName}</TableCell>
-              <TableCell>{r.vendorName}</TableCell>
-              <TableCell>{formatDate(r.submittedAt)}</TableCell>
+              <TableCell>{r.event_name}</TableCell>
+              <TableCell>{r.vendor_name}</TableCell>
+              <TableCell>{formatDate(r.submitted_at)}</TableCell>
               <AmountCell>${parseFloat(r.amount).toFixed(2)}</AmountCell>
               <TableCell>
-                <ViewLink href={r.imageUrl} target="_blank" rel="noopener noreferrer">View</ViewLink>
+                <ViewLink href={r.image_url} target="_blank" rel="noopener noreferrer">View</ViewLink>
               </TableCell>
             </TableRow>
           ))}
