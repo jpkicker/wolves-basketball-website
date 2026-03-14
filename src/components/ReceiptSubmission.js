@@ -78,6 +78,25 @@ const Input = styled.input`
   }
 `;
 
+const Select = styled.select`
+  padding: 0.75rem 1rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  cursor: pointer;
+  appearance: auto;
+
+  &:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+`;
+
 const UploadArea = styled.label`
   display: flex;
   flex-direction: column;
@@ -161,12 +180,12 @@ const ReceiptTable = styled.div`
 
 const TableHeader = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr 0.8fr 0.8fr;
+  grid-template-columns: 1.2fr 1.4fr 1.2fr 1fr 0.8fr 0.7fr;
   background: var(--navy);
   padding: 0.75rem 1rem;
   gap: 0.5rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     display: none;
   }
 `;
@@ -182,14 +201,14 @@ const TableHeaderCell = styled.div`
 
 const TableRow = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr 0.8fr 0.8fr;
+  grid-template-columns: 1.2fr 1.4fr 1.2fr 1fr 0.8fr 0.7fr;
   padding: 0.9rem 1rem;
   gap: 0.5rem;
   background: ${props => props.$alt ? 'var(--gray-100)' : 'var(--white)'};
   border-bottom: 1px solid var(--gray-200);
   align-items: center;
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;
     gap: 0.25rem;
   }
@@ -261,7 +280,7 @@ const EmptyState = styled.div`
 `;
 
 const ReceiptSubmission = () => {
-  const [form, setForm] = useState({ eventName: '', vendorName: '', amount: '' });
+  const [form, setForm] = useState({ submittedBy: '', eventName: '', vendorName: '', amount: '', expenseType: '' });
   const [file, setFile] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState(null);
@@ -293,7 +312,7 @@ const ReceiptSubmission = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.eventName || !form.vendorName || !form.amount) {
+    if (!form.submittedBy || !form.eventName || !form.vendorName || !form.amount) {
       setStatus({ error: true, msg: 'Please fill in all fields.' });
       return;
     }
@@ -323,8 +342,10 @@ const ReceiptSubmission = () => {
       const { error: dbError } = await supabase
         .from('wolf_receipts')
         .insert({
+          submitted_by: form.submittedBy,
           event_name: form.eventName,
           vendor_name: form.vendorName,
+          expense_type: form.expenseType,
           amount: parseFloat(form.amount),
           image_url: urlData.publicUrl,
           file_name: file.name,
@@ -334,7 +355,7 @@ const ReceiptSubmission = () => {
       if (dbError) throw dbError;
 
       setStatus({ error: false, msg: `✅ Receipt submitted! $${parseFloat(form.amount).toFixed(2)} from ${form.vendorName} logged.` });
-      setForm({ eventName: '', vendorName: '', amount: '' });
+      setForm({ submittedBy: '', eventName: '', vendorName: '', amount: '', expenseType: '' });
       setFile(null);
       loadReceipts();
     } catch (err) {
@@ -360,6 +381,43 @@ const ReceiptSubmission = () => {
       <Card>
         <form onSubmit={handleSubmit}>
           <FormGrid>
+            <FieldGroup>
+              <Label htmlFor="submittedBy">Your Name</Label>
+              <Select
+                id="submittedBy"
+                name="submittedBy"
+                value={form.submittedBy}
+                onChange={handleChange}
+              >
+                <option value="">— Select your name —</option>
+                <option value="Elijah Balcarcel">Elijah Balcarcel</option>
+                <option value="Julio Balcarcel">Julio Balcarcel</option>
+                <option value="Emma Snelgrove">Emma Snelgrove</option>
+                <option value="Jason Ranney">Jason Ranney</option>
+              </Select>
+            </FieldGroup>
+
+            <FieldGroup>
+              <Label htmlFor="expenseType">Expense Type</Label>
+              <Input
+                id="expenseType"
+                name="expenseType"
+                type="text"
+                list="expenseTypes"
+                placeholder="Food, Lodging, Transportation..."
+                value={form.expenseType}
+                onChange={handleChange}
+              />
+              <datalist id="expenseTypes">
+                <option value="Food" />
+                <option value="Lodging" />
+                <option value="Transportation" />
+                <option value="Supplies" />
+                <option value="Entry Fee" />
+                <option value="Equipment" />
+              </datalist>
+            </FieldGroup>
+
             <FieldGroup>
               <Label htmlFor="eventName">Event Name</Label>
               <Input
@@ -423,17 +481,19 @@ const ReceiptSubmission = () => {
       ) : (
         <ReceiptTable>
           <TableHeader>
+            <TableHeaderCell>Name</TableHeaderCell>
             <TableHeaderCell>Event</TableHeaderCell>
             <TableHeaderCell>Vendor</TableHeaderCell>
-            <TableHeaderCell>Date</TableHeaderCell>
+            <TableHeaderCell>Type</TableHeaderCell>
             <TableHeaderCell>Amount</TableHeaderCell>
             <TableHeaderCell>Receipt</TableHeaderCell>
           </TableHeader>
           {receipts.map((r, i) => (
             <TableRow key={r.id} $alt={i % 2 === 1}>
+              <TableCell>{r.submitted_by}</TableCell>
               <TableCell>{r.event_name}</TableCell>
               <TableCell>{r.vendor_name}</TableCell>
-              <TableCell>{formatDate(r.submitted_at)}</TableCell>
+              <TableCell>{r.expense_type || '—'}</TableCell>
               <AmountCell>${parseFloat(r.amount).toFixed(2)}</AmountCell>
               <TableCell>
                 <ViewLink href={r.image_url} target="_blank" rel="noopener noreferrer">View</ViewLink>
