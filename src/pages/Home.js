@@ -475,20 +475,20 @@ const Home = () => {
       <StatsBar>
         <StatsContent>
           <StatItem>
+            <StatNumber>4-1</StatNumber>
+            <StatLabel>Season Record</StatLabel>
+          </StatItem>
+          <StatItem>
+            <StatNumber>0</StatNumber>
+            <StatLabel>Puma Ranking</StatLabel>
+          </StatItem>
+          <StatItem>
             <StatNumber>17U</StatNumber>
             <StatLabel>Age Division</StatLabel>
           </StatItem>
           <StatItem>
-            <StatNumber>13</StatNumber>
-            <StatLabel>Tournaments</StatLabel>
-          </StatItem>
-          <StatItem>
             <StatNumber>10</StatNumber>
             <StatLabel>Players</StatLabel>
-          </StatItem>
-          <StatItem>
-            <StatNumber>2026</StatNumber>
-            <StatLabel>Season</StatLabel>
           </StatItem>
         </StatsContent>
       </StatsBar>
