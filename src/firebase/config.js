@@ -1,6 +1,7 @@
 // Firebase configuration for Wellington Wolves website
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -12,12 +13,14 @@ const firebaseConfig = {
 };
 
 let db = null;
+let storage = null;
 
 try {
   const app = initializeApp(firebaseConfig);
   db = getFirestore(app);
+  storage = getStorage(app);
 } catch (error) {
   console.error('Firebase initialization error:', error);
 }
 
-export { db };
+export { db, storage };

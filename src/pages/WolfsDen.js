@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+import ReceiptSubmission from '../components/ReceiptSubmission';
 
 // Password for the Wolf's Den (simple client-side protection)
 const PACK_PASSWORD = 'wolves2026';
@@ -667,6 +668,11 @@ const WolfsDen = () => {
               </CardContent>
             </ResourceCard>
           </ResourceGrid>
+
+          <Divider />
+
+          {/* Receipt Submission Section */}
+          <ReceiptSubmission />
 
           <Divider />
 
