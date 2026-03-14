@@ -180,7 +180,7 @@ const ReceiptTable = styled.div`
 
 const TableHeader = styled.div`
   display: grid;
-  grid-template-columns: 1.2fr 1.4fr 1.2fr 1fr 0.8fr 0.7fr;
+  grid-template-columns: 1.1fr 1.3fr 1.1fr 0.9fr 1.5fr 0.8fr 0.6fr;
   background: var(--navy);
   padding: 0.75rem 1rem;
   gap: 0.5rem;
@@ -201,7 +201,7 @@ const TableHeaderCell = styled.div`
 
 const TableRow = styled.div`
   display: grid;
-  grid-template-columns: 1.2fr 1.4fr 1.2fr 1fr 0.8fr 0.7fr;
+  grid-template-columns: 1.1fr 1.3fr 1.1fr 0.9fr 1.5fr 0.8fr 0.6fr;
   padding: 0.9rem 1rem;
   gap: 0.5rem;
   background: ${props => props.$alt ? 'var(--gray-100)' : 'var(--white)'};
@@ -370,7 +370,15 @@ const ReceiptSubmission = () => {
 
   const formatDate = (iso) => {
     try {
-      return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      return new Date(iso).toLocaleString('en-US', {
+        timeZone: 'America/New_York',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+      }) + ' ET';
     } catch { return '—'; }
   };
 
@@ -485,6 +493,7 @@ const ReceiptSubmission = () => {
             <TableHeaderCell>Event</TableHeaderCell>
             <TableHeaderCell>Vendor</TableHeaderCell>
             <TableHeaderCell>Type</TableHeaderCell>
+            <TableHeaderCell>Submitted (ET)</TableHeaderCell>
             <TableHeaderCell>Amount</TableHeaderCell>
             <TableHeaderCell>Receipt</TableHeaderCell>
           </TableHeader>
@@ -494,6 +503,7 @@ const ReceiptSubmission = () => {
               <TableCell>{r.event_name}</TableCell>
               <TableCell>{r.vendor_name}</TableCell>
               <TableCell>{r.expense_type || '—'}</TableCell>
+              <TableCell>{formatDate(r.submitted_at)}</TableCell>
               <AmountCell>${parseFloat(r.amount).toFixed(2)}</AmountCell>
               <TableCell>
                 <ViewLink href={r.image_url} target="_blank" rel="noopener noreferrer">View</ViewLink>
