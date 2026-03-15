@@ -475,7 +475,7 @@ const Home = () => {
       <StatsBar>
         <StatsContent>
           <StatItem>
-            <StatNumber>4-2</StatNumber>
+            <StatNumber>4-3</StatNumber>
             <StatLabel>Season Record</StatLabel>
           </StatItem>
           <StatItem>
