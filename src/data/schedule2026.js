@@ -76,7 +76,7 @@ export const tournaments = [
       address: "400 E Alfred St, Tavares, FL 32778"
     },
     hotelLink: null,
-    details: "Hotel: Holiday Inn Express, Tavares, FL. $189/night."
+    details: "🏨 Hotel: Hampton Inn & Suites Orlando-North/Altamonte Springs, 161 Douglas Avenue, Altamonte Springs, FL 32714. Check-in 3/20, Check-out 3/22 (2 nights)."
   },
   {
     id: 4,
