@@ -563,24 +563,51 @@ const WolfsDen = () => {
                 </div>
               </div>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                 <div>
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>📋 How It Works</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>1.</strong> Upload your highlight clip to YouTube (regular video or YouTube Short)</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>2.</strong> Copy the YouTube link</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>3.</strong> Go to the <a href="/upload" style={{ color: 'var(--navy)', fontWeight: '600', textDecoration: 'underline' }}>Upload Highlights</a> page</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>4.</strong> Enter the team password</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>5.</strong> Select your name from the roster</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>6.</strong> Paste your YouTube link and hit upload</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>Your video will appear on your player profile page!</p>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>STEP 1: UPLOAD YOUR VIDEO TO YOUTUBE</h4>
+                  <div style={{ background: 'var(--gray-100)', borderRadius: '8px', padding: '1.25rem', marginBottom: '0.5rem' }}>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>From your phone:</strong></p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>1. Open the <strong>YouTube app</strong> (download it free from the App Store or Google Play if you don't have it)</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>2. Sign in with your Google account (or create one — it's free)</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>3. Tap the <strong>+</strong> button at the bottom of the screen</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>4. Choose <strong>"Upload a video"</strong> (for full clips) or <strong>"Create a Short"</strong> (for clips under 60 seconds)</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>5. Select the highlight video from your camera roll</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>6. Give it a title (e.g., "Ethan Ranney — Game Winner vs Miami Elite")</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>7. Set visibility to <strong>"Public"</strong> or <strong>"Unlisted"</strong> (either works)</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>8. Tap <strong>"Upload"</strong> and wait for it to finish processing</p>
+                  </div>
                 </div>
 
                 <div>
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>💡 Tips</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• <strong>YouTube Shorts</strong> and full-length videos both work</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• Give your clip a clear title (e.g., "Game Winner vs Miami Elite")</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• Upload your best plays — quality over quantity</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• Coaches and recruiters check these profiles!</p>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>STEP 2: COPY YOUR YOUTUBE LINK</h4>
+                  <div style={{ background: 'var(--gray-100)', borderRadius: '8px', padding: '1.25rem', marginBottom: '0.5rem' }}>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>1. Go to your uploaded video on YouTube</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>2. Tap the <strong>"Share"</strong> button (arrow icon below the video)</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>3. Tap <strong>"Copy link"</strong></p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-500)', margin: '0.5rem 0', paddingLeft: '1rem', fontStyle: 'italic' }}>The link will look like: youtube.com/watch?v=... or youtu.be/... — either format works!</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>STEP 3: ADD IT TO YOUR WOLVES PROFILE</h4>
+                  <div style={{ background: 'var(--gray-100)', borderRadius: '8px', padding: '1.25rem', marginBottom: '0.5rem' }}>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>1. Go to the <a href="/upload" style={{ color: 'var(--navy)', fontWeight: '700', textDecoration: 'underline' }}>Upload Highlights</a> page on this website</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>2. Enter the team password</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>3. <strong>Select your name</strong> from the roster dropdown</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>4. Give your highlight a title</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>5. <strong>Paste the YouTube link</strong> you copied in Step 2</p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0', paddingLeft: '1rem' }}>6. Hit <strong>"Upload Highlight"</strong></p>
+                    <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--green-dark, #155724)', margin: '0.75rem 0', paddingLeft: '1rem', fontWeight: '600' }}>✅ That's it! Your video will show up on your player profile page for coaches and recruiters to see.</p>
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(255, 215, 0, 0.1)', borderRadius: '8px', padding: '1.25rem', border: '1px solid var(--gold)' }}>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.5rem' }}>💡 PRO TIPS</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.4rem 0' }}>• <strong>YouTube Shorts</strong> (under 60 sec) and full-length videos both work</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.4rem 0' }}>• Upload your <strong>best plays</strong> — quality over quantity</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.4rem 0' }}>• Include your name in the YouTube video title so it's easy to find</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.4rem 0' }}>• <strong>Coaches and college recruiters check these profiles!</strong> Make it count 🏀</p>
                 </div>
               </div>
 
