@@ -543,9 +543,9 @@ const WolfsDen = () => {
             </ResourceCard>
           </ResourceGrid>
 
-          {/* Golf Tournament Section */}
+          {/* Player Highlights Upload Section */}
           <div style={{ marginTop: '2rem' }}>
-            <SectionTitle><span>⛳</span> CHARITY GOLF TOURNAMENT</SectionTitle>
+            <SectionTitle><span>🎬</span> UPLOAD YOUR HIGHLIGHTS</SectionTitle>
             <div style={{ 
               background: 'var(--white)', 
               borderRadius: '12px', 
@@ -554,60 +554,54 @@ const WolfsDen = () => {
               border: '2px solid var(--gold)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                <IconWrapper $bg="#228B22">
-                  <GolfIcon />
+                <IconWrapper $bg="var(--navy)">
+                  <LinkIcon />
                 </IconWrapper>
                 <div>
-                  <CardTitle style={{ fontSize: '1.5rem' }}>WELLINGTON WOLVES CHARITY GOLF TOURNAMENT</CardTitle>
-                  <CardDescription style={{ marginTop: '0.25rem' }}>One of our largest fundraising opportunities of the season!</CardDescription>
+                  <CardTitle style={{ fontSize: '1.5rem' }}>ADD HIGHLIGHTS TO YOUR PLAYER PROFILE</CardTitle>
+                  <CardDescription style={{ marginTop: '0.25rem' }}>Show coaches and recruiters what you can do — upload your best clips!</CardDescription>
                 </div>
               </div>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                 <div>
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>📅 Event Details</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><strong>Date:</strong> Saturday, April 4, 2026</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><strong>Location:</strong> Village Golf Course</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>122 Country Club Drive</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>Royal Palm Beach, FL 33411</p>
-                  
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginTop: '1.5rem', marginBottom: '0.75rem' }}>🕐 Agenda</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• 11:00 AM – 12:00 PM: Golfer Registration</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• 1:00 PM: Shotgun Start</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• 5:00 PM: Food & Awards</p>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>📋 How It Works</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>1.</strong> Upload your highlight clip to YouTube (regular video or YouTube Short)</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>2.</strong> Copy the YouTube link</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>3.</strong> Go to the <a href="/upload" style={{ color: 'var(--navy)', fontWeight: '600', textDecoration: 'underline' }}>Upload Highlights</a> page</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>4.</strong> Enter the team password</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>5.</strong> Select your name from the roster</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}><strong>6.</strong> Paste your YouTube link and hit upload</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>Your video will appear on your player profile page!</p>
                 </div>
 
                 <div>
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>💵 Golfer Pricing</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• <strong>$150</strong> per golfer</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• <strong>$600</strong> per foursome</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-500)', margin: '0.5rem 0', fontStyle: 'italic' }}>$70/golfer goes to course (greens fee + drinks).<br/>Remaining balance is profit for the team!</p>
-
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginTop: '1.5rem', marginBottom: '0.75rem' }}>🎁 Raffle Items Needed</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>Each team is asked to donate:</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Three (3) raffle items</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Value range: $50–$150 per item</p>
-                </div>
-
-                <div>
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>🏆 How Teams Earn Money</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Registered golfers & foursomes</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Team-secured sponsorships</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Silent auction items (100% goes to team!)</p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}>• Raffle and contest proceeds</p>
-
-                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginTop: '1.5rem', marginBottom: '0.75rem' }}>📞 Questions?</h4>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><strong>Rochelle Glenn</strong></p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.25rem 0' }}><a href="tel:5613735137" style={{ color: 'var(--navy)', textDecoration: 'none' }}>561-373-5137</a></p>
-                  <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-500)', margin: '0.5rem 0', fontStyle: 'italic' }}>Join the Golf Tournament GroupMe for updates!</p>
+                  <h4 style={{ fontFamily: 'Bebas Neue', fontSize: '1.1rem', color: 'var(--gold-dark)', letterSpacing: '1px', marginBottom: '0.75rem' }}>💡 Tips</h4>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• <strong>YouTube Shorts</strong> and full-length videos both work</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• Give your clip a clear title (e.g., "Game Winner vs Miami Elite")</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• Upload your best plays — quality over quantity</p>
+                  <p style={{ fontFamily: 'Barlow', fontSize: '0.95rem', color: 'var(--gray-700)', margin: '0.5rem 0' }}>• Coaches and recruiters check these profiles!</p>
                 </div>
               </div>
 
-              <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--gray-100)', borderRadius: '8px' }}>
-                <p style={{ fontFamily: 'Barlow', fontSize: '0.9rem', color: 'var(--gray-600)', margin: 0 }}>
-                  <strong>🙋 Volunteers Required:</strong> If our team participates, we must provide volunteers for swag bag assembly (2 weeks before), 
-                  registration table, contest holes, raffles & silent auction, and general event support on tournament day.
-                </p>
+              <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+                <a 
+                  href="/upload" 
+                  style={{ 
+                    display: 'inline-block',
+                    background: 'var(--navy)', 
+                    color: 'var(--gold)', 
+                    padding: '1rem 2.5rem', 
+                    borderRadius: '8px', 
+                    fontFamily: 'Bebas Neue', 
+                    fontSize: '1.25rem', 
+                    letterSpacing: '2px', 
+                    textDecoration: 'none',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  🎥 UPLOAD YOUR HIGHLIGHTS
+                </a>
               </div>
             </div>
           </div>
