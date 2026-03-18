@@ -137,16 +137,16 @@ export const tournaments = [
   {
     id: 8,
     date: "05/15 - 05/17",
-    name: "Sweet 16 in ATL (OTR LIVE)",
-    city: "Johns Creek",
+    name: "HoopSeen Atlanta Jam (LIVE)",
+    city: "Suwanee",
     state: "GA",
-    circuit: "OTR",
+    circuit: "HOOPSEEN",
     venue: {
-      name: "TBD",
-      address: "Atlanta, GA Area"
+      name: "Suwanee Sports Academy",
+      address: "3640 Burnette Rd, Suwanee, GA 30024"
     },
-    hotelLink: null,
-    details: "Hotel: Hampton Inn & Suites Johns Creek, 6440 East Johns Crossing, Johns Creek, GA 30097. $124/night."
+    hotelLink: "https://travel.exposureevents.com/search/?city=3640+Burnette+Rd+Suwanee+Georgia+30024&checkin=5/14/2026&checkout=5/17/2026&kw=teamid---eventid-264061",
+    details: "NCAA Live Period event — premier independent travel basketball event in the Southeast. Showcase format, 4 games. Mandatory Stay-To-Play: book hotels through GroupHousing (see hotel link). Contact: Reggie McGee, 470.266.8862, rmcgee@hoopseen.com. Register at hoopseen.com."
   },
   {
     id: 9,
