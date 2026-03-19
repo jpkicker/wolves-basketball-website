@@ -30,6 +30,18 @@ export const rosterEnhanced = [
     gpa: "",
     bio: "Dynamic point guard with exceptional court vision and leadership abilities. Known for creating opportunities for teammates while being a scoring threat from anywhere on the court.",
     stats: {
+      season: "Spring 2026",
+      gp: 8,
+      ppg: 8.4,
+      rpg: 3.1,
+      apg: 2.3,
+      spg: 0.6,
+      bpg: 0.0,
+      fgPct: 43,
+      threePct: 25,
+      ftPct: 47
+    },
+    previousStats: {
       season: "2024-25",
       gp: 31,
       ppg: 12.3,
@@ -66,6 +78,18 @@ export const rosterEnhanced = [
     gpa: "",
     bio: "Versatile shooting guard with a smooth stroke and high basketball IQ. Excels at reading defenses and making the right play. Strong defender who takes pride in shutting down the opponent's best player.",
     stats: {
+      season: "Spring 2026",
+      gp: 3,
+      ppg: 4.7,
+      rpg: 1.0,
+      apg: 0.7,
+      spg: 0.7,
+      bpg: 0.0,
+      fgPct: 50,
+      threePct: 33,
+      ftPct: 75
+    },
+    previousStats: {
       season: "2024-25",
       gp: 31,
       ppg: 3.1,
@@ -102,6 +126,18 @@ export const rosterEnhanced = [
     gpa: "3",
     bio: "Quick and crafty guard who excels at getting to the rim. Fearless competitor with a knack for making big plays in clutch moments.",
     stats: {
+      season: "Spring 2026",
+      gp: 8,
+      ppg: 3.3,
+      rpg: 1.8,
+      apg: 2.1,
+      spg: 0.5,
+      bpg: 0.0,
+      fgPct: 26,
+      threePct: 33,
+      ftPct: 67
+    },
+    previousStats: {
       season: "2024-25",
       gp: 31,
       ppg: 4.5,
@@ -138,6 +174,18 @@ export const rosterEnhanced = [
     gpa: "",
     bio: "Athletic combo guard with explosive scoring ability. Can score at all three levels and is developing into a lockdown defender.",
     stats: {
+      season: "Spring 2026",
+      gp: 8,
+      ppg: 7.9,
+      rpg: 2.5,
+      apg: 3.0,
+      spg: 0.8,
+      bpg: 0.1,
+      fgPct: 45,
+      threePct: 35,
+      ftPct: 53
+    },
+    previousStats: {
       season: "2024-25",
       gp: 31,
       ppg: 7.8,
@@ -174,16 +222,16 @@ export const rosterEnhanced = [
     gpa: "3.77",
     bio: "Skilled guard with a versatile game. Can stretch the floor with his shooting or attack the basket.",
     stats: {
-      season: "2024-25",
-      gp: 24,
-      ppg: 0.0,
-      rpg: 0.0,
-      apg: 0.0,
-      spg: 0.0,
+      season: "Spring 2026",
+      gp: 8,
+      ppg: 7.4,
+      rpg: 3.9,
+      apg: 1.5,
+      spg: 1.5,
       bpg: 0.0,
-      fgPct: 0,
-      threePct: 0,
-      ftPct: 0
+      fgPct: 25,
+      threePct: 19,
+      ftPct: 53
     },
     highlights: [],
     recruiting: {
@@ -210,6 +258,18 @@ export const rosterEnhanced = [
     gpa: "3.5",
     bio: "Long and athletic forward with excellent potential. Uses his length to disrupt passing lanes and alter shots. Developing offensive game.",
     stats: {
+      season: "Spring 2026",
+      gp: 8,
+      ppg: 18.8,
+      rpg: 9.1,
+      apg: 1.3,
+      spg: 0.6,
+      bpg: 1.3,
+      fgPct: 63,
+      threePct: 67,
+      ftPct: 52
+    },
+    previousStats: {
       season: "2024-25",
       gp: 31,
       ppg: 12.9,
@@ -246,16 +306,16 @@ export const rosterEnhanced = [
     gpa: "",
     bio: "",
     stats: {
-      season: "2025-26",
-      gp: 0,
-      ppg: 0.0,
-      rpg: 0.0,
-      apg: 0.0,
+      season: "Spring 2026",
+      gp: 8,
+      ppg: 1.1,
+      rpg: 2.1,
+      apg: 1.1,
       spg: 0.0,
       bpg: 0.0,
-      fgPct: 0,
+      fgPct: 36,
       threePct: 0,
-      ftPct: 0
+      ftPct: 50
     },
     highlights: [],
     recruiting: {
@@ -281,16 +341,16 @@ export const rosterEnhanced = [
     gpa: "3.1",
     bio: "",
     stats: {
-      season: "2025-26",
-      gp: 0,
-      ppg: 0.0,
-      rpg: 0.0,
+      season: "Spring 2026",
+      gp: 4,
+      ppg: 1.8,
+      rpg: 1.8,
       apg: 0.0,
       spg: 0.0,
       bpg: 0.0,
-      fgPct: 0,
+      fgPct: 25,
       threePct: 0,
-      ftPct: 0
+      ftPct: 25
     },
     highlights: [],
     recruiting: {
@@ -316,14 +376,14 @@ export const rosterEnhanced = [
     gpa: "2.5",
     bio: "",
     stats: {
-      season: "2025-26",
-      gp: 0,
-      ppg: 0.0,
-      rpg: 0.0,
+      season: "Spring 2026",
+      gp: 5,
+      ppg: 0.8,
+      rpg: 0.8,
       apg: 0.0,
-      spg: 0.0,
+      spg: 0.2,
       bpg: 0.0,
-      fgPct: 0,
+      fgPct: 67,
       threePct: 0,
       ftPct: 0
     },
@@ -351,16 +411,16 @@ export const rosterEnhanced = [
     gpa: "",
     bio: "",
     stats: {
-      season: "2025-26",
-      gp: 0,
-      ppg: 0.0,
-      rpg: 0.0,
+      season: "Spring 2026",
+      gp: 6,
+      ppg: 2.7,
+      rpg: 1.8,
       apg: 0.0,
-      spg: 0.0,
-      bpg: 0.0,
-      fgPct: 0,
+      spg: 0.2,
+      bpg: 0.2,
+      fgPct: 58,
       threePct: 0,
-      ftPct: 0
+      ftPct: 67
     },
     highlights: [],
     recruiting: {

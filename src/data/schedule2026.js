@@ -145,8 +145,8 @@ export const tournaments = [
       name: "Suwanee Sports Academy",
       address: "3640 Burnette Rd, Suwanee, GA 30024"
     },
-    hotelLink: "https://travel.exposureevents.com/search/?city=3640+Burnette+Rd+Suwanee+Georgia+30024&checkin=5/14/2026&checkout=5/17/2026&kw=teamid---eventid-264061",
-    details: "NCAA Live Period event — premier independent travel basketball event in the Southeast. Showcase format, 4 games. 🏨 Hotel: Residence Inn Atlanta NE/Duluth Sugarloaf. Group ID: G-00599463 (via Team Travel Source). ⚠️ Room block release date: 03/21/2026 — book ASAP or rooms go back to general inventory. Contact TTS: info@teamtravelsource.com / (502) 354-9103. Event contact: Reggie McGee, 470.266.8862, rmcgee@hoopseen.com."
+    hotelLink: "https://presto.eventpipe.com/event/b8e25cd6-dfb9-4ac8-ac7e-a8586210d9b4/groups/1d8bf470-65fc-47d9-b3ea-6b00c11057df?inventory=public",
+    details: "NCAA Live Period event — premier independent travel basketball event in the Southeast. Showcase format, 4 games. 🏨 Hotel: Residence Inn Atlanta NE/Duluth Sugarloaf. Group ID: G-00599463 (via Team Travel Source). ⚠️ Room block release date: 03/21/2026 — book ASAP or rooms go back to general inventory. Contact TTS: info@teamtravelsource.com / (502) 354-9103."
   },
   {
     id: 9,

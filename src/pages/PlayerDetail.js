@@ -840,6 +840,56 @@ const PlayerDetail = () => {
             </Card>
           )}
 
+          {player.previousStats && (
+            <Card $delay="0.45s">
+              <SectionTitle>Previous Season ({player.previousStats.season})</SectionTitle>
+              <StatsGrid>
+                {player.previousStats.gp && (
+                  <StatBox>
+                    <div className="value">{player.previousStats.gp}</div>
+                    <div className="label">Games</div>
+                  </StatBox>
+                )}
+                <StatBox>
+                  <div className="value">{player.previousStats.ppg}</div>
+                  <div className="label">PPG</div>
+                </StatBox>
+                <StatBox>
+                  <div className="value">{player.previousStats.rpg}</div>
+                  <div className="label">RPG</div>
+                </StatBox>
+                <StatBox>
+                  <div className="value">{player.previousStats.apg}</div>
+                  <div className="label">APG</div>
+                </StatBox>
+                <StatBox>
+                  <div className="value">{player.previousStats.spg}</div>
+                  <div className="label">SPG</div>
+                </StatBox>
+                {player.previousStats.bpg !== undefined && (
+                  <StatBox>
+                    <div className="value">{player.previousStats.bpg}</div>
+                    <div className="label">BPG</div>
+                  </StatBox>
+                )}
+                <StatBox>
+                  <div className="value">{player.previousStats.fgPct}%</div>
+                  <div className="label">FG%</div>
+                </StatBox>
+                <StatBox>
+                  <div className="value">{player.previousStats.threePct}%</div>
+                  <div className="label">3PT%</div>
+                </StatBox>
+                {player.previousStats.ftPct && (
+                  <StatBox>
+                    <div className="value">{player.previousStats.ftPct}%</div>
+                    <div className="label">FT%</div>
+                  </StatBox>
+                )}
+              </StatsGrid>
+            </Card>
+          )}
+
           <Card $delay="0.5s">
             <SectionTitle>
               <FaVideo /> Highlights
