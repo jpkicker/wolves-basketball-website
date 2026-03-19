@@ -76,7 +76,41 @@ export const tournaments = [
       address: "400 E Alfred St, Tavares, FL 32778"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Hampton Inn & Suites Orlando-North/Altamonte Springs, 161 Douglas Avenue, Altamonte Springs, FL 32714. Check-in 3/20, Check-out 3/22 (2 nights)."
+    details: "🏨 Hotel: Hampton Inn & Suites Orlando-North/Altamonte Springs, 161 Douglas Avenue, Altamonte Springs, FL 32714. Check-in 3/20, Check-out 3/22 (2 nights).",
+    games: [
+      {
+        day: "Sat, Mar 21",
+        time: "1:00 PM EDT",
+        court: "Court 4",
+        opponent: "Elite 8 Select - Black",
+        homeAway: "Home",
+        division: "11th/12th Boys, Pool A"
+      },
+      {
+        day: "Sat, Mar 21",
+        time: "3:20 PM EDT",
+        court: "Court 4",
+        opponent: "Ftl",
+        homeAway: "Home",
+        division: "11th/12th Boys, Pool A"
+      },
+      {
+        day: "Sun, Mar 22",
+        time: "10:40 AM EDT",
+        court: "Court 3",
+        opponent: "Sunshine Elite",
+        homeAway: "Home",
+        division: "11th/12th Boys, Pool A"
+      },
+      {
+        day: "Sun, Mar 22",
+        time: "1:00 PM EDT",
+        court: "Court 3",
+        opponent: "Vice City Elite 17U",
+        homeAway: "Home",
+        division: "11th/12th Boys, Pool A"
+      }
+    ]
   },
   {
     id: 4,
