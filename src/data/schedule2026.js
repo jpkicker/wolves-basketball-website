@@ -124,7 +124,41 @@ export const tournaments = [
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Residence Inn by Marriott Boston Concord. Check-in 3/27, Check-out 3/29 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: JetBlue #722 PBI→BOS Fri 3/27 6:35 AM–9:39 AM (3h 04m) | JetBlue #721 BOS→PBI Sun 3/29 7:25 PM–10:49 PM (3h 24m) — $216.80/person roundtrip."
+    details: "🏨 Hotel: Residence Inn by Marriott Boston Concord. Check-in 3/27, Check-out 3/29 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: JetBlue #722 PBI→BOS Fri 3/27 6:35 AM–9:39 AM (3h 04m) | JetBlue #721 BOS→PBI Sun 3/29 7:25 PM–10:49 PM (3h 24m) — $216.80/person roundtrip.",
+    games: [
+      {
+        day: "Sat, Mar 28",
+        time: "10:10 AM EDT",
+        court: "Court 3",
+        opponent: "All In Elite 17U (CT)",
+        homeAway: "Home",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Sat, Mar 28",
+        time: "12:20 PM EDT",
+        court: "Court 3",
+        opponent: "Brooklyn Wildcats 17U (NY)",
+        homeAway: "Home",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Sun, Mar 29",
+        time: "9:05 AM EDT",
+        court: "Court 2",
+        opponent: "Team Peake 17U MILLER",
+        homeAway: "Away",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Sun, Mar 29",
+        time: "11:15 AM EDT",
+        court: "Court 2",
+        opponent: "Pro Level Titans 17U (NY)",
+        homeAway: "Away",
+        division: "HS Boys - 17U"
+      }
+    ]
   },
   {
     id: 5,
