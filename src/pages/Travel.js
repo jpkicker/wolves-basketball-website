@@ -365,7 +365,7 @@ const Travel = () => {
               </InfoCardHeader>
               <InfoCardBody>
                 <ContactText>
-                  <strong>Team Manager</strong>
+                  <strong>Team Parent</strong>
                   Jason Ranney<br />
                   <a href="tel:5614515880">(561) 451-5880</a>
                 </ContactText>

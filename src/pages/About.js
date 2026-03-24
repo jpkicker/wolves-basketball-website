@@ -407,7 +407,7 @@ const About = () => {
               <StaffCard $delay="0.3s">
                 <StaffCardHeader>
                   <StaffName>JASON RANNEY</StaffName>
-                  <StaffRole>Team Manager</StaffRole>
+                  <StaffRole>Team Parent</StaffRole>
                 </StaffCardHeader>
                 <StaffCardBody>
                   <StaffDescription>

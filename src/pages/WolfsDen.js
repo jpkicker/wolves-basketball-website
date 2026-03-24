@@ -702,7 +702,7 @@ const WolfsDen = () => {
           <ContactCard>
             <ContactGrid>
               <ContactItem>
-                <h4>Team Manager</h4>
+                <h4>Team Parent</h4>
                 <p><strong>Jason Ranney</strong></p>
                 <p><a href="tel:5614515880">(561) 451-5880</a></p>
                 <p><a href="mailto:jpkicker@gmail.com">jpkicker@gmail.com</a></p>
