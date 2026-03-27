@@ -28,7 +28,7 @@ export const tournaments = [
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: null,
-    details: "Hotel: Residence Inn by Marriott Tampa Wesley Chapel (next to Wiregrass facility). $229/night. Matching 15U team hotel.",
+    details: "🏨 Hotel: Residence Inn by Marriott Tampa Wesley Chapel, 2650 Lajuana Blvd, Wesley Chapel, FL 33543. $229/night. Matching 15U team hotel.",
     games: [
       {
         day: "Sat, Mar 14",
@@ -124,7 +124,7 @@ export const tournaments = [
       address: "22 Towns Farm Rd, Westford, MA 01886"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Residence Inn by Marriott Boston Concord. Check-in 3/27, Check-out 3/29 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: JetBlue #722 PBI→BOS Fri 3/27 6:35 AM–9:39 AM (3h 04m) | JetBlue #721 BOS→PBI Sun 3/29 7:25 PM–10:49 PM (3h 24m) — $216.80/person roundtrip.",
+    details: "🏨 Hotel: Residence Inn by Marriott Boston Concord, 320 Baker Avenue, Concord, MA 01742. Check-in 3/27, Check-out 3/29 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: JetBlue #722 PBI→BOS Fri 3/27 6:35 AM–9:39 AM (3h 04m) | JetBlue #721 BOS→PBI Sun 3/29 7:25 PM–10:49 PM (3h 24m) — $216.80/person roundtrip.",
     games: [
       {
         day: "Sat, Mar 28",
@@ -186,7 +186,7 @@ export const tournaments = [
       address: "3021 Sports Complex Blvd, Wesley Chapel, FL 33543"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Fairfield Inn & Suites by Marriott Tampa Wesley Chapel. Check-in 5/1, Check-out 5/3 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
+    details: "🏨 Hotel: Fairfield Inn & Suites by Marriott Tampa Wesley Chapel, 2650 Lajuana Blvd, Wesley Chapel, FL 33543. Check-in 5/1, Check-out 5/3 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 7,
@@ -200,7 +200,7 @@ export const tournaments = [
       address: "400 E Alfred St, Tavares, FL 32778"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Hampton Inn Leesburg/Tavares. Check-in 5/8, Check-out 5/10 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
+    details: "🏨 Hotel: Hampton Inn Leesburg/Tavares, 9630 US Highway 441, Leesburg, FL 34788. Check-in 5/8, Check-out 5/10 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 8,
@@ -214,7 +214,7 @@ export const tournaments = [
       address: "3640 Burnette Rd, Suwanee, GA 30024"
     },
     hotelLink: "https://presto.eventpipe.com/event/b8e25cd6-dfb9-4ac8-ac7e-a8586210d9b4/groups/1d8bf470-65fc-47d9-b3ea-6b00c11057df?inventory=public",
-    details: "NCAA Live Period event — premier independent travel basketball event in the Southeast. Showcase format, 4 games. 🏨 Hotel: Residence Inn Atlanta NE/Duluth Sugarloaf. Group ID: G-00599463 (via Team Travel Source). ⚠️ Room block release date: 03/21/2026 — book ASAP or rooms go back to general inventory. Contact TTS: info@teamtravelsource.com / (502) 354-9103."
+    details: "NCAA Live Period event — premier independent travel basketball event in the Southeast. Showcase format, 4 games. 🏨 Hotel: Residence Inn Atlanta NE/Duluth Sugarloaf, 1940 Satellite Blvd, Duluth, GA 30097. Group ID: G-00599463 (via Team Travel Source). ⚠️ Room block release date: 03/21/2026 — book ASAP or rooms go back to general inventory. Contact TTS: info@teamtravelsource.com / (502) 354-9103."
   },
   {
     id: 9,
@@ -228,7 +228,7 @@ export const tournaments = [
       address: "6700 Kingspointe Pkwy, Orlando, FL 32819"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Universal's Stella Nova Resort, Orlando, FL (staying with other Wolves teams). Arrive Friday 5/22, depart Monday 5/25 (3 nights). Possible game on Monday. Rate TBD."
+    details: "🏨 Hotel: Universal's Stella Nova Resort, 4500 Epic Blvd, Orlando, FL 32819 (staying with other Wolves teams). Arrive Friday 5/22, depart Monday 5/25 (3 nights). Possible game on Monday. Rate TBD."
   },
   {
     id: 10,

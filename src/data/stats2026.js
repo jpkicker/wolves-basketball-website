@@ -2,7 +2,7 @@
 // Source: GameChanger — Season Averages (Standard)
 // Record: 4-4 | 8 Games Played
 
-export const seasonRecord = { wins: 4, losses: 4, season: "Spring 2026" };
+export const seasonRecord = { wins: 7, losses: 10, season: "Spring 2026" };
 
 export const playerStats = [
   { name: "Camden Wesley-Kam", number: null,  gp: 8, ppg: 18.8, pfpg: 1.8, fgPct: 63, threePct: 67, ftPct: 52, topg: 0.3, rpg: 9.1, apg: 1.3, spg: 0.6, bpg: 1.3 },
