@@ -172,7 +172,7 @@ export const tournaments = [
       address: "2100 Olympic Avenue, Henderson, NV 89014"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana. Check-in 4/16, Check-out 4/19 (3 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: Frontier #4551 MIA→LAS Apr 16 arrives 8:42 AM | Frontier #4552 LAS→MIA Apr 19 arrives 11:49 PM — $196.96/person roundtrip (non-refundable)."
+    details: "🏨 Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana, 175 E Tropicana Ave, Las Vegas, NV 89109. Check-in 4/16, Check-out 4/19 (3 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: Frontier #4551 MIA→LAS Apr 16 arrives 8:42 AM | Frontier #4552 LAS→MIA Apr 19 arrives 11:49 PM — $196.96/person roundtrip (non-refundable)."
   },
   {
     id: 6,
@@ -242,7 +242,7 @@ export const tournaments = [
       address: "4870 Celebration Pointe Ave, Gainesville, FL 32608"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Hilton Garden Inn Gainesville. Check-in 7/3, Check-out 7/5 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
+    details: "🏨 Hotel: Hilton Garden Inn Gainesville, 4075 SW 33rd Pl, Gainesville, FL 32608. Check-in 7/3, Check-out 7/5 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 11,
@@ -256,7 +256,7 @@ export const tournaments = [
       address: "1 All Star Boulevard, Glen Allen, VA 23059"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Embassy Suites by Hilton Richmond. Check-in 7/8, Check-out 7/12 (4 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
+    details: "🏨 Hotel: Embassy Suites by Hilton Richmond, 2925 Emerywood Pkwy, Henrico, VA 23294. Check-in 7/8, Check-out 7/12 (4 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
   },
   {
     id: 12,
@@ -284,7 +284,7 @@ export const tournaments = [
       address: "9800 International Dr., Orlando, FL 32819"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Residence Inn by Marriott Orlando Convention Center. Check-in 7/23, Check-out 7/27 (4 nights). Championship event. Feel free to book through Expedia, Hotels.com, or any service you prefer."
+    details: "🏨 Hotel: Residence Inn by Marriott Orlando Convention Center, 8800 Universal Blvd, Orlando, FL 32819. Check-in 7/23, Check-out 7/27 (4 nights). Championship event. Feel free to book through Expedia, Hotels.com, or any service you prefer."
   }
 ];
 
