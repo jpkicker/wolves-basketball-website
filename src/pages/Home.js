@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import teamImageUrl from 'url:../assets/07320183bb4a406ca62f47f55ffe22e8.jpeg';
+import teamImageUrl from 'url:../assets/wolves-champions-hero.jpg';
 import AnnouncementPreview from '../components/AnnouncementPreview';
 
 const fadeInUp = keyframes`
