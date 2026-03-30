@@ -43,9 +43,9 @@ const HomeContainer = styled.div`
 
 const HeroSection = styled.section`
   position: relative;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 900px;
+  height: 80vh;
+  min-height: 500px;
+  max-height: 750px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -59,9 +59,9 @@ const HeroSection = styled.section`
     height: 100%;
     background: linear-gradient(
       135deg,
-      rgba(0, 21, 41, 0.75) 0%,
-      rgba(0, 31, 63, 0.6) 40%,
-      rgba(0, 31, 63, 0.45) 100%
+      rgba(0, 21, 41, 0.55) 0%,
+      rgba(0, 31, 63, 0.35) 40%,
+      rgba(0, 31, 63, 0.2) 100%
     );
     z-index: 1;
   }
@@ -86,7 +86,7 @@ const HeroImage = styled.div`
   height: 100%;
   background-image: url(${teamImageUrl});
   background-size: cover;
-  background-position: center center;
+  background-position: center 25%;
   animation: ${scaleIn} 1.2s ease-out;
 `;
 
