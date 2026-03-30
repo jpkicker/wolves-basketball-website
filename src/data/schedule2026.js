@@ -36,7 +36,8 @@ export const tournaments = [
         court: "Court 2",
         opponent: "SCE UA Grind",
         homeAway: "Home",
-        division: "Boys Varsity Showcase, Pool A"
+        division: "Boys Varsity Showcase, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=oGAIyI55OUY"
       },
       {
         day: "Sat, Mar 14",
@@ -44,7 +45,8 @@ export const tournaments = [
         court: "Court 1",
         opponent: "SCE UA Rise",
         homeAway: "Home",
-        division: "Boys Varsity Showcase, Pool A"
+        division: "Boys Varsity Showcase, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=OHgrX1yY57Y"
       },
       {
         day: "Sun, Mar 15",
@@ -52,7 +54,8 @@ export const tournaments = [
         court: "Court 1",
         opponent: "TNT Hoopsquad 2026",
         homeAway: "Home",
-        division: "Boys Varsity Showcase, Pool A"
+        division: "Boys Varsity Showcase, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=AFsq8fOqmgQ"
       },
       {
         day: "Sun, Mar 15",
@@ -60,7 +63,8 @@ export const tournaments = [
         court: "Court 1",
         opponent: "SWFL Hoops",
         homeAway: "Home",
-        division: "Boys Varsity Showcase, Pool A"
+        division: "Boys Varsity Showcase, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=A-T4BzjdoQc"
       }
     ]
   },
@@ -84,7 +88,8 @@ export const tournaments = [
         court: "Court 4",
         opponent: "Elite 8 Select - Black",
         homeAway: "Home",
-        division: "11th/12th Boys, Pool A"
+        division: "11th/12th Boys, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=PWHH_GXLErw"
       },
       {
         day: "Sat, Mar 21",
@@ -92,7 +97,8 @@ export const tournaments = [
         court: "Court 4",
         opponent: "Ftl",
         homeAway: "Home",
-        division: "11th/12th Boys, Pool A"
+        division: "11th/12th Boys, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=ddoo84a64L0"
       },
       {
         day: "Sun, Mar 22",
@@ -100,7 +106,8 @@ export const tournaments = [
         court: "Court 3",
         opponent: "Sunshine Elite",
         homeAway: "Home",
-        division: "11th/12th Boys, Pool A"
+        division: "11th/12th Boys, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=xmbe2_3GiDM"
       },
       {
         day: "Sun, Mar 22",
@@ -108,7 +115,8 @@ export const tournaments = [
         court: "Court 3",
         opponent: "Vice City Elite 17U",
         homeAway: "Home",
-        division: "11th/12th Boys, Pool A"
+        division: "11th/12th Boys, Pool A",
+        filmUrl: "https://www.youtube.com/watch?v=Ny7r4ju5Pfk"
       }
     ]
   },
@@ -140,7 +148,8 @@ export const tournaments = [
         court: "Court 3",
         opponent: "Brooklyn Wildcats 17U (NY)",
         homeAway: "Home",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        filmUrl: "https://www.youtube.com/watch?v=z1gmV8n1Gbc"
       },
       {
         day: "Sun, Mar 29",
@@ -149,7 +158,7 @@ export const tournaments = [
         opponent: "Team Peake 17U MILLER",
         homeAway: "Away",
         division: "HS Boys - 17U",
-        filmUrl: "https://sportsengineplay.com/teams/Wellington-Wolves-17U-FL/game/Team-peake-17U-MILLER-vs-Wellington-Wolves-17U-FL-2026-03-29?video_id=69c93a04f80d2bb416f3fc0e&follow=Z6LFBG"
+        filmUrl: "https://www.youtube.com/watch?v=84FgYaYnw9A"
       },
       {
         day: "Sun, Mar 29",
@@ -157,7 +166,8 @@ export const tournaments = [
         court: "Court 2",
         opponent: "Pro Level Titans 17U (NY)",
         homeAway: "Away",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        filmUrl: "https://www.youtube.com/watch?v=c6nkGSJhv6I"
       }
     ]
   },

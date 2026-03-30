@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { tournaments, teamEvents, circuitColors } from '../data/schedule2026';
+import { extractVideoId } from '../utils/youtube';
 
 // Combine tournaments and team events, then sort by date
 const allEvents = [...tournaments, ...teamEvents].sort((a, b) => {
@@ -322,21 +323,22 @@ const GameMeta = styled.span`
   white-space: nowrap;
 `;
 
-const FilmLink = styled.a`
+const FilmButton = styled.button`
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: var(--navy);
-  color: var(--gold);
+  background: ${props => props.$active ? 'var(--gold)' : 'var(--navy)'};
+  color: ${props => props.$active ? 'var(--navy)' : 'var(--gold)'};
   padding: 0.35rem 0.75rem;
   border-radius: 4px;
-  text-decoration: none;
+  border: none;
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   white-space: nowrap;
+  cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
@@ -348,6 +350,26 @@ const FilmLink = styled.a`
   svg {
     width: 14px;
     height: 14px;
+  }
+`;
+
+const FilmEmbed = styled.div`
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 `;
 
@@ -373,6 +395,7 @@ const HeaderWrapper = styled.div`
 
 const TournamentAccordion = () => {
   const [openId, setOpenId] = useState(null);
+  const [activeFilm, setActiveFilm] = useState(null); // "tournamentId-gameIdx"
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
@@ -455,23 +478,53 @@ const TournamentAccordion = () => {
                       <div key={gi}>
                         <GamesDayHeader>{group.day}</GamesDayHeader>
                         {group.games.map((game, idx) => (
-                          <GameCard key={idx}>
-                            <GameTime>{game.time}</GameTime>
-                            <GameMatchup>
-                              <strong>Wolves</strong> vs {game.opponent}
-                              {game.score && <GameScore>{game.score}</GameScore>}
-                            </GameMatchup>
-                            <GameCourt>{game.court}</GameCourt>
-                            <GameMeta>{game.division}</GameMeta>
-                            {game.filmUrl && (
-                              <FilmLink href={game.filmUrl} target="_blank" rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                  <polygon points="5 3 19 12 5 21 5 3"/>
-                                </svg>
-                                Watch Film
-                              </FilmLink>
-                            )}
-                          </GameCard>
+                          <React.Fragment key={idx}>
+                            <GameCard>
+                              <GameTime>{game.time}</GameTime>
+                              <GameMatchup>
+                                <strong>Wolves</strong> vs {game.opponent}
+                                {game.score && <GameScore>{game.score}</GameScore>}
+                              </GameMatchup>
+                              <GameCourt>{game.court}</GameCourt>
+                              <GameMeta>{game.division}</GameMeta>
+                              {game.filmUrl && (
+                                <FilmButton
+                                  $active={activeFilm === `${tournament.id}-${idx}`}
+                                  onClick={() => setActiveFilm(
+                                    activeFilm === `${tournament.id}-${idx}` ? null : `${tournament.id}-${idx}`
+                                  )}
+                                >
+                                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                  </svg>
+                                  {activeFilm === `${tournament.id}-${idx}` ? 'Hide Film' : 'Watch Film'}
+                                </FilmButton>
+                              )}
+                            </GameCard>
+                            {game.filmUrl && activeFilm === `${tournament.id}-${idx}` && (() => {
+                              const ytId = extractVideoId(game.filmUrl);
+                              if (ytId) {
+                                return (
+                                  <FilmEmbed>
+                                    <iframe
+                                      src={`https://www.youtube.com/embed/${ytId}`}
+                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                      allowFullScreen
+                                      title={`Wolves vs ${game.opponent}`}
+                                    />
+                                  </FilmEmbed>
+                                );
+                              }
+                              return (
+                                <FilmEmbed style={{ paddingBottom: '50px', textAlign: 'center', lineHeight: '50px' }}>
+                                  <a href={game.filmUrl} target="_blank" rel="noopener noreferrer"
+                                     style={{ color: 'var(--gold)', fontWeight: 700 }}>
+                                    Open Film on SportsEngine Play →
+                                  </a>
+                                </FilmEmbed>
+                              );
+                            })()}
+                          </React.Fragment>
                         ))}
                       </div>
                     ));
