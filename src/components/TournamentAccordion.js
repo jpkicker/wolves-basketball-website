@@ -306,11 +306,49 @@ const GameMatchup = styled.span`
   }
 `;
 
+const GameScore = styled.span`
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--gold-dark);
+`;
+
 const GameMeta = styled.span`
   font-family: 'Barlow', sans-serif;
   font-size: 0.8rem;
   color: var(--gray-500);
   white-space: nowrap;
+`;
+
+const FilmLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--navy);
+  color: var(--gold);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-1px);
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
 `;
 
 const GameCourt = styled.span`
@@ -421,9 +459,18 @@ const TournamentAccordion = () => {
                             <GameTime>{game.time}</GameTime>
                             <GameMatchup>
                               <strong>Wolves</strong> vs {game.opponent}
+                              {game.score && <GameScore>{game.score}</GameScore>}
                             </GameMatchup>
                             <GameCourt>{game.court}</GameCourt>
                             <GameMeta>{game.division}</GameMeta>
+                            {game.filmUrl && (
+                              <FilmLink href={game.filmUrl} target="_blank" rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                                Watch Film
+                              </FilmLink>
+                            )}
                           </GameCard>
                         ))}
                       </div>
