@@ -474,11 +474,14 @@ const TournamentAccordion = () => {
                       }
                       dayGroups[dayGroups.length - 1].games.push(game);
                     });
+                    let gameCounter = 0;
                     return dayGroups.map((group, gi) => (
                       <div key={gi}>
                         <GamesDayHeader>{group.day}</GamesDayHeader>
-                        {group.games.map((game, idx) => (
-                          <React.Fragment key={idx}>
+                        {group.games.map((game) => {
+                          const gameKey = `${tournament.id}-${gameCounter++}`;
+                          return (
+                          <React.Fragment key={gameKey}>
                             <GameCard>
                               <GameTime>{game.time}</GameTime>
                               <GameMatchup>
@@ -489,19 +492,19 @@ const TournamentAccordion = () => {
                               <GameMeta>{game.division}</GameMeta>
                               {game.filmUrl && (
                                 <FilmButton
-                                  $active={activeFilm === `${tournament.id}-${idx}`}
+                                  $active={activeFilm === gameKey}
                                   onClick={() => setActiveFilm(
-                                    activeFilm === `${tournament.id}-${idx}` ? null : `${tournament.id}-${idx}`
+                                    activeFilm === gameKey ? null : gameKey
                                   )}
                                 >
                                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <polygon points="5 3 19 12 5 21 5 3"/>
                                   </svg>
-                                  {activeFilm === `${tournament.id}-${idx}` ? 'Hide Film' : 'Watch Film'}
+                                  {activeFilm === gameKey ? 'Hide Film' : 'Watch Film'}
                                 </FilmButton>
                               )}
                             </GameCard>
-                            {game.filmUrl && activeFilm === `${tournament.id}-${idx}` && (() => {
+                            {game.filmUrl && activeFilm === gameKey && (() => {
                               const ytId = extractVideoId(game.filmUrl);
                               if (ytId) {
                                 return (
@@ -525,7 +528,8 @@ const TournamentAccordion = () => {
                               );
                             })()}
                           </React.Fragment>
-                        ))}
+                        );
+                        })}
                       </div>
                     ));
                   })()}
