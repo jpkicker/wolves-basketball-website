@@ -327,7 +327,7 @@ export const teamEvents = [
       address: "9855 Lake Worth Rd, Wellington, FL 33411" // Assuming 33411 is the correct zip for that area.
     },
     hotelLink: null,
-    details: "Team fundraising event at Publix. Volunteers needed - check Wolf's Den for sign-up details."
+    details: "Team fundraising event at Publix — 9:00 AM to 3:00 PM. All players are required to participate. Please arrive 15 minutes before your shift. Coaches will be present at all times.\n\n🕘 SHIFT 1 — 9:00 AM to 12:00 PM\n1. Ethan Ranney\n2. Nicholas Cruz\n3. Camden Wesley-Kam\n4. Chase Ursini-Gardner\n5. Max Modric\n\n🕛 SHIFT 2 — 12:00 PM to 3:00 PM\n1. Canaan Gedeon\n2. RJ Jean-Baptiste\n3. Cristian Brown\n4. Jorge Lopez\n5. Genesis Perozo"
   }
 ];
 
