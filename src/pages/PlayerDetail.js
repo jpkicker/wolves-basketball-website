@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import { FaArrowLeft, FaInstagram, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt, FaQrcode, FaPlay } from 'react-icons/fa';
+import { FaArrowLeft, FaInstagram, FaTwitter, FaEnvelope, FaVideo, FaGraduationCap, FaSchool, FaShareAlt, FaQrcode, FaPlay } from 'react-icons/fa';
 import { QRCodeSVG } from 'qrcode.react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { rosterEnhanced } from '../data/players-enhanced';
@@ -960,6 +960,18 @@ const PlayerDetail = () => {
                     rel="noopener noreferrer"
                   >
                     @{player.instagram}
+                  </a>
+                </InfoItem>
+              )}
+              {player.twitter && (
+                <InfoItem>
+                  <FaTwitter />
+                  <a
+                    href={`https://x.com/${player.twitter}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @{player.twitter}
                   </a>
                 </InfoItem>
               )}
