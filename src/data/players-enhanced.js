@@ -22,6 +22,7 @@ export const rosterEnhanced = [
     initial: "CG",
     image: canaanImage,
     instagram: "c_gedeon.21",
+    twitter: "GedeonCanaan",
     // Enhanced fields
     height: "6'1\"",
     weight: "165",
