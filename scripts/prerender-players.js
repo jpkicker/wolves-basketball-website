@@ -169,12 +169,22 @@ function renderPlayerHtml(p) {
     `  <link rel="canonical" href="${esc(url)}">`,
   ].join('\n');
 
+  // Replace the title and inject per-player OG tags in one atomic op.
+  // Why this approach:
+  //   1. Parcel minifies dist/index.html and strips optional tags like <head>
+  //      and <body>, so we can't anchor on those.
+  //   2. Most OG crawlers (Facebook, X, LinkedIn) take the FIRST occurrence
+  //      of a given og:* property. Since src/index.html has baseline OG tags
+  //      after the title, we must inject per-player tags BEFORE the baseline
+  //      ones — which means right after the title, not before <body>.
+  const titleTagRe = /<title>[^<]*<\/title>/;
+  const replacement = `<title>${esc(title)}</title>${ogTags}`;
   let html = template;
-  // Remove the baseline site-wide OG tags from the template (between the two comment lines)
-  // so per-player tags don't conflict. Simpler approach: just inject ours after <head>
-  // and let the later tags take precedence for crawlers that read the last value.
-  html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`);
-  html = html.replace('<head>', `<head>\n${ogTags}`);
+  if (!titleTagRe.test(html)) {
+    console.warn(`[prerender-players] No <title> tag found in template for ${p.id}`);
+    return html;
+  }
+  html = html.replace(titleTagRe, replacement);
   return html;
 }
 
