@@ -633,6 +633,12 @@ const PlayerDetail = () => {
 
   const player = rosterEnhanced.find(p => p.id === playerId);
 
+  // Recruiting contact: emails go to team coaches, with parent CC'd if available
+  const COACH_EMAILS = "ELIJAHBALCARCEL2@GMAIL.COM,JULA16@BELLSOUTH.NET";
+  const recruitingMailto = player
+    ? `mailto:${COACH_EMAILS}?subject=Recruiting Inquiry - ${player.firstName} ${player.lastName}${player.recruiting?.email ? `&cc=${player.recruiting.email}` : ''}`
+    : '';
+
   // Fetch highlights from Firestore
   useEffect(() => {
     const fetchHighlights = async () => {
@@ -761,14 +767,12 @@ const PlayerDetail = () => {
               </QuickStatsRow>
 
               <ActionButtons>
-                {player.recruiting?.email && (
-                  <ActionButton
-                    href={`mailto:${player.recruiting.email}?subject=Recruiting Inquiry - ${player.firstName} ${player.lastName}`}
-                    $primary
-                  >
-                    <FaEnvelope /> Contact for Recruiting
-                  </ActionButton>
-                )}
+                <ActionButton
+                  href={recruitingMailto}
+                  $primary
+                >
+                  <FaEnvelope /> Contact for Recruiting
+                </ActionButton>
                 <ActionButton as="button" onClick={handleShare}>
                   <FaShareAlt /> Share Profile
                 </ActionButton>
@@ -973,13 +977,9 @@ const PlayerDetail = () => {
               )}
             </InfoList>
 
-            {player.recruiting?.email && (
-              <ContactButton
-                href={`mailto:${player.recruiting.email}?subject=Recruiting Inquiry - ${player.firstName} ${player.lastName}`}
-              >
-                <FaEnvelope /> Contact Coach
-              </ContactButton>
-            )}
+            <ContactButton href={recruitingMailto}>
+              <FaEnvelope /> Contact Coach
+            </ContactButton>
           </Card>
         </Sidebar>
       </ContentSection>
