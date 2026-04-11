@@ -304,7 +304,7 @@ export const rosterEnhanced = [
     gradYear: 2027,
     school: "Palm Beach Central",
     gpa: "",
-    bio: "",
+    bio: "Steady combo guard with good size and a high motor. Brings consistent effort on the defensive end and works within the team's flow on offense. Continues to develop as a perimeter scorer and decision-maker.",
     stats: {
       season: "Spring 2026",
       gp: 16,
@@ -339,7 +339,7 @@ export const rosterEnhanced = [
     gradYear: 2028,
     school: "Joaquin Garcia",
     gpa: "3.1",
-    bio: "",
+    bio: "Physical forward with a strong frame and good rebounding instincts. Plays with energy on both ends and gives the team a tough interior presence. A young 2028 prospect with significant room to grow as he develops his game.",
     stats: {
       season: "Spring 2026",
       gp: 12,
@@ -374,7 +374,7 @@ export const rosterEnhanced = [
     gradYear: 2027,
     school: "West Boca Raton Community High School",
     gpa: "2.5",
-    bio: "",
+    bio: "True 6'6\" post with the size and length to protect the rim and finish around the basket. Brings effort and physicality to the paint. Continues to expand his offensive skill set as he develops into a complete center.",
     stats: {
       season: "Spring 2026",
       gp: 10,
@@ -409,7 +409,7 @@ export const rosterEnhanced = [
     gradYear: 2028,
     school: "Park Vista",
     gpa: "",
-    bio: "",
+    bio: "Long-framed 6'4\" big man with good mobility for his size. Active around the basket and shows promise as a developing post player. As a 2028 prospect, has significant upside as he continues to add strength and refine his game.",
     stats: {
       season: "Spring 2026",
       gp: 14,
