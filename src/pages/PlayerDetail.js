@@ -826,15 +826,19 @@ const PlayerDetail = () => {
                     <div className="label">BPG</div>
                   </StatBox>
                 )}
-                <StatBox>
-                  <div className="value">{player.stats.fgPct}%</div>
-                  <div className="label">FG%</div>
-                </StatBox>
-                <StatBox>
-                  <div className="value">{player.stats.threePct}%</div>
-                  <div className="label">3PT%</div>
-                </StatBox>
-                {player.stats.ftPct && (
+                {player.stats.fgPct > 0 && (
+                  <StatBox>
+                    <div className="value">{player.stats.fgPct}%</div>
+                    <div className="label">FG%</div>
+                  </StatBox>
+                )}
+                {player.stats.threePct > 0 && (
+                  <StatBox>
+                    <div className="value">{player.stats.threePct}%</div>
+                    <div className="label">3PT%</div>
+                  </StatBox>
+                )}
+                {player.stats.ftPct > 0 && (
                   <StatBox>
                     <div className="value">{player.stats.ftPct}%</div>
                     <div className="label">FT%</div>
@@ -876,15 +880,19 @@ const PlayerDetail = () => {
                     <div className="label">BPG</div>
                   </StatBox>
                 )}
-                <StatBox>
-                  <div className="value">{player.previousStats.fgPct}%</div>
-                  <div className="label">FG%</div>
-                </StatBox>
-                <StatBox>
-                  <div className="value">{player.previousStats.threePct}%</div>
-                  <div className="label">3PT%</div>
-                </StatBox>
-                {player.previousStats.ftPct && (
+                {player.previousStats.fgPct > 0 && (
+                  <StatBox>
+                    <div className="value">{player.previousStats.fgPct}%</div>
+                    <div className="label">FG%</div>
+                  </StatBox>
+                )}
+                {player.previousStats.threePct > 0 && (
+                  <StatBox>
+                    <div className="value">{player.previousStats.threePct}%</div>
+                    <div className="label">3PT%</div>
+                  </StatBox>
+                )}
+                {player.previousStats.ftPct > 0 && (
                   <StatBox>
                     <div className="value">{player.previousStats.ftPct}%</div>
                     <div className="label">FT%</div>
