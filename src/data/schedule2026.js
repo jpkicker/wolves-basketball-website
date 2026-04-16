@@ -212,9 +212,17 @@ export const tournaments = [
       {
         day: "Sat, Apr 19",
         time: "1:25 PM PDT",
-        court: "Court 2",
+        court: "Court 1",
         opponent: "Build Your Way Elite 17U (CA)",
         homeAway: "Away",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Sat, Apr 19",
+        time: "3:35 PM PDT",
+        court: "Court 1",
+        opponent: "Philly D1 Basketball 17U",
+        homeAway: "Home",
         division: "HS Boys - 17U"
       }
     ]
