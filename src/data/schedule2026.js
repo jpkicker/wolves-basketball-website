@@ -186,15 +186,7 @@ export const tournaments = [
     details: "🏨 Hotel: Holiday Inn Express & Suites Las Vegas - E Tropicana, 175 E Tropicana Ave, Las Vegas, NV 89109. Check-in 4/16, Check-out 4/19 (3 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer. ✈ Recommended Flights: Frontier #4551 MIA→LAS Apr 16 arrives 8:42 AM | Frontier #4552 LAS→MIA Apr 19 arrives 11:49 PM — $196.96/person roundtrip (non-refundable).",
     games: [
       {
-        day: "Thu, Apr 17",
-        time: "9:20 PM PDT",
-        court: "Court 3",
-        opponent: "All In Elite 17U (CT)",
-        homeAway: "Home",
-        division: "HS Boys - 17U"
-      },
-      {
-        day: "Fri, Apr 18",
+        day: "Sat, Apr 18",
         time: "4:40 PM PDT",
         court: "Court 3",
         opponent: "ONYX BC 17U Black (CA)",
@@ -202,7 +194,7 @@ export const tournaments = [
         division: "HS Boys - 17U"
       },
       {
-        day: "Fri, Apr 18",
+        day: "Sat, Apr 18",
         time: "6:50 PM PDT",
         court: "Court 4",
         opponent: "Prodigy Elite 17U (CA)",
@@ -210,7 +202,7 @@ export const tournaments = [
         division: "HS Boys - 17U"
       },
       {
-        day: "Sat, Apr 19",
+        day: "Sun, Apr 19",
         time: "1:25 PM PDT",
         court: "Court 1",
         opponent: "Build Your Way Elite 17U (CA)",
@@ -218,7 +210,7 @@ export const tournaments = [
         division: "HS Boys - 17U"
       },
       {
-        day: "Sat, Apr 19",
+        day: "Sun, Apr 19",
         time: "3:35 PM PDT",
         court: "Court 1",
         opponent: "Philly D1 Basketball 17U",
