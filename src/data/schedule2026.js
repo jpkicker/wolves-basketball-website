@@ -71,11 +71,12 @@ export const tournaments = [
     },
     hotelLink: "https://eventconnect.io",
     details: "Event Connect hotel booking available. NXTpro circuit event.",
+    details: "Fri 5/1: 5:00 PM vs Kissimmee AllStars (Court 2) | Sat 5/2: 5:15 PM vs FCA Saints (Court 2), 7:25 PM vs Palmetto City Hurricanes (Court 2) | Sun 5/3: 4:10 PM vs Orlando Bad Boys (Court 1)",
     games: [
-      { date: "05/01", time: "5:00 PM", opponent: "Kissimmee AllStars 17U", location: "Court 2", homeAway: "Home" },
-      { date: "05/02", time: "5:15 PM", opponent: "FCA Saints 17U (FL)", location: "Court 2", homeAway: "Away" },
-      { date: "05/02", time: "7:25 PM", opponent: "Palmetto City Hurricanes 17U (SC)", location: "Court 2", homeAway: "Home" },
-      { date: "05/03", time: "12:55 PM", opponent: "Orlando Bad Boys 17U (FL)", location: "Court 1", homeAway: "Away" }
+      { date: "05/01", time: "5:00 PM", opponent: "Kissimmee AllStars 17U", court: "Court 2", homeAway: "Home" },
+      { date: "05/02", time: "5:15 PM", opponent: "FCA Saints 17U (FL)", court: "Court 2", homeAway: "Away" },
+      { date: "05/02", time: "7:25 PM", opponent: "Palmetto City Hurricanes 17U (SC)", court: "Court 2", homeAway: "Home" },
+      { date: "05/03", time: "4:10 PM", opponent: "Orlando Bad Boys 17U (FL)", court: "Court 1", homeAway: "Away" }
     ]
   },
   {
