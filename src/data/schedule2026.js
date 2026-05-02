@@ -18,20 +18,6 @@ export const tournaments = [
   },
   {
     id: 2,
-    date: "04/11 - 04/13",
-    name: "Puma NXTpro (Providence, RI)",
-    city: "Tiverton",
-    state: "RI",
-    circuit: "NXTpro",
-    venue: {
-      name: "Longplex Family & Sports Center",
-      address: "300 Industrial Way, Tiverton, RI 02878"
-    },
-    hotelLink: "https://eventconnect.io",
-    details: "Event Connect hotel booking available. NXTpro circuit event."
-  },
-  {
-    id: 3,
     date: "04/18 - 04/20",
     name: "Puma NXTpro (Wesley Chapel, FL)",
     city: "Wesley Chapel",
@@ -45,21 +31,7 @@ export const tournaments = [
     details: "Event Connect hotel booking available. NXTpro circuit event."
   },
   {
-    id: 4,
-    date: "04/25 - 04/27",
-    name: "Puma NXTpro (Plano, TX)",
-    city: "Murphy",
-    state: "TX",
-    circuit: "NXTpro",
-    venue: {
-      name: "PSA Murphy",
-      address: "330 N Murphy Rd, Murphy, TX 75094"
-    },
-    hotelLink: "https://eventconnect.io",
-    details: "Event Connect hotel booking available. NXTpro circuit event."
-  },
-  {
-    id: 5,
+    id: 3,
     date: "05/01 - 05/03",
     name: "Puma NXTpro (Wesley Chapel, FL)",
     city: "Wesley Chapel",
@@ -80,7 +52,7 @@ export const tournaments = [
     ]
   },
   {
-    id: 6,
+    id: 4,
     date: "05/09 - 05/11",
     name: "Puma NXTpro (Westford, MA)",
     city: "Westford",
@@ -94,7 +66,7 @@ export const tournaments = [
     details: "Event Connect hotel booking available. NXTpro circuit event."
   },
   {
-    id: 7,
+    id: 5,
     date: "05/15 - 05/17",
     name: "Atlanta Jam (HOOPSEEN LIVE)",
     city: "Suwanee",
@@ -108,7 +80,7 @@ export const tournaments = [
     details: "Premier HOOPSEEN event with excellent college scouting exposure."
   },
   {
-    id: 8,
+    id: 6,
     date: "05/24 - 05/26",
     name: "Memorial Day Classic",
     city: "Orlando",
@@ -122,7 +94,7 @@ export const tournaments = [
     details: "On The Radar Memorial Day Classic. High-level competition."
   },
   {
-    id: 9,
+    id: 7,
     date: "07/04 - 07/06",
     name: "Puma NXTpro (Gainesville, FL)",
     city: "Gainesville",
@@ -136,7 +108,7 @@ export const tournaments = [
     details: "Event Connect hotel booking available. NXTpro circuit event."
   },
   {
-    id: 10,
+    id: 8,
     date: "07/10 - 07/13",
     name: "Best of the South (HOOPSEEN LIVE)",
     city: "Atlanta",
@@ -150,7 +122,7 @@ export const tournaments = [
     details: "Premier summer event with top-tier college scouting exposure."
   },
   {
-    id: 11,
+    id: 9,
     date: "07/24 - 07/27",
     name: "Puma NXTpro FINALS",
     city: "Orlando",
@@ -167,7 +139,7 @@ export const tournaments = [
 
 export const teamEvents = [
   {
-    id: 102,
+    id: 10,
     date: "04/11 - 04/12",
     name: "Publix Fundraiser",
     city: "Royal Palm Beach",
