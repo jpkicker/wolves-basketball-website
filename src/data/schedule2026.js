@@ -234,9 +234,9 @@ export const tournaments = [
     details: "🏨 Hotel: Fairfield Inn & Suites by Marriott Tampa Wesley Chapel, 2650 Lajuana Blvd, Wesley Chapel, FL 33543. Check-in 5/1, Check-out 5/3 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer.",
     games: [
       { date: "05/01", time: "5:00 PM", opponent: "Kissimmee AllStars 17U", court: "Court 2", homeAway: "Home" },
-      { date: "05/02", time: "5:15 PM", opponent: "FCA Saints 17U (FL)", court: "Court 2", homeAway: "Away" },
-      { date: "05/02", time: "7:25 PM", opponent: "Palmetto City Hurricanes 17U (SC)", court: "Court 2", homeAway: "Home" },
-      { date: "05/03", time: "4:10 PM", opponent: "Orlando Bad Boys 17U (FL)", court: "Court 1", homeAway: "Away" }
+      { date: "05/02", time: "5:15 PM", opponent: "FCA Saints 17U (FL)", court: "Court 2", homeAway: "Away", filmUrl: "https://www.youtube.com/watch?v=XLz3gHFW4f0" },
+      { date: "05/02", time: "7:25 PM", opponent: "Palmetto City Hurricanes 17U (SC)", court: "Court 2", homeAway: "Home", filmUrl: "https://www.youtube.com/watch?v=t9KqgQ0zl68" },
+      { date: "05/03", time: "4:10 PM", opponent: "Orlando Bad Boys 17U (FL)", court: "Court 1", homeAway: "Away", filmUrl: "https://www.youtube.com/watch?v=JjSl7e9fqU8" }
     ]
   },
   {
