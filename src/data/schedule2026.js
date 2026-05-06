@@ -253,10 +253,10 @@ export const tournaments = [
     hotelLink: null,
     details: "🏨 Hotel: Hampton Inn Leesburg/Tavares, 9630 US Highway 441, Leesburg, FL 34788. Check-in 5/8, Check-out 5/10 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer.",
     games: [
-      { date: "05/09", time: "11:15 AM", opponent: "Team Khalfani 17U (FL)", court: "Court 1", homeAway: "Home" },
-      { date: "05/09", time: "4:40 PM", opponent: "Orlando Bad Boys 17U (FL)", court: "Court 1", homeAway: "Away" },
-      { date: "05/10", time: "10:10 AM", opponent: "Kissimmee AllStars 17U", court: "Court 3", homeAway: "Home" },
-      { date: "05/10", time: "12:20 PM", opponent: "Miami Basketball Club 17U (FL)", court: "Court 1", homeAway: "Away" }
+      { date: "05/09", time: "12:20 PM", opponent: "Team Khalfani 17U (FL)", court: "Court 8", homeAway: "Home" },
+      { date: "05/09", time: "3:35 PM", opponent: "Manatee Pal Thunder 17U (FL)", court: "Court 9", homeAway: "Away" },
+      { date: "05/10", time: "9:05 AM", opponent: "MABA 17U (FL)", court: "Court 8", homeAway: "Home" },
+      { date: "05/10", time: "11:15 AM", opponent: "Miami Basketball Club 17U (FL)", court: "Court 9", homeAway: "Away" }
     ]
   },
   {
