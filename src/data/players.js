@@ -5,7 +5,6 @@ import canaanImage from 'url:../assets/headshots/canaan-2026.png';
 import ethanImage from 'url:../assets/headshots/ethan-2026.png';
 import nicholasImage from 'url:../assets/headshots/nick-2026.png';
 import rjImage from 'url:../assets/headshots/rj-2026.png';
-import camdenImage from 'url:../assets/headshots/cam-2026.png';
 import maxImage from 'url:../assets/headshots/max-2026.png';
 import chaseImage from 'url:../assets/headshots/chase-2026.png';
 import genesisImage from 'url:../assets/headshots/genesis-2026.png';
@@ -85,21 +84,6 @@ export const roster = [
     school: "American Heritage",
     gradYear: "12th/2027",
     gpa: 3.77
-  },
-  {
-    number: 11,
-    firstName: "CAMDEN",
-    lastName: "WESLEY-KAM",
-    position: "Forward",
-    height: "6'3\"",
-    weight: 180,
-    initial: "CW",
-    image: camdenImage,
-    instagram: "camden.wk",
-    twitter: "CamdenWK",
-    school: "Wellington Community High School",
-    gradYear: "11th/2027",
-    gpa: 3.5
   },
   {
     number: 4,
