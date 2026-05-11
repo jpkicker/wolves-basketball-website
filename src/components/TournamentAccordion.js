@@ -316,6 +316,18 @@ const GameScore = styled.span`
   color: var(--gold-dark);
 `;
 
+const GameResult = styled.span`
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  background: ${({ $result }) => $result === 'W' ? '#166534' : '#7f1d1d'};
+  color: ${({ $result }) => $result === 'W' ? '#bbf7d0' : '#fecaca'};
+`;
+
 const GameMeta = styled.span`
   font-family: 'Barlow', sans-serif;
   font-size: 0.8rem;
@@ -486,6 +498,7 @@ const TournamentAccordion = () => {
                               <GameTime>{game.time}</GameTime>
                               <GameMatchup>
                                 <strong>Wolves</strong> vs {game.opponent}
+                                {game.result && <GameResult $result={game.result}>{game.result}</GameResult>}
                                 {game.score && <GameScore>{game.score}</GameScore>}
                               </GameMatchup>
                               <GameCourt>{game.court}</GameCourt>
