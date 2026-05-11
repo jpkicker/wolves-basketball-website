@@ -5,7 +5,6 @@ import canaanImage from 'url:../assets/headshots/canaan-2026.png';
 import ethanImage from 'url:../assets/headshots/ethan-2026.png';
 import nicholasImage from 'url:../assets/headshots/nick-2026.png';
 import rjImage from 'url:../assets/headshots/rj-2026.png';
-import camdenImage from 'url:../assets/headshots/cam-2026.png';
 import maxImage from 'url:../assets/headshots/max-2026.png';
 import chaseImage from 'url:../assets/headshots/chase-2026.png';
 import genesisImage from 'url:../assets/headshots/genesis-2026.png';
@@ -238,54 +237,6 @@ export const rosterEnhanced = [
     recruiting: {
       hudl: "",
       email: "GAMODRIC@MBIPROJECTMANAGEMENT.COM",
-      interests: ["D2", "D3"],
-      status: "Open"
-    }
-  },
-  {
-    id: "camden-wesley-kam",
-    number: 11,
-    firstName: "CAMDEN",
-    lastName: "WESLEY-KAM",
-    position: "Forward",
-    initial: "CW",
-    image: camdenImage,
-    instagram: "camden.wk",
-    twitter: "CamdenWK",
-    height: "6'3\"",
-    weight: "180",
-    gradYear: 2027,
-    school: "Wellington Community High School",
-    gpa: "3.5",
-    bio: "Long and athletic forward with excellent potential. Uses his length to disrupt passing lanes and alter shots. Developing offensive game.",
-    stats: {
-      season: "Spring 2026",
-      gp: 16,
-      ppg: 18.6,
-      rpg: 7.7,
-      apg: 0.9,
-      spg: 0.7,
-      bpg: 0.8,
-      fgPct: 59,
-      threePct: 38,
-      ftPct: 61
-    },
-    previousStats: {
-      season: "2024-25",
-      gp: 31,
-      ppg: 12.9,
-      rpg: 7.2,
-      apg: 0.7,
-      spg: 0.9,
-      bpg: 0.7,
-      fgPct: 58,
-      threePct: 27,
-      ftPct: 51
-    },
-    highlights: [],
-    recruiting: {
-      hudl: "",
-      email: "FALLONKAM@GMAIL.COM",
       interests: ["D2", "D3"],
       status: "Open"
     }
