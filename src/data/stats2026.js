@@ -5,7 +5,6 @@
 export const seasonRecord = { wins: 11, losses: 16, season: "Spring 2026" };
 
 export const playerStats = [
-  { name: "Alex Brazzale",       number: 11, gp: 27, ppg: 16.4, pfpg: 1.0, fgPct: 61, threePct: 38, ftPct: 63, topg: 0.6, rpg: 7.4, apg: 0.9, spg: 0.6, bpg: 0.9 },
   { name: "Canaan Gedeon",       number: 2,  gp: 27, ppg: 11.0, pfpg: 0.7, fgPct: 39, threePct: 21, ftPct: 64, topg: 1.4, rpg: 3.2, apg: 2.1, spg: 0.6, bpg: 0.2 },
   { name: "Max Modric",          number: 10, gp: 27, ppg: 7.2,  pfpg: 1.5, fgPct: 32, threePct: 27, ftPct: 50, topg: 1.0, rpg: 3.0, apg: 1.3, spg: 1.1, bpg: 0.1 },
   { name: "RJ Baptiste",         number: 0,  gp: 27, ppg: 6.7,  pfpg: 1.0, fgPct: 32, threePct: 20, ftPct: 63, topg: 1.2, rpg: 2.8, apg: 3.0, spg: 1.0, bpg: 0.1 },
