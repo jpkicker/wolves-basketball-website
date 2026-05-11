@@ -2,7 +2,7 @@
 // Source: GameChanger — Season Averages (Standard)
 // Record: 11-16 | Spring 2026
 
-export const seasonRecord = { wins: 11, losses: 16, season: "Spring 2026" };
+export const seasonRecord = { wins: 12, losses: 16, season: "Spring 2026" };
 
 export const playerStats = [
   { name: "Canaan Gedeon",       number: 2,  gp: 27, ppg: 11.0, pfpg: 0.7, fgPct: 39, threePct: 21, ftPct: 64, topg: 1.4, rpg: 3.2, apg: 2.1, spg: 0.6, bpg: 0.2 },
