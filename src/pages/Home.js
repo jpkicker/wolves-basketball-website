@@ -475,7 +475,7 @@ const Home = () => {
       <StatsBar>
         <StatsContent>
           <StatItem>
-            <StatNumber>7-10</StatNumber>
+            <StatNumber>12-16</StatNumber>
             <StatLabel>Season Record</StatLabel>
           </StatItem>
           <StatItem>
@@ -487,7 +487,7 @@ const Home = () => {
             <StatLabel>Age Division</StatLabel>
           </StatItem>
           <StatItem>
-            <StatNumber>10</StatNumber>
+            <StatNumber>9</StatNumber>
             <StatLabel>Players</StatLabel>
           </StatItem>
         </StatsContent>
