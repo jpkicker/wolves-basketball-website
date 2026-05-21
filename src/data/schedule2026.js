@@ -14,7 +14,13 @@ export const tournaments = [
       address: "11700 Pierson Rd, Wellington, FL 33414"
     },
     hotelLink: null,
-    details: "US Amateur Basketball tournament. Local event - no travel required."
+    details: "US Amateur Basketball tournament. Local event - no travel required.",
+    games: [
+      { day: "Sat, Mar 7", opponent: "Born Ballers",  homeAway: "Home", result: "W", score: "54-49" },
+      { day: "Sat, Mar 7", opponent: "BGH-Red",        homeAway: "Home", result: "L", score: "40-51" },
+      { day: "Sun, Mar 8", opponent: "BBA",             homeAway: "Home", result: "W", score: "59-54" },
+      { day: "Sun, Mar 8", opponent: "BGH-Red",         homeAway: "Home", result: "W", score: "56-45" }
+    ]
   },
   {
     id: 2,
@@ -37,7 +43,8 @@ export const tournaments = [
         opponent: "SCE UA Grind",
         homeAway: "Home",
         division: "Boys Varsity Showcase, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=oGAIyI55OUY"
+        filmUrl: "https://www.youtube.com/watch?v=oGAIyI55OUY",
+        result: "L", score: "47-50"
       },
       {
         day: "Sat, Mar 14",
@@ -46,7 +53,8 @@ export const tournaments = [
         opponent: "SCE UA Rise",
         homeAway: "Home",
         division: "Boys Varsity Showcase, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=OHgrX1yY57Y"
+        filmUrl: "https://www.youtube.com/watch?v=OHgrX1yY57Y",
+        result: "L", score: "40-63"
       },
       {
         day: "Sun, Mar 15",
@@ -55,7 +63,8 @@ export const tournaments = [
         opponent: "TNT Hoopsquad 2026",
         homeAway: "Home",
         division: "Boys Varsity Showcase, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=AFsq8fOqmgQ"
+        filmUrl: "https://www.youtube.com/watch?v=AFsq8fOqmgQ",
+        result: "W", score: "55-33"
       },
       {
         day: "Sun, Mar 15",
@@ -64,7 +73,8 @@ export const tournaments = [
         opponent: "SWFL Hoops",
         homeAway: "Home",
         division: "Boys Varsity Showcase, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=A-T4BzjdoQc"
+        filmUrl: "https://www.youtube.com/watch?v=A-T4BzjdoQc",
+        result: "L", score: "67-71"
       }
     ]
   },
@@ -89,7 +99,8 @@ export const tournaments = [
         opponent: "Elite 8 Select - Black",
         homeAway: "Home",
         division: "11th/12th Boys, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=PWHH_GXLErw"
+        filmUrl: "https://www.youtube.com/watch?v=PWHH_GXLErw",
+        result: "L", score: "56-60"
       },
       {
         day: "Sat, Mar 21",
@@ -98,7 +109,8 @@ export const tournaments = [
         opponent: "Ftl",
         homeAway: "Home",
         division: "11th/12th Boys, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=ddoo84a64L0"
+        filmUrl: "https://www.youtube.com/watch?v=ddoo84a64L0",
+        result: "L", score: "57-63"
       },
       {
         day: "Sun, Mar 22",
@@ -107,7 +119,8 @@ export const tournaments = [
         opponent: "Sunshine Elite",
         homeAway: "Home",
         division: "11th/12th Boys, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=xmbe2_3GiDM"
+        filmUrl: "https://www.youtube.com/watch?v=xmbe2_3GiDM",
+        result: "L", score: "60-73"
       },
       {
         day: "Sun, Mar 22",
@@ -116,7 +129,8 @@ export const tournaments = [
         opponent: "Vice City Elite 17U",
         homeAway: "Home",
         division: "11th/12th Boys, Pool A",
-        filmUrl: "https://www.youtube.com/watch?v=Ny7r4ju5Pfk"
+        filmUrl: "https://www.youtube.com/watch?v=Ny7r4ju5Pfk",
+        result: "W", score: "61-59"
       }
     ]
   },
@@ -140,7 +154,8 @@ export const tournaments = [
         court: "Court 3",
         opponent: "All In Elite 17U (CT)",
         homeAway: "Home",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        result: "W", score: "45-44"
       },
       {
         day: "Sat, Mar 28",
@@ -149,7 +164,8 @@ export const tournaments = [
         opponent: "Brooklyn Wildcats 17U (NY)",
         homeAway: "Home",
         division: "HS Boys - 17U",
-        filmUrl: "https://www.youtube.com/watch?v=z1gmV8n1Gbc"
+        filmUrl: "https://www.youtube.com/watch?v=z1gmV8n1Gbc",
+        result: "L", score: "49-70"
       },
       {
         day: "Sun, Mar 29",
@@ -158,7 +174,8 @@ export const tournaments = [
         opponent: "Team Peake 17U MILLER",
         homeAway: "Away",
         division: "HS Boys - 17U",
-        filmUrl: "https://www.youtube.com/watch?v=84FgYaYnw9A"
+        filmUrl: "https://www.youtube.com/watch?v=84FgYaYnw9A",
+        result: "L", score: "32-52"
       },
       {
         day: "Sun, Mar 29",
@@ -167,7 +184,8 @@ export const tournaments = [
         opponent: "Pro Level Titans 17U (NY)",
         homeAway: "Away",
         division: "HS Boys - 17U",
-        filmUrl: "https://www.youtube.com/watch?v=c6nkGSJhv6I"
+        filmUrl: "https://www.youtube.com/watch?v=c6nkGSJhv6I",
+        result: "W", score: "61-55"
       }
     ]
   },
@@ -191,7 +209,8 @@ export const tournaments = [
         court: "Court 3",
         opponent: "ONYX BC 17U Black (CA)",
         homeAway: "Away",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        result: "L", score: "32-43"
       },
       {
         day: "Sat, Apr 18",
@@ -199,7 +218,8 @@ export const tournaments = [
         court: "Court 4",
         opponent: "Prodigy Elite 17U (CA)",
         homeAway: "Home",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        result: "L", score: "58-67"
       },
       {
         day: "Sun, Apr 19",
@@ -207,7 +227,8 @@ export const tournaments = [
         court: "Court 1",
         opponent: "Build Your Way Elite 17U (CA)",
         homeAway: "Away",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        result: "L", score: "35-64"
       },
       {
         day: "Sun, Apr 19",
@@ -215,7 +236,8 @@ export const tournaments = [
         court: "Court 1",
         opponent: "Philly D1 Basketball 17U",
         homeAway: "Home",
-        division: "HS Boys - 17U"
+        division: "HS Boys - 17U",
+        result: "W"
       }
     ]
   },
@@ -233,10 +255,10 @@ export const tournaments = [
     hotelLink: null,
     details: "🏨 Hotel: Fairfield Inn & Suites by Marriott Tampa Wesley Chapel, 2650 Lajuana Blvd, Wesley Chapel, FL 33543. Check-in 5/1, Check-out 5/3 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer.",
     games: [
-      { date: "05/01", time: "5:00 PM", opponent: "Kissimmee AllStars 17U", court: "Court 2", homeAway: "Home" },
-      { date: "05/02", time: "5:15 PM", opponent: "FCA Saints 17U (FL)", court: "Court 2", homeAway: "Away", filmUrl: "https://www.youtube.com/watch?v=XLz3gHFW4f0" },
-      { date: "05/02", time: "7:25 PM", opponent: "Palmetto City Hurricanes 17U (SC)", court: "Court 2", homeAway: "Home", filmUrl: "https://www.youtube.com/watch?v=t9KqgQ0zl68" },
-      { date: "05/03", time: "4:10 PM", opponent: "Orlando Bad Boys 17U (FL)", court: "Court 1", homeAway: "Away", filmUrl: "https://www.youtube.com/watch?v=JjSl7e9fqU8" }
+      { date: "05/01", time: "5:00 PM", opponent: "Kissimmee AllStars 17U", court: "Court 2", homeAway: "Home", result: "L", score: "47-48" },
+      { date: "05/02", time: "5:15 PM", opponent: "FCA Saints 17U (FL)", court: "Court 2", homeAway: "Away", filmUrl: "https://www.youtube.com/watch?v=XLz3gHFW4f0", result: "W", score: "65-42" },
+      { date: "05/02", time: "7:25 PM", opponent: "Palmetto City Hurricanes 17U (SC)", court: "Court 2", homeAway: "Home", filmUrl: "https://www.youtube.com/watch?v=t9KqgQ0zl68", result: "W", score: "75-69" },
+      { date: "05/03", time: "4:10 PM", opponent: "Orlando Bad Boys 17U (FL)", court: "Court 1", homeAway: "Away", filmUrl: "https://www.youtube.com/watch?v=JjSl7e9fqU8", result: "W", score: "66-45" }
     ]
   },
   {
@@ -253,10 +275,10 @@ export const tournaments = [
     hotelLink: null,
     details: "🏨 Hotel: Hampton Inn Leesburg/Tavares, 9630 US Highway 441, Leesburg, FL 34788. Check-in 5/8, Check-out 5/10 (2 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer.",
     games: [
-      { date: "05/09", time: "12:20 PM", opponent: "Team Khalfani 17U (FL)", court: "Court 8", homeAway: "Home" },
-      { date: "05/09", time: "3:35 PM", opponent: "Manatee Pal Thunder 17U (FL)", court: "Court 9", homeAway: "Away" },
-      { date: "05/10", time: "9:05 AM", opponent: "MABA 17U (FL)", court: "Court 8", homeAway: "Home" },
-      { date: "05/10", time: "11:15 AM", opponent: "Miami Basketball Club 17U (FL)", court: "Court 9", homeAway: "Away" }
+      { date: "05/09", time: "12:20 PM", opponent: "Team Khalfani 17U (FL)", court: "Court 8", homeAway: "Home", result: "L", score: "34-63" },
+      { date: "05/09", time: "3:35 PM", opponent: "Manatee Pal Thunder 17U (FL)", court: "Court 9", homeAway: "Away", result: "L", score: "48-65" },
+      { date: "05/10", time: "9:05 AM", opponent: "MABA 17U (FL)", court: "Court 8", homeAway: "Home", result: "W", score: "71-66" },
+      { date: "05/10", time: "11:15 AM", opponent: "Miami Basketball Club 17U (FL)", court: "Court 9", homeAway: "Away", result: "L", score: "48-62" }
     ]
   },
   {
@@ -285,7 +307,13 @@ export const tournaments = [
       address: "6700 Kingspointe Pkwy, Orlando, FL 32819"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Universal's Stella Nova Resort, 4500 Epic Blvd, Orlando, FL 32819 (staying with other Wolves teams). Arrive Friday 5/22, depart Monday 5/25 (3 nights). Possible game on Monday. Rate TBD."
+    details: "🏨 Hotel: Universal's Stella Nova Resort, 4500 Epic Blvd, Orlando, FL 32819 (staying with other Wolves teams). Arrive Friday 5/22, depart Monday 5/25 (3 nights). Possible game on Monday. Rate TBD.",
+    games: [
+      { day: "Sat, May 23", time: "10:10 AM EDT", court: "Court 3", opponent: "SE Elite Gold",             homeAway: "Away", division: "17U - B" },
+      { day: "Sat, May 23", time: "12:20 PM EDT", court: "Court 1", opponent: "Elite Playmakers (Smith) OTR", homeAway: "Home", division: "17U - B" },
+      { day: "Sun, May 24", time: "10:10 AM EDT", court: "Court 3", opponent: "OCO 17u NB",               homeAway: "Home", division: "17U - B" },
+      { day: "Mon, May 25", time: "10:10 AM EDT", court: "Court 2", opponent: "Gold Elite 17U OTR",        homeAway: "Home", division: "17U - B" }
+    ]
   },
   {
     id: 10,
