@@ -332,16 +332,16 @@ export const tournaments = [
   {
     id: 11,
     date: "07/09 - 07/12",
-    name: "Puma NXT PRO LIVE (Richmond)",
-    city: "Glen Allen",
-    state: "VA",
-    circuit: "NXTpro",
+    name: "Phenom Hoops Live (Raleigh)",
+    city: "Raleigh",
+    state: "NC",
+    circuit: "PHENOM",
     venue: {
-      name: "Henrico Sports & Events Center",
-      address: "1 All Star Boulevard, Glen Allen, VA 23059"
+      name: "Raleigh Convention Center",
+      address: "500 S Salisbury St, Raleigh, NC 27601"
     },
     hotelLink: null,
-    details: "🏨 Hotel: Embassy Suites by Hilton Richmond, 2925 Emerywood Pkwy, Henrico, VA 23294. Check-in 7/8, Check-out 7/12 (4 nights). Feel free to book through Expedia, Hotels.com, or any service you prefer."
+    details: "🏨 Hotel: Hampton Inn & Suites Raleigh/Crabtree Valley, 3920 Arrow Drive, Raleigh, NC 27612. Check-in 7/10, Check-out 7/12 (2 nights). NCAA-certified live period event. Session 1: Thu–Fri Jul 9–10 (2-2). Session 2: Sat–Sun Jul 11–12 (2-1). Event page: https://www.phenomhoopreport.com/phenom-hoops-live/"
   },
   {
     id: 12,
@@ -412,6 +412,7 @@ export const circuitColors = {
   OTR: { bg: "#FF6B00", text: "#FFFFFF", accent: "#000000" },
   AAU: { bg: "#003087", text: "#FFFFFF", accent: "#C8102E" },
   USAB: { bg: "#002a5c", text: "#FFFFFF", accent: "#e51b24" },
+  PHENOM: { bg: "#7B1E3A", text: "#FFFFFF", accent: "#FFD700" },
   LOCAL: { bg: "#001f3f", text: "#FFFFFF", accent: "#FFD700" },
   FUNDRAISER: { bg: "#228B22", text: "#FFFFFF", accent: "#FFD700" }
 };
