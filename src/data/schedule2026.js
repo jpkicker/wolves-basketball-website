@@ -351,11 +351,55 @@ export const tournaments = [
     state: "GA",
     circuit: "OTR",
     venue: {
-      name: "TBD",
-      address: "Cartersville, GA"
+      name: "LakePoint Sports Community",
+      address: "261 Stars Way, Emerson, GA 30137"
     },
     hotelLink: null,
-    details: "Hotel: TBD."
+    details: "🏨 Hotel: TBD. NCAA July live period event. All times EDT — subject to change.",
+    games: [
+      {
+        day: "Thu, Jul 16",
+        time: "1:05 PM EDT",
+        court: "Court 4",
+        opponent: "Elevate Huskies",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Thu, Jul 16",
+        time: "4:20 PM EDT",
+        court: "Court 9",
+        opponent: "Conyers Kingsmen",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Fri, Jul 17",
+        time: "12:50 PM EDT",
+        court: "Court 7",
+        opponent: "Georgia Canes OTR Bryce",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Fri, Jul 17",
+        time: "7:20 PM EDT",
+        court: "Court 7",
+        opponent: "Team S.M.A.S.H. Pro OTR 2027",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Sat, Jul 18",
+        time: "5:10 PM EDT",
+        court: "Court 1",
+        opponent: "XPC Eli",
+        division: "HS Boys - 17U"
+      },
+      {
+        day: "Sun, Jul 19",
+        time: "9:35 AM EDT",
+        court: "Court 8",
+        opponent: "HWPO Hoops OTR 2027",
+        division: "HS Boys - 17U"
+      }
+    ]
   },
   {
     id: 13,
