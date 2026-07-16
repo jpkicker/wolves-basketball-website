@@ -355,20 +355,20 @@ export const tournaments = [
       address: "261 Stars Way, Emerson, GA 30137"
     },
     hotelLink: null,
-    details: "🏨 Hotel: TBD. NCAA July live period event. All times EDT — subject to change.",
+    details: "🏨 Hotel: Fairfield by Marriott Atlanta Kennesaw — 3425 Busbee Dr, Kennesaw, GA 30144 (check-in Thu 7/16, check-out Sun 7/19). NCAA July live period event. All times EDT — subject to change.",
     games: [
       {
         day: "Thu, Jul 16",
-        time: "1:05 PM EDT",
-        court: "Court 4",
-        opponent: "Elevate Huskies",
+        time: "3:15 PM EDT",
+        court: "Court 6",
+        opponent: "Conyers Kingsmen",
         division: "HS Boys - 17U"
       },
       {
         day: "Thu, Jul 16",
-        time: "4:20 PM EDT",
+        time: "5:25 PM EDT",
         court: "Court 9",
-        opponent: "Conyers Kingsmen",
+        opponent: "Palm Beach Sharks",
         division: "HS Boys - 17U"
       },
       {
